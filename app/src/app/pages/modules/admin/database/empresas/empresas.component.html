@@ -1,0 +1,32 @@
+<div fxLayout="row wrap">
+  <div fxFlex="100">
+    <mat-card class="card">
+
+    <!-- TITULO -->
+    <app-mat-header-simple></app-mat-header-simple>
+    <!-- FIN TITULO -->
+
+    <!-- TOOLBAR -->
+    <app-empresas-toolbar></app-empresas-toolbar>
+    <!-- FIN TOOLBAR -->
+
+    <div *ngIf="this.service.conf.optionSelected==='home'">
+      <app-empresas-home></app-empresas-home>
+    </div>
+
+    <div *ngIf="this.service.conf.optionSelected==='registros'">
+      <app-empresas-search></app-empresas-search>
+      <app-empresas-table></app-empresas-table>
+    </div>
+
+    <div *ngIf="this.service.conf.optionSelected==='nuevo'">
+      <app-empresas-new></app-empresas-new>
+    </div>
+
+    <div *ngIf="this.service.conf.optionSelected==='settings'">
+      <app-empresas-edit></app-empresas-edit>
+    </div>
+
+    </mat-card>
+  </div>
+</div>

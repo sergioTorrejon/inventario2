@@ -1,0 +1,122 @@
+      <!-- TABLA -->
+      <div>
+        <!-- TITULO DE LA TABLA -->
+        <div fxLayout="row wrap">
+          <div class="table-title" fxFlex="100">
+          REGISTROS DE {{this.service.conf.config.cardTitle}}
+          </div>
+        </div>
+        <!-- FIN TITULO DE LA TABLA -->
+
+        <!-- TABLA PANTALLA GRANDE -->
+        <div fxShow="false" fxShow.gt-md>
+          <!-- CABECERAS DE LA TABLA -->
+          <div fxLayout="row wrap">
+            <div class="table-head-acctions" fxFlex="2">
+              Sel
+            </div>
+            <div fxLayout="row wrap"  matSort  fxFlex="90"
+            class="table-head-columns"
+            (matSortChange)="this.service.sortData($event)" 
+            [matSortActive]="this.service.sort" 
+            [matSortDirection]="this.service.order" 
+            matSortDisableClear>
+              <div *ngFor="let config of this.service.conf.columns" [mat-sort-header]="config.name" [fxFlex]="config.width">
+              {{config.label}}
+              </div>
+            </div>
+            <div class="table-head-acctions" fxFlex="8">
+              Acciones
+            </div>
+          </div>
+          <!-- FIN CABECERAS DE LA TABLA -->
+          <!-- DATA DE LA TABLA -->
+          <div  fxLayout="row wrap" *ngFor="let row of this.service.data; index as i" [ngClass]="i%2===0?'fieldTablePar':'fieldTableImpar'">
+            <div fxLayout="row wrap" fxFlex="80">
+              <div fxLayout="row wrap" *ngFor="let column of this.service.conf.columns" [fxFlex]="column.width">
+                <p class="form-table-body">{{row[column.name]}}</p>
+              </div>
+            </div>
+            <!-- FILA DE ACCIONES -->
+            <div fxLayout="row wrap" fxFlex="20" >
+              <button mat-button color="primary" fxFlex="50">
+                <mat-icon>visibility</mat-icon>
+                <span class="form-table-body">Ver</span> 
+              </button>
+              <button mat-button color="warn" fxFlex="50">
+                <mat-icon>delete</mat-icon>
+                <span class="form-table-body">Eliminar</span> 
+              </button>
+            </div>
+            <div><mat-divider></mat-divider></div>
+            <!-- ***FIN*** FILA DE ACCIONES -->
+          </div>
+          <!-- ***FIN*** DATA DE LA TABLA -->
+        </div>
+        <!-- FIN TABLA PANTALLA GRANDE -->
+
+        <!-- TABLA PANTALLA PEQUEÑA -->
+        <div fxShow="false" fxShow.lt-lg>
+          <!-- CABECERAS DE LA TABLA -->
+          <div  fxLayout="row wrap" >
+            <div class="table-head-acctions" fxFlex="80">
+              <div style="text-align: left;"  fxLayout="row wrap">
+                <div fxFlex="40">
+                  <span class="form-table-body">Descripción</span> 
+                </div>
+                <div fxFlex="60">
+                  <span  class="form-table-body">Detalle</span> 
+                </div>
+              </div>
+            </div>
+            <div class="table-head-acctions" fxFlex="20">
+              Acciones
+            </div>
+          </div>
+          <!-- FIN CABECERAS DE LA TABLA -->
+          <!-- DATA DE LA TABLA -->
+          <div  fxLayout="row wrap" *ngFor="let row of this.service.data; index as i" [ngClass]="i%2===0?'fieldTablePar':'fieldTableImpar'" >
+            <!-- ***FIN*** FILAS DE LA TABLA -->
+            <div fxFlex="80">
+              <div fxLayout="row wrap" *ngFor="let column of this.service.conf.columns; last as last">
+                <div fxFlex="40">
+                  <span  class="form-table-body" style="text-align: left;">{{column.label}}</span>
+                </div>
+                <div fxFlex="60">
+                  <span class="form-table-body" style="text-align: left;">:{{row[column.name]}}</span> 
+                </div>
+                <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+              </div>
+            </div>
+            <mat-divider fxFlex="1" [vertical]="true"></mat-divider>
+            <!-- FILA DE ACCIONES -->
+            <div fxLayout="row wrap" fxFlex="19" >
+              <button mat-button color="primary" fxFlex="100">
+                <mat-icon>edit</mat-icon>
+                <span class="form-table-body" fxShow="true" fxHide.xs>Editar</span> 
+              </button>
+              <button mat-button color="warn" fxFlex="100">
+                <mat-icon>close</mat-icon>
+                <span class="form-table-body" fxHide.xs>Eliminar</span> 
+              </button>
+            </div>
+            <mat-divider class="mat-divider-field"></mat-divider>
+            <!-- ***FIN*** FILA DE ACCIONES -->
+          </div>
+          <!-- ***FIN*** DATA DE LA TABLA -->
+        </div>
+        <!-- TABLA PANTALLA PEQUEÑA -->
+
+
+        <!-- PAGINACION DE LA TABLA -->
+        <mat-divider class="mat-divider-field"></mat-divider>
+        <mat-paginator 
+        [length]="this.service.count" 
+        [pageSize]="this.service.page.size" 
+        [pageIndex]="this.service.page.index" 
+        [pageSizeOptions]="[5, 10, 25, 100]"
+        (page)="this.service.pagination($event)"
+        ></mat-paginator>
+      <!-- FIN PAGINACION DE LA TABLA -->
+      </div>
+      <!-- FIN TABLA -->

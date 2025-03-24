@@ -1,0 +1,27 @@
+<!-- FORMULARIO -->
+<div class="box"  fxLayout="row wrap" >
+  <div *ngFor="let element of modelForm.elements" [fxFlex.gt-lg]="element.width" [fxFlex.gt-md]="element.width"  fxFlex.gt-xs="100" fxFlex="100">
+    <form  [formGroup]="formGroup" >
+        <mat-form-field *ngIf="element.type === 'input'" class="form-element" appearance="outline">
+          <mat-label>{{element.label}}</mat-label>
+          <input  matInput [formControlName]="element.name" >
+          <button mat-button *ngIf="formGroup.controls[element.name].value" 
+          matSuffix mat-icon-button color="warn" aria-label="Clear" (click)="formGroup.controls[element.name].setValue('');setFormField()">
+          <mat-icon>close</mat-icon>
+          </button>
+          </mat-form-field>
+        <mat-form-field *ngIf="element.type === 'select'" class="form-element" appearance="outline" >
+          <mat-label>{{element.label}}</mat-label>
+          <mat-select [formControlName]="element.name">
+          <mat-option *ngFor="let option of element.option" [value]="element.value">{{element.label}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field *ngIf="element.type === 'date'" class="form-element" appearance="outline" >
+          <mat-label>{{element.label}}</mat-label>
+          <input matInput [matDatepicker]="picker" (click)="picker.open()" [formControlName]="element.name" readonly>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+    </form>
+  </div>
+</div>
+<!-- **FIN** FORMULARIO -->

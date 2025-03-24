@@ -1,0 +1,52 @@
+<!-- SECCION HEADER -->
+<div fxLayout="row wrap"  class="container-box">
+    <div fxLayout="row wrap" fxFlex="100" class="container-box">
+        <mat-divider vertical="true"></mat-divider>
+        <div fxLayout="row wrap" fxFlex="20">
+            <span fxFlex="100" class="h-center">Seleccionar</span>
+            <mat-divider inset="true"></mat-divider>
+            <button mat-button color="primary" fxFlex="100">
+                <mat-icon>download</mat-icon>
+                <span fxShow="true" fxHide.xs>Exportar</span>
+            </button>
+        </div>
+        <mat-divider vertical="true"></mat-divider>
+        <div fxFlex="10">
+            <button mat-button color="primary" fxFlex="100">
+                <mat-icon>check_box</mat-icon>
+                <span fxShow="true" fxHide.xs>Seleccionar</span>
+            </button>
+        </div>
+        <mat-divider vertical="true"></mat-divider>
+        <div fxLayout="row wrap" fxFlex="10">
+            <button mat-button color="warn" fxFlex="100">
+                <mat-icon>delete</mat-icon>
+                <span fxShow="true" fxHide.xs>Elimnar</span>
+            </button>
+            <mat-divider inset="true"></mat-divider>
+            <button mat-button color="primary" fxFlex="100">
+                <mat-icon>download</mat-icon>
+                <span fxShow="true" fxHide.xs>Exportar</span>
+            </button>
+        </div>
+        <mat-divider vertical="true"></mat-divider>
+        <div fxFlex="40">
+            <button mat-button color="primary" fxFlex="100">
+                <mat-icon>filter_list</mat-icon>
+                <span fxShow="true" fxHide.xs>Filtrar</span>
+            </button>
+        </div>
+        <mat-divider vertical="true"></mat-divider>
+        <div fxFlex="9">
+            <button mat-button color="primary" fxFlex="100">
+                <mat-icon>check_box</mat-icon>
+                <span fxShow="true" fxHide.xs>Seleccionar</span>
+            </button>
+        </div>
+    </div>
+    <div fxFlex="100">
+        <app-personas-table></app-personas-table>
+    </div>
+</div>
+
+<!-- **FIN** SECCION HEADER-->

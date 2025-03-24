@@ -1,0 +1,100 @@
+      <!-- TABLA -->
+      <div>
+        <!-- TITULO DE LA TABLA -->
+        <div fxLayout="row wrap">
+          <div class="table-title" fxFlex="100">
+          REGISTROS DE {{this.service.conf.config.cardTitle}}
+          </div>
+        </div>
+        <!-- FIN TITULO DE LA TABLA -->
+
+        <!-- TABLA PANTALLA GRANDE -->
+        <div fxShow="false" fxShow.gt-md>
+          <!-- CABECERAS DE LA TABLA -->
+          <div fxLayout="row wrap" class="table-head" >
+            <div class="container h-center" fxFlex="3"><mat-icon>check_circle</mat-icon></div>
+            <!-- <mat-checkbox class="container h-center" fxFlex="3"></mat-checkbox> -->
+            <div class="container" fxLayout="row wrap" fxFlex="90"
+            matSort
+            (matSortChange)="this.service.sortData($event)"
+            [matSortActive]="this.service.sort"
+            [matSortDirection]="this.service.order"
+            matSortDisableClear>
+              <b *ngFor="let config of this.service.conf.columns" [mat-sort-header]="config.name" [fxFlex]="config.width">
+              {{config.label}}
+              </b>
+            </div>
+            <!-- <div fxFlex="7"></div> -->
+          </div>
+          <!-- FIN CABECERAS DE LA TABLA -->
+          <!-- DATA DE LA TABLA -->
+          <div  fxLayout="row wrap"  *ngFor="let row of this.service.data; index as i" [ngClass]="i%2===0?'fieldTablePar':'fieldTableImpar'">
+            <!-- CHECKBOX -->
+            <mat-checkbox class="container h-center" fxFlex="3" ></mat-checkbox>
+            <!-- FIN CHECKBOX -->
+            <!-- DATA -->
+            <div class="container" fxLayout="row wrap" fxFlex="90">
+              <div class="table-body" *ngFor="let column of this.service.conf.columns" [fxFlex]="column.width">{{row[column.name]}}</div>
+            </div>
+            <!-- FIN DATA -->
+            <!-- VER -->
+            <button mat-button color="primary" fxFlex="7">
+              <mat-icon>visibility</mat-icon>
+              <span>Ver</span>
+            </button>
+            <!-- FIN VER -->
+            <div><mat-divider></mat-divider></div>
+          </div>
+          <!-- ***FIN*** DATA DE LA TABLA -->
+        </div>
+        <!-- FIN TABLA PANTALLA GRANDE -->
+
+        <!-- TABLA PANTALLA PEQUEÑA -->
+        <div fxShow="false" fxShow.lt-lg>
+          <!-- CABECERAS DE LA TABLA -->
+          <div fxLayout="row wrap" class="table-head">
+            <div class="container h-center" fxFlex="7"><mat-icon>check_circle</mat-icon></div>
+            <div class="container" fxLayout="row wrap" fxFlex="80">
+              <b fxFlex="40"> Descripción</b>
+              <b fxFlex="60">Detalle</b>
+            </div>
+          </div>
+          <!-- FIN CABECERAS DE LA TABLA -->
+          <!-- DATA DE LA TABLA -->
+          <div  fxLayout="row wrap" *ngFor="let row of this.service.data; index as i" [ngClass]="i%2===0?'fieldTablePar':'fieldTableImpar'" >
+            <!-- ***FIN*** FILAS DE LA TABLA -->
+            <div fxLayout="row wrap"  fxFlex="7">
+              <mat-checkbox class="h-center" fxFlex="100"></mat-checkbox>
+            </div>
+            <div fxFlex="80">
+              <div class="table-body" fxLayout="row wrap" *ngFor="let column of this.service.conf.columns; last as last">
+                <div fxFlex="40" >{{column.label}}</div>
+                <div fxFlex="60" >{{row[column.name]}}</div>
+              </div>
+            </div>
+            <!-- FILA DE ACCIONES -->
+            <div class="h-center"  fxLayout="row wrap" fxFlex="10">
+              <button mat-button color="primary" fxFlex="100">
+                <mat-icon>visibility</mat-icon>
+                <span fxShow="true" fxHide.xs>Ver</span>
+              </button>
+            </div>
+            <!-- ***FIN*** FILA DE ACCIONES -->
+          </div>
+          <!-- ***FIN*** DATA DE LA TABLA -->
+        </div>
+        <!-- TABLA PANTALLA PEQUEÑA -->
+
+
+        <!-- PAGINACION DE LA TABLA -->
+        <mat-divider class="mat-divider-field"></mat-divider>
+        <mat-paginator
+        [length]="this.service.count"
+        [pageSize]="this.service.page.size"
+        [pageIndex]="this.service.page.index"
+        [pageSizeOptions]="[5, 10, 25, 100]"
+        (page)="this.service.pagination($event)"
+        ></mat-paginator>
+      <!-- FIN PAGINACION DE LA TABLA -->
+      </div>
+      <!-- FIN TABLA -->

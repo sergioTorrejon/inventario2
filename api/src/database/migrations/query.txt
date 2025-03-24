@@ -1,0 +1,1651 @@
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(1, 'AD', 'Andorra', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(2, 'AE', 'Emiratos Árabes Unidos', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(3, 'AF', 'Afganistán', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(4, 'AG', 'Antigua y Barbuda', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(5, 'AI', 'Anguila', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(6, 'AL', 'Albania', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(7, 'AM', 'Armenia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(8, 'AN', 'Antillas Neerlandesas', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(9, 'AO', 'Angola', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(10, 'AQ', 'Antártida', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(11, 'AR', 'Argentina', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(12, 'AS', 'Samoa Americana', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(13, 'AT', 'Austria', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(14, 'AU', 'Australia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(15, 'AW', 'Aruba', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(16, 'AX', 'Islas Áland', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(17, 'AZ', 'Azerbaiyán', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(18, 'BA', 'Bosnia y Herzegovina', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(19, 'BB', 'Barbados', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(20, 'BD', 'Bangladesh', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(21, 'BE', 'Bélgica', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(22, 'BF', 'Burkina Faso', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(23, 'BG', 'Bulgaria', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(24, 'BH', 'Bahréin', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(25, 'BI', 'Burundi', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(26, 'BJ', 'Benin', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(27, 'BL', 'San Bartolomé', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(28, 'BM', 'Bermudas', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(29, 'BN', 'Brunéi', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(30, 'BO', 'Bolivia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(31, 'BR', 'Brasil', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(32, 'BS', 'Bahamas', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(33, 'BT', 'Bhután', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(34, 'BV', 'Isla Bouvet', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(35, 'BW', 'Botsuana', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(36, 'BY', 'Belarús', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(37, 'BZ', 'Belice', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(38, 'CA', 'Canadá', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(39, 'CC', 'Islas Cocos', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(40, 'CF', 'República Centro-Africana', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(41, 'CG', 'Congo', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(42, 'CH', 'Suiza', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(43, 'CI', 'Costa de Marfil', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(44, 'CK', 'Islas Cook', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(45, 'CL', 'Chile', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(46, 'CM', 'Camerún', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(47, 'CN', 'China', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(48, 'CO', 'Colombia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(49, 'CR', 'Costa Rica', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(50, 'CU', 'Cuba', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(51, 'CV', 'Cabo Verde', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(52, 'CX', 'Islas Christmas', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(53, 'CY', 'Chipre', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(54, 'CZ', 'República Checa', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(55, 'DE', 'Alemania', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(56, 'DJ', 'Yibuti', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(57, 'DK', 'Dinamarca', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(58, 'DM', 'Domínica', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(59, 'DO', 'República Dominicana', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(60, 'DZ', 'Argel', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(61, 'EC', 'Ecuador', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(62, 'EE', 'Estonia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(63, 'EG', 'Egipto', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(64, 'EH', 'Sahara Occidental', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(65, 'ER', 'Eritrea', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(66, 'ES', 'España', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(67, 'ET', 'Etiopía', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(68, 'FI', 'Finlandia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(69, 'FJ', 'Fiji', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(70, 'FK', 'Islas Malvinas', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(71, 'FM', 'Micronesia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(72, 'FO', 'Islas Faroe', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(73, 'FR', 'Francia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(74, 'GA', 'Gabón', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(75, 'GB', 'Reino Unido', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(76, 'GD', 'Granada', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(77, 'GE', 'Georgia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(78, 'GF', 'Guayana Francesa', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(79, 'GG', 'Guernsey', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(80, 'GH', 'Ghana', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(81, 'GI', 'Gibraltar', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(82, 'GL', 'Groenlandia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(83, 'GM', 'Gambia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(84, 'GN', 'Guinea', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(85, 'GP', 'Guadalupe', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(86, 'GQ', 'Guinea Ecuatorial', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(87, 'GR', 'Grecia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(88, 'GS', 'Georgia del Sur e Islas Sandwich del Sur', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(89, 'GT', 'Guatemala', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(90, 'GU', 'Guam', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(91, 'GW', 'Guinea-Bissau', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(92, 'GY', 'Guayana', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(93, 'HK', 'Hong Kong', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(94, 'HM', 'Islas Heard y McDonald', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(95, 'HN', 'Honduras', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(96, 'HR', 'Croacia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(97, 'HT', 'Haití', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(98, 'HU', 'Hungría', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(99, 'ID', 'Indonesia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(100, 'IE', 'Irlanda', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(101, 'IL', 'Israel', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(102, 'IM', 'Isla de Man', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(103, 'IN', 'India', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(104, 'IO', 'Territorio Británico del Océano Índico', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(105, 'IQ', 'Irak', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(106, 'IR', 'Irán', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(107, 'IS', 'Islandia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(108, 'IT', 'Italia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(109, 'JE', 'Jersey', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(110, 'JM', 'Jamaica', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(111, 'JO', 'Jordania', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(112, 'JP', 'Japón', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(113, 'KE', 'Kenia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(114, 'KG', 'Kirguistán', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(115, 'KH', 'Camboya', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(116, 'KI', 'Kiribati', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(117, 'KM', 'Comoros', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(118, 'KN', 'San Cristóbal y Nieves', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(119, 'KP', 'Corea del Norte', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(120, 'KR', 'Corea del Sur', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(121, 'KW', 'Kuwait', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(122, 'KY', 'Islas Caimán', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(123, 'KZ', 'Kazajstán', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(124, 'LA', 'Laos', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(125, 'LB', 'Líbano', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(126, 'LC', 'Santa Lucía', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(127, 'LI', 'Liechtenstein', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(128, 'LK', 'Sri Lanka', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(129, 'LR', 'Liberia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(130, 'LS', 'Lesotho', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(131, 'LT', 'Lituania', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(132, 'LU', 'Luxemburgo', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(133, 'LV', 'Letonia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(134, 'LY', 'Libia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(135, 'MA', 'Marruecos', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(136, 'MC', 'Mónaco', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(137, 'MD', 'Moldova', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(138, 'ME', 'Montenegro', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(139, 'MG', 'Madagascar', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(140, 'MH', 'Islas Marshall', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(141, 'MK', 'Macedonia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(142, 'ML', 'Mali', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(143, 'MM', 'Myanmar', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(144, 'MN', 'Mongolia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(145, 'MO', 'Macao', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(146, 'MQ', 'Martinica', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(147, 'MR', 'Mauritania', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(148, 'MS', 'Montserrat', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(149, 'MT', 'Malta', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(150, 'MU', 'Mauricio', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(151, 'MV', 'Maldivas', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(152, 'MW', 'Malawi', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(153, 'MX', 'México', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(154, 'MY', 'Malasia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(155, 'MZ', 'Mozambique', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(156, 'NA', 'Namibia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(157, 'NC', 'Nueva Caledonia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(158, 'NE', 'Níger', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(159, 'NF', 'Islas Norkfolk', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(160, 'NG', 'Nigeria', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(161, 'NI', 'Nicaragua', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(162, 'NL', 'Países Bajos', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(163, 'NO', 'Noruega', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(164, 'NP', 'Nepal', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(165, 'NR', 'Nauru', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(166, 'NU', 'Niue', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(167, 'NZ', 'Nueva Zelanda', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(168, 'OM', 'Omán', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(169, 'PA', 'Panamá', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(170, 'PE', 'Perú', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(171, 'PF', 'Polinesia Francesa', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(172, 'PG', 'Papúa Nueva Guinea', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(173, 'PH', 'Filipinas', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(174, 'PK', 'Pakistán', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(175, 'PL', 'Polonia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(176, 'PM', 'San Pedro y Miquelón', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(177, 'PN', 'Islas Pitcairn', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(178, 'PR', 'Puerto Rico', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(179, 'PS', 'Palestina', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(180, 'PT', 'Portugal', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(181, 'PW', 'Islas Palaos', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(182, 'PY', 'Paraguay', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(183, 'QA', 'Qatar', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(184, 'RE', 'Reunión', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(185, 'RO', 'Rumanía', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(186, 'RS', 'Serbia y Montenegro', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(187, 'RU', 'Rusia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(188, 'RW', 'Ruanda', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(189, 'SA', 'Arabia Saudita', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(190, 'SB', 'Islas Solomón', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(191, 'SC', 'Seychelles', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(192, 'SD', 'Sudán', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(193, 'SE', 'Suecia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(194, 'SG', 'Singapur', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(195, 'SH', 'Santa Elena', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(196, 'SI', 'Eslovenia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(197, 'SJ', 'Islas Svalbard y Jan Mayen', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(198, 'SK', 'Eslovaquia', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(199, 'SL', 'Sierra Leona', NULL, true, 'default', '2023-02-07 05:41:54.217');
+INSERT INTO public.data_paises
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion)
+VALUES(200, 'SM', 'San Marino', NULL, true, 'default', '2023-02-07 05:41:54.217');
+
+
+INSERT INTO public.data_estados_departamentos
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_pais)
+VALUES(1, 'lpz', 'La Paz', NULL, true, 'default', '2023-02-07 05:44:46.365', 30);
+INSERT INTO public.data_estados_departamentos
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_pais)
+VALUES(2, 'scz', 'Santa Cruz', NULL, true, 'default', '2023-02-07 05:44:46.372', 30);
+INSERT INTO public.data_estados_departamentos
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_pais)
+VALUES(3, 'or', 'Oruro', NULL, true, 'default', '2023-02-07 05:44:46.377', 30);
+INSERT INTO public.data_estados_departamentos
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_pais)
+VALUES(4, 'cbba', 'Cochabamba', NULL, true, 'default', '2023-02-07 05:44:46.382', 30);
+INSERT INTO public.data_estados_departamentos
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_pais)
+VALUES(5, 'suc', 'Sucre', NULL, true, 'default', '2023-02-07 05:44:46.387', 30);
+INSERT INTO public.data_estados_departamentos
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_pais)
+VALUES(6, 'pt', 'Potosi', NULL, true, 'default', '2023-02-07 05:44:46.391', 30);
+INSERT INTO public.data_estados_departamentos
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_pais)
+VALUES(7, 'bn', 'Beni', NULL, true, 'default', '2023-02-07 05:44:46.396', 30);
+INSERT INTO public.data_estados_departamentos
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_pais)
+VALUES(8, 'pn', 'Pando', NULL, true, 'default', '2023-02-07 05:44:46.400', 30);
+INSERT INTO public.data_estados_departamentos
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_pais)
+VALUES(9, 'tja', 'Tarija', NULL, true, 'default', '2023-02-07 05:44:46.404', 30);
+
+
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(1, NULL, 'La Paz', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(2, NULL, 'Palca', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(3, NULL, 'Mecapaca', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(4, NULL, 'Achocalla', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(5, NULL, 'El Alto', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(6, NULL, 'Achacachi', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(7, NULL, 'Ancoraimes', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(8, NULL, 'Chua Cocani', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(9, NULL, 'Huarina', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(10, NULL, 'Santiago de Huata', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(11, NULL, 'Huatajata', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(12, NULL, 'Coro Coro', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(13, NULL, 'Caquiaviri', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(14, NULL, 'Calacoto', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(15, NULL, 'Comanche', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(16, NULL, 'Charaña', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(17, NULL, 'Waldo Ballivián', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(18, NULL, 'Nazacara de Pacajes', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(19, NULL, 'Callapa', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(20, NULL, 'Puerto Acosta', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(21, NULL, 'Mocomoco', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(22, NULL, 'Puerto Carabuco', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(23, NULL, 'Humanata', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(24, NULL, 'Escoma', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(25, NULL, 'Chuma', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(26, NULL, 'Ayata', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(27, NULL, 'Aucapata', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(28, NULL, 'Sorata', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(29, NULL, 'Guanay', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(30, NULL, 'Tacacoma', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(31, NULL, 'Quiabaya', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(32, NULL, 'Combaya', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(33, NULL, 'Tipuani', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(34, NULL, 'Mapiri', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(35, NULL, 'Teoponte', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(36, NULL, 'Apolo', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(37, NULL, 'Pelechuco', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(38, NULL, 'Viacha', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(39, NULL, 'Guaqui', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(40, NULL, 'Tiahuanaco', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(41, NULL, 'Desaguadero', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(42, NULL, 'San Andrés de Machaca', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(43, NULL, 'Jesús de Machaca', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(44, NULL, 'Taraco', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(45, NULL, 'Luribay', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(46, NULL, 'Sapahaqui', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(47, NULL, 'Yaco', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(48, NULL, 'Malla', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(49, NULL, 'Cairoma', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(50, NULL, 'Inquisivi', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(51, NULL, 'Quime', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(52, NULL, 'Cajuata', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(53, NULL, 'Colquiri', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(54, NULL, 'Ichoca', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(55, NULL, 'Licoma Pampa', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(56, NULL, 'Chulumani', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(57, NULL, 'Irupana', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(58, NULL, 'Yanacachi', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(59, NULL, 'Palos Blancos', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(60, NULL, 'La Asunta', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(61, NULL, 'Pucarani', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(62, NULL, 'Laja', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(63, NULL, 'Batallas', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(64, NULL, 'Puerto Pérez', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(65, NULL, 'Sica Sica', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(66, NULL, 'Umala', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(67, NULL, 'Ayo Ayo', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(68, NULL, 'Calamarca', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(69, NULL, 'Patacamaya', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(70, NULL, 'Colquencha', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(71, NULL, 'Collana', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(72, NULL, 'Coroico', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(73, NULL, 'Coripata', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(74, NULL, 'Ixiamas', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(75, NULL, 'San Buenaventura', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(76, NULL, 'Charazani', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(77, NULL, 'Curva', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(78, NULL, 'Copacabana', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(79, NULL, 'San Pedro de Tiquina', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(80, NULL, 'Tito Yupanqui', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(81, NULL, 'San Pedro de Curahuara', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(82, NULL, 'Papel Pampa', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(83, NULL, 'Chacarilla', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(84, NULL, 'Santiago de Machaca', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(85, NULL, 'Catacora', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(86, NULL, 'Caranavi', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(87, NULL, 'Alto Beni', NULL, true, 'default', '2023-02-07 05:48:49.417', 1);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(88, NULL, 'Santa Cruz de la Sierra', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(89, NULL, 'Cotoca', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(90, NULL, 'Porongo', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(91, NULL, 'La Guardia', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(92, NULL, 'El Torno', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(93, NULL, 'Warnes', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(94, NULL, 'Okinawa Uno', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(95, NULL, 'San Ignacio de Velasco', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(96, NULL, 'San Miguel de Velasco', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(97, NULL, 'San Rafael de Velasco', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(98, NULL, 'Buena Vista', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(99, NULL, 'San Carlos', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(100, NULL, 'Villa Yapacaní', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(101, NULL, 'San Juan de Yapacaní', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(102, NULL, 'San José de Chiquitos', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(103, NULL, 'Pailón', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(104, NULL, 'Roboré', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(105, NULL, 'Portachuelo', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(106, NULL, 'Santa Rosa del Sara', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(107, NULL, 'Colpa Bélgica', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(108, NULL, 'Lagunillas', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(109, NULL, 'Charagua', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(110, NULL, 'Cabezas', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(111, NULL, 'Cuevo', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(112, NULL, 'Gutiérrez', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(113, NULL, 'Camiri', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(114, NULL, 'Boyuibe', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(115, NULL, 'Vallegrande', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(116, NULL, 'El Trigal', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(117, NULL, 'Moro Moro', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(118, NULL, 'Postrervalle', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(119, NULL, 'Pucará', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(120, NULL, 'Samaipata', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(121, NULL, 'Pampagrande', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(122, NULL, 'Mairana', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(123, NULL, 'Quirusillas', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(124, NULL, 'Montero', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(125, NULL, 'General Saavedra', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(126, NULL, 'Mineros', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(127, NULL, 'Fernández Alonso', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(128, NULL, 'San Pedro', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(129, NULL, 'Concepción', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(130, NULL, 'San Javier', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(131, NULL, 'San Julián', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(132, NULL, 'San Ramón', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(133, NULL, 'San Antonio de Lomerío', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(134, NULL, 'Cuatro Cañadas', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(135, NULL, 'San Matías', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(136, NULL, 'Comarapa', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(137, NULL, 'Saipina', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(138, NULL, 'Puerto Suárez', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(139, NULL, 'Puerto Quijarro', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(140, NULL, 'El Carmen Rivero Tórrez', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(141, NULL, 'Ascensión de Guarayos', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(142, NULL, 'Urubichá', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(143, NULL, 'El Puente', NULL, true, 'default', '2023-02-07 05:57:29.968', 2);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(144, NULL, 'Oruro', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(145, NULL, 'Caracollo', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(146, NULL, 'El Choro', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(147, NULL, 'Paria', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(148, NULL, 'Challapata', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(149, NULL, 'Quillacas', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(150, NULL, 'Corque', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(151, NULL, 'Choquecota', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(152, NULL, 'Curahuara de Carangas', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(153, NULL, 'Turco', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(154, NULL, 'Huachacalla', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(155, NULL, 'Escara', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(156, NULL, 'Cruz de Machacamarca', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(157, NULL, 'Yunguyo de Litoral', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(158, NULL, 'Esmeralda', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(159, NULL, 'Poopó', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(160, NULL, 'Pazña', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(161, NULL, 'Antequera', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(162, NULL, 'Huanuni', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(163, NULL, 'Machacamarca', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(164, NULL, 'Salinas de Garci Mendoza', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(165, NULL, 'Pampa Aullagas', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(166, NULL, 'Sabaya', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(167, NULL, 'Coipasa', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(168, NULL, 'Chipaya', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(169, NULL, 'Toledo', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(170, NULL, 'Eucaliptus', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(171, NULL, 'Santiago de Andamarca', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(172, NULL, 'Belén de Andamarca', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(173, NULL, 'Totora', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(174, NULL, 'Santiago de Huari', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(175, NULL, 'La Rivera', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(176, NULL, 'Todos Santos', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(177, NULL, 'Carangas', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(178, NULL, 'Huayllamarca', NULL, true, 'default', '2023-02-07 05:57:29.968', 3);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(179, NULL, 'Cochabamba', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(180, NULL, 'Aiquile', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(181, NULL, 'Pasorapa', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(182, NULL, 'Omereque', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(183, NULL, 'Independencia', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(184, NULL, 'Morochata', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(185, NULL, 'Cocapata', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(186, NULL, 'Tarata', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(187, NULL, 'Anzaldo', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(188, NULL, 'Arbieto', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(189, NULL, 'Sacabamba', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(190, NULL, 'Arani', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(191, NULL, 'Vacas', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(192, NULL, 'Arque', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(193, NULL, 'Tacopaya', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(194, NULL, 'Capinota', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(195, NULL, 'Santiváñez', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(196, NULL, 'Sicaya', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(197, NULL, 'Cliza', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(198, NULL, 'Toco', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(199, NULL, 'Tolata', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(200, NULL, 'Quillacollo', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(201, NULL, 'Sipe Sipe', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(202, NULL, 'Tiquipaya', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(203, NULL, 'Vinto', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(204, NULL, 'Colcapirhua', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(205, NULL, 'Sacaba', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(206, NULL, 'Colomi', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(207, NULL, 'Villa Tunari', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(208, NULL, 'Tapacarí', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(209, NULL, 'Totora', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(210, NULL, 'Pojo', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(211, NULL, 'Pocona', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(212, NULL, 'Chimoré', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(213, NULL, 'Puerto Villarroel', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(214, NULL, 'Entre Ríos', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(215, NULL, 'Mizque', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(216, NULL, 'Vila Vila', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(217, NULL, 'Alalay', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(218, NULL, 'Punata', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(219, NULL, 'Villa Rivero', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(220, NULL, 'San Benito', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(221, NULL, 'Tacachi', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(222, NULL, 'Cuchumuela', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(223, NULL, 'Bolívar', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(224, NULL, 'Tiraque', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(225, NULL, 'Shinahota', NULL, true, 'default', '2023-02-07 05:57:29.968', 4);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(226, NULL, 'Sucre', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(227, NULL, 'Yotala', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(228, NULL, 'Poroma', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(229, NULL, 'Azurduy', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(230, NULL, 'Tarvita', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(231, NULL, 'Villa Zudáñez', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(232, NULL, 'Presto', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(233, NULL, 'Villa Mojocoya', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(234, NULL, 'Icla', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(235, NULL, 'Padilla', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(236, NULL, 'Tomina', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(237, NULL, 'Sopachuy', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(238, NULL, 'Villa Alcalá', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(239, NULL, 'El Villar', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(240, NULL, 'Monteagudo', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(241, NULL, 'Huacareta', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(242, NULL, 'Tarabuco', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(243, NULL, 'Yamparáez', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(244, NULL, 'Camargo', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(245, NULL, 'San Lucas', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(246, NULL, 'Incahuasi', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(247, NULL, 'Villa Charcas', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(248, NULL, 'Villa Serrano', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(249, NULL, 'Villa Abecia', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(250, NULL, 'Culpina', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(251, NULL, 'Las Carreras', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(252, NULL, 'Villa Vaca Guzman Muyupampa', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(253, NULL, 'Huacaya', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(254, NULL, 'Macharetí', NULL, true, 'default', '2023-02-07 05:57:29.968', 5);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(255, NULL, 'Potosí', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(256, NULL, 'Tinguipaya', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(257, NULL, 'Yocalla', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(258, NULL, 'Urmiri', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(259, NULL, 'Uncía', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(260, NULL, 'Chayanta', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(261, NULL, 'Llallagua', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(262, NULL, 'Chuquihuta', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(263, NULL, 'Betanzos', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(264, NULL, 'Chaquí', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(265, NULL, 'Tacobamba', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(266, NULL, 'Colquechaca', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(267, NULL, 'Ravelo', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(268, NULL, 'Pocoata', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(269, NULL, 'Ocurí', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(270, NULL, 'San Pedro de Macha', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(271, NULL, 'San Pedro de Buena Vista', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(272, NULL, 'Toro Toro', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(273, NULL, 'Cotagaita', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(274, NULL, 'Vitichi', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(275, NULL, 'Sacaca', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(276, NULL, 'Caripuyo', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(277, NULL, 'Tupiza', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(278, NULL, 'Atocha', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(279, NULL, 'Colcha K', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(280, NULL, 'San Pedro de Quemes', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(281, NULL, 'San Pablo de Lípez', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(282, NULL, 'Mojinete', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(283, NULL, 'San Antonio de Esmoruco', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(284, NULL, 'Puna', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(285, NULL, 'Caiza D', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(286, NULL, 'Ckochas', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(287, NULL, 'Uyuni', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(288, NULL, 'Tomave', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(289, NULL, 'Porco', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(290, NULL, 'Arampampa', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(291, NULL, 'Acasio', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(292, NULL, 'Llica', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(293, NULL, 'Tahua', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(294, NULL, 'Villazón', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(295, NULL, 'San Agustín', NULL, true, 'default', '2023-02-07 05:57:29.968', 6);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(296, NULL, 'Trinidad', NULL, true, 'default', '2023-02-07 05:57:29.968', 7);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(297, NULL, 'San Javier', NULL, true, 'default', '2023-02-07 05:57:29.968', 7);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(298, NULL, 'Riberalta', NULL, true, 'default', '2023-02-07 05:57:29.968', 7);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(299, NULL, 'Guayaramerín', NULL, true, 'default', '2023-02-07 05:57:29.968', 7);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(300, NULL, 'Reyes', NULL, true, 'default', '2023-02-07 05:57:29.968', 7);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(301, NULL, 'San Borja', NULL, true, 'default', '2023-02-07 05:57:29.968', 7);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(302, NULL, 'Santa Rosa', NULL, true, 'default', '2023-02-07 05:57:29.968', 7);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(303, NULL, 'Rurrenabaque', NULL, true, 'default', '2023-02-07 05:57:29.968', 7);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(304, NULL, 'Santa Ana del Yacuma', NULL, true, 'default', '2023-02-07 05:57:29.968', 7);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(305, NULL, 'Exaltación', NULL, true, 'default', '2023-02-07 05:57:29.968', 7);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(306, NULL, 'San Ignacio de Moxos', NULL, true, 'default', '2023-02-07 05:57:29.968', 7);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(307, NULL, 'Loreto', NULL, true, 'default', '2023-02-07 05:57:29.968', 7);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(308, NULL, 'San Andrés', NULL, true, 'default', '2023-02-07 05:57:29.968', 7);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(309, NULL, 'San Joaquín', NULL, true, 'default', '2023-02-07 05:57:29.968', 7);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(310, NULL, 'San Ramón', NULL, true, 'default', '2023-02-07 05:57:29.968', 7);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(311, NULL, 'Puerto Siles', NULL, true, 'default', '2023-02-07 05:57:29.968', 7);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(312, NULL, 'Magdalena', NULL, true, 'default', '2023-02-07 05:57:29.968', 7);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(313, NULL, 'Baures', NULL, true, 'default', '2023-02-07 05:57:29.968', 7);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(314, NULL, 'Huacaraje', NULL, true, 'default', '2023-02-07 05:57:29.968', 7);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(315, NULL, 'Cobija', NULL, true, 'default', '2023-02-07 05:57:29.968', 8);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(316, NULL, 'Porvenir', NULL, true, 'default', '2023-02-07 05:57:29.968', 8);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(317, NULL, 'Bolpebra', NULL, true, 'default', '2023-02-07 05:57:29.968', 8);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(318, NULL, 'Bella Flor', NULL, true, 'default', '2023-02-07 05:57:29.968', 8);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(319, NULL, 'Puerto Rico', NULL, true, 'default', '2023-02-07 05:57:29.968', 8);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(320, NULL, 'San Pedro', NULL, true, 'default', '2023-02-07 05:57:29.968', 8);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(321, NULL, 'Filadelfia', NULL, true, 'default', '2023-02-07 05:57:29.968', 8);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(322, NULL, 'Puerto Gonzalo Moreno', NULL, true, 'default', '2023-02-07 05:57:29.968', 8);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(323, NULL, 'San Lorenzo', NULL, true, 'default', '2023-02-07 05:57:29.968', 8);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(324, NULL, 'Sena', NULL, true, 'default', '2023-02-07 05:57:29.968', 8);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(325, NULL, 'Santa Rosa del Abuná', NULL, true, 'default', '2023-02-07 05:57:29.968', 8);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(326, NULL, 'Ingavi', NULL, true, 'default', '2023-02-07 05:57:29.968', 8);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(327, NULL, 'Nueva Esperanza', NULL, true, 'default', '2023-02-07 05:57:29.968', 8);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(328, NULL, 'Villa Nueva', NULL, true, 'default', '2023-02-07 05:57:29.968', 8);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(329, NULL, 'Santos Mercado', NULL, true, 'default', '2023-02-07 05:57:29.968', 8);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(330, NULL, 'Tarija', NULL, true, 'default', '2023-02-07 05:57:29.968', 9);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(331, NULL, 'Padcaya', NULL, true, 'default', '2023-02-07 05:57:29.968', 9);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(332, NULL, 'Bermejo', NULL, true, 'default', '2023-02-07 05:57:29.968', 9);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(333, NULL, 'Yacuiba', NULL, true, 'default', '2023-02-07 05:57:29.968', 9);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(334, NULL, 'Caraparí', NULL, true, 'default', '2023-02-07 05:57:29.968', 9);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(335, NULL, 'Villa Montes', NULL, true, 'default', '2023-02-07 05:57:29.968', 9);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(336, NULL, 'Uriondo', NULL, true, 'default', '2023-02-07 05:57:29.968', 9);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(337, NULL, 'Yunchará', NULL, true, 'default', '2023-02-07 05:57:29.968', 9);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(338, NULL, 'San Lorenzo', NULL, true, 'default', '2023-02-07 05:57:29.968', 9);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(339, NULL, 'El Puente', NULL, true, 'default', '2023-02-07 05:57:29.968', 9);
+INSERT INTO public.data_ciudades_municipios
+(id, codigo, nombre, descripcion, active, usuario_creacion, fecha_creacion, id_estado_departamento)
+VALUES(340, NULL, 'Entre Ríos', NULL, true, 'default', '2023-02-07 05:57:29.968', 9);

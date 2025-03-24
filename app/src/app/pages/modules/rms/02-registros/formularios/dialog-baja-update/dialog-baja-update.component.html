@@ -1,0 +1,330 @@
+<!-- HEADER -->
+<div fxLayout="row wrap">
+  <div>
+    <img src="assets/images/logo-aps.png" alt="homepage" class="light-logo">
+  </div>
+  <span fxFlex></span>
+  <button mat-icon-button color="warn" matDialogClose="cancel" matTooltip="Salir" (click)="close('close')">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<!--FIN DEL HEADER -->
+
+<!-- DATOS DE LA PERSONA SELECCIONADA -->
+<div mat-dialog-content>
+  <!--TITULO DE BUSQUEDA Y BOTON PARA AGREGAR NUEVA PERSONA NATURAL -->
+  <div fxLayout="row wrap">
+    <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
+    </div>
+    <div fxFlex.gt-lg="60" fxFlex.gt-md="60"  fxFlex.gt-xs="100" fxFlex="100">
+      <h2 mat-dialog-title class="head-dialog" style="text-align: center;">FICHA DE REGISTRO FUNCIONARIO/DIRECTIVO</h2>
+    </div>
+    <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
+    </div>
+  </div>
+  <!--FIN TITULO DE BUSQUEDA Y BOTON PARA AGREGAR NUEVA PERSONA NATURAL -->
+  <!-- DATOS DEL SELECCIONADO -->
+  <div  >
+    <!-- SUBTITULO FORMULARIO -->
+    <mat-card-subtitle>DATOS DEL FUNCIONARIO</mat-card-subtitle>
+    <!-- FIN SUBTITULO FORMULARIO -->
+
+    <!-- DATOS PERSONA SELECCIONADA -->
+      <!-- CABECERAS DE LA TABLA -->
+        <div fxLayout="row wrap">
+          <div   class="form-table-head" *ngFor="let config of columnsSelect"  [fxFlex.gt-lg]="config.width" [fxFlex.gt-md]="config.width" fxFlex.gt-xs="100" fxFlex="100">
+          {{config.label}}
+          </div>
+        </div>
+      <!-- DATA DE LA TABLA -->
+        <div fxLayout="row wrap">
+          <div class="form-table-body"  *ngFor="let column of columnsSelect" [fxFlex.gt-lg]="column.width" [fxFlex.gt-md]="column.width"  fxFlex.gt-xs="100" fxFlex="100">
+            <div class="form-table-body" >
+              {{this.data.data[column.name]}}
+            </div>
+          </div>
+        </div>
+  </div>
+  <!-- FIN DATOS DEL SELECCIONADO -->
+
+  <!-- DATOS DE LA BAJA -->
+  <div>
+    <!-- SUBTITULO FORMULARIO -->
+    <mat-card-subtitle>DATOS DE LA BAJA</mat-card-subtitle>
+    <!-- FIN SUBTITULO FORMULARIO -->
+
+    <!-- DATOS PERSONA SELECCIONADA -->
+      <!-- CABECERAS DE LA TABLA -->
+        <div fxLayout="row wrap" >
+          <div   class="form-table-head" *ngFor="let config of columnsBajaSelect"  [fxFlex.gt-lg]="config.width" [fxFlex.gt-md]="config.width" fxFlex.gt-xs="100" fxFlex="100">
+          {{config.label}}
+          </div>
+        </div>
+      <!-- DATA DE LA TABLA -->
+        <div fxLayout="row wrap">
+          <div class="form-table-body"  *ngFor="let column of columnsBajaSelect" [fxFlex.gt-lg]="column.width" [fxFlex.gt-md]="column.width"  fxFlex.gt-xs="100" fxFlex="100">
+            <div class="form-table-body" >
+              {{this.data.baja[column.name]}}
+            </div>
+          </div>
+        </div>
+  </div>
+  <!-- FIN DATOS DE LA BAJA -->
+
+  <!-- HECHOS POSTERIORES -->
+  <div > <!-- instead of your <div>  or use <div mat-dialog-content> -->
+    <!-- FORMULARIO -->
+      <!-- BODY - DATA DE TABLA NOTIFICACIONES  -->
+      <div>
+        <!--BOTONES PARA BUSCAR O ADICIONAR PERSONA -->
+        <div fxLayout="row wrap">
+          <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
+            <button style="text-align: left;"  mat-button color="primary" type="submit" class="form-element" matTooltip="Registrar" (click)="this.nuevoHechoPosterior=!this.nuevoHechoPosterior" >
+              <mat-icon>preview</mat-icon> 
+              Ver Hechos Posteriores
+            </button>
+          </div>
+          <div fxFlex.gt-lg="60" fxFlex.gt-md="60"  fxFlex.gt-xs="100" fxFlex="100">
+            <h2 mat-dialog-title class="head-dialog" style="text-align: center;">Hechos Posteriores</h2>
+          </div>
+          <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
+  <!--           <div *ngIf="!this.nuevoHechoPosterior" fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
+              <button   mat-button color="primary" type="submit" class="form-element" matTooltip="Registrar" (click)="this.nuevoHechoPosterior=!this.nuevoHechoPosterior" ><mat-icon>add</mat-icon> Nuevo Hecho Posterior</button>
+            </div> -->
+          </div>
+        </div>
+        <!--FIN BOTONES PARA BUSCAR O ADICIONAR PERSONA -->
+
+        <!-- BODY - FORMULARIO DE INSERCION IN ROW  -->
+        <div *ngIf="this.nuevoHechoPosterior" fxLayout="row wrap">
+          <!-- CAUSAL HECHOS POSTERIORES -->
+          <div fxFlex.gt-lg="40" fxFlex.gt-md="40"  fxFlex.gt-xs="100" fxFlex="100">
+            <form [formGroup]="formGroupNotificacion">
+              <mat-form-field class="form-search" appearance="outline" >
+                <mat-label>Causal</mat-label>
+                <mat-select formControlName="causal">
+                  <mat-option class="multiline-mat-option" *ngFor="let option of this.optionsHEchosPosteriores" [value]="option.value">
+                    {{option.label}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </form>
+          </div>
+
+          <!-- FECHA DE REGISTRO -->
+          <div fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="100" fxFlex="100">
+            <form  [formGroup]="formGroupNotificacion" >
+              <mat-form-field  class="form-search"  appearance="outline" >
+                <mat-label>Fecha</mat-label>
+                <input matInput [matDatepicker]="pickerNotificacion" (click)="pickerNotificacion.open()" formControlName="fecha" readonly>
+                <mat-datepicker #pickerNotificacion></mat-datepicker>
+              </mat-form-field>
+            </form>
+          </div>
+
+          <!-- DESCRIPCION -->
+          <div fxFlex.gt-lg="40" fxFlex.gt-md="40"  fxFlex.gt-xs="100" fxFlex="100">
+            <form  [formGroup]="formGroupNotificacion" >
+              <mat-form-field class="form-search" appearance="outline">
+                <mat-label>Descripción</mat-label>
+                <input  matInput formControlName="descripcion" >
+              </mat-form-field>
+            </form>
+          </div>
+
+        <!-- AGREGAR -->
+          <div fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="100" fxFlex="100">
+            <form [formGroup]="formGroupNotificacion" class="form-search" (click)="saveNotificaciones(formGroupNotificacion.value)" >
+              <button mat-raised-button color="primary"  matTooltip="Registrar" *ngIf="formGroupNotificacion.valid"><mat-icon>add</mat-icon> Agregar</button>
+            </form>
+          </div>
+        </div>
+      <!-- FIN DEL BODY -->
+        <!-- BODY - CABECERA DE TABLA NOTIFICACIONES  -->
+        <div *ngIf="this.nuevoHechoPosterior" fxLayout="row wrap">
+          <div class="form-label" fxFlex.gt-lg="30" fxFlex.gt-md="30"  fxFlex.gt-xs="100" fxFlex="100">
+            Causal
+          </div>
+          <div class="form-label" fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="100" fxFlex="100">
+            Fecha
+          </div>
+          <div class="form-label" fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
+            Descripción
+          </div>
+          <div class="form-label" fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="100" fxFlex="100">
+            Estado
+          </div>
+          <div class="form-label" fxFlex.gt-lg="15" fxFlex.gt-md="15"  fxFlex.gt-xs="100" fxFlex="100">
+            Observaciones
+          </div>
+          <div class="form-label" style="text-align: center;" fxFlex.gt-lg="15" fxFlex.gt-md="15"  fxFlex.gt-xs="10" fxFlex="10">
+          Acciones
+          </div>
+        </div>
+        <!-- FIN DEL BODY -->
+        <!-- BODY - DATA DE TABLA NOTIFICACIONES  -->
+        <div *ngIf="this.nuevoHechoPosterior">
+          <div  fxLayout="row wrap" *ngFor="let data of dataHechosPosteriores" >
+            <div class="form-search" fxFlex.gt-lg="30" fxFlex.gt-md="30"  fxFlex.gt-xs="100" fxFlex="100">
+              <div class="form-search">
+                {{data['causal']}}
+              </div>
+            </div>
+            <div class="form-search" fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="100" fxFlex="100">
+              <div class="form-search">
+                {{data['fecha_registro']| date:'dd/MM/yyyy'}}
+              </div>
+            </div>
+            <div class="form-search" fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
+              <div class="form-search">
+                {{data['descripcion']}}
+              </div>
+            </div>
+            <div *ngIf="rowEdit!=data['id']" class="form-search" fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="100" fxFlex="100">
+              <div class="form-search">
+                {{data['estado']}}
+              </div>
+            </div>
+            <div *ngIf="rowEdit==data['id']" fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="100" fxFlex="100">
+              <form [formGroup]="formGrouEditHechosPosteriores">
+                <mat-form-field class="form-search" appearance="outline" >
+                  <mat-label>Estado</mat-label>
+                  <mat-select formControlName="estado">
+                    <mat-option *ngFor="let option of this.dataOptions.optioEstadoHechosPosteriores" [value]="option.value">{{option.label}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </form>
+            </div>
+
+            <div *ngIf="rowEdit!=data['id']" class="form-search" fxFlex.gt-lg="15" fxFlex.gt-md="15"  fxFlex.gt-xs="100" fxFlex="100">
+              <div class="form-search">
+                {{data['observaciones']}}
+              </div>
+            </div>
+
+                    <!-- OBSERVACIONES -->
+          <div *ngIf="rowEdit==data['id']" fxFlex.gt-lg="15" fxFlex.gt-md="15"  fxFlex.gt-xs="100" fxFlex="100">
+            <form  [formGroup]="formGrouEditHechosPosteriores" >
+              <mat-form-field class="form-search" appearance="outline">
+                <mat-label>Observaciones</mat-label>
+                <input  matInput formControlName="observaciones" >
+              </mat-form-field>
+            </form>
+          </div>
+            <div *ngIf="data['estado']=='enProceso'&&rowEdit!=data['id']" fxFlex.gt-lg="15" fxFlex.gt-md="15"  fxFlex.gt-xs="10" fxFlex="10">
+                <button style="text-align: center;" class="form-element" mat-button color="primary" matTooltip="Confirmar" (click)="EditHechosPosteriores(data)">
+                  <mat-icon>edit</mat-icon>Editar
+                </button>
+            </div>
+            <div *ngIf="rowEdit==data['id']" fxFlex.gt-lg="8" fxFlex.gt-md="8"  fxFlex.gt-xs="8" fxFlex="8">
+              <button *ngIf="formGrouEditHechosPosteriores.valid" style="text-align: center;" class="form-element" mat-button color="primary" matTooltip="Confirmar" (click)="ConfirmHechosPosteriores(data)">
+                <mat-icon>save</mat-icon>Guardar
+              </button>
+          </div>
+          <div *ngIf="rowEdit==data['id']" fxFlex.gt-lg="7" fxFlex.gt-md="7"  fxFlex.gt-xs="7" fxFlex="7">
+            <button style="text-align: center;" class="form-element" mat-button color="warn" matTooltip="Confirmar" (click)="this.rowEdit=0">
+              <mat-icon>cancel</mat-icon>Cancelar
+            </button>
+        </div>
+          </div>
+        </div>
+
+        <!-- FIN DEL BODY -->
+      </div>
+    <!-- FIN DEL BODY -->
+
+  </div>
+
+  <!-- SOLICITUDES -->
+  <div mat-dialog-content > <!-- instead of your <div>  or use <div mat-dialog-content> -->
+      <div fxLayout="row wrap">
+        <div  fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
+          <button  style="text-align: left;" mat-button color="primary" type="submit" class="form-element" matTooltip="Registrar" (click)="this.viewSolicitudes=!this.viewSolicitudes" ><mat-icon>preview</mat-icon> Ver Solicitudes</button>
+        </div>
+        <div fxFlex.gt-lg="60" fxFlex.gt-md="60"  fxFlex.gt-xs="100" fxFlex="100">
+          <h2 mat-dialog-title class="head-dialog" style="text-align: center;">Solicitudes</h2>
+        </div>
+        <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
+        </div>
+      </div>
+
+
+      <div *ngIf="this.viewSolicitudes">
+
+        <!-- BODY - FORMULARIO DE INSERCION IN ROW  -->
+        <div fxLayout="row wrap">
+          <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="20" fxFlex="20">
+            <form [formGroup]="formGroupSolicitudes">
+              <mat-form-field class="form-search" appearance="outline" >
+                <mat-label>Tipo de solicitud</mat-label>
+                <mat-select formControlName="TipoSolicitud">
+                  <mat-option *ngFor="let option of this.tipoSolicitud" [value]="option.value">{{option.label}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </form>
+          </div>
+          <div fxFlex.gt-lg="60" fxFlex.gt-md="60"  fxFlex.gt-xs="60" fxFlex="60">
+            <form  [formGroup]="formGroupSolicitudes" >
+              <mat-form-field class="form-search" appearance="outline">
+                <mat-label>Descripción</mat-label>
+                <input matInput formControlName="Descripcion" >
+              </mat-form-field>
+            </form>
+          </div>
+
+          <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
+            <form [formGroup]="formGroupSolicitudes" class="form-search" (click)="saveSolicitud(formGroupSolicitudes.value)" >
+              <button mat-raised-button color="primary" matTooltip="Registrar" [disabled]="!formGroupSolicitudes.valid"><mat-icon>add</mat-icon> Agregar</button>
+            </form>
+          </div>
+        </div>
+
+
+      <!-- CABECERAS DE LA TABLA -->
+        <div fxLayout="row wrap" matSort (matSortChange)="sortData($event)" [matSortActive]="this.sort" [matSortDirection]="this.order" matSortDisableClear>
+          <div   class="form-label" *ngFor="let config of headersSolicitudes" [mat-sort-header]="config.name" [fxFlex.gt-lg]="config.width" [fxFlex.gt-md]="config.width" fxFlex.gt-xs="none" fxFlex=none>
+            {{config.label}}
+            </div>
+
+          <div style="text-align: center;"  class="form-label" fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="100" fxFlex="100">
+            Acciones
+          </div>
+        </div>
+      <!-- FIN CABECERAS DE LA TABLA -->
+
+      <!-- DATA DE LA TABLA -->
+        <div fxLayout="row wrap" *ngFor="let config of this.dataSolicitudes">
+        <div class="form-table-body"  *ngFor="let column of headersSolicitudes" [fxFlex.gt-lg]="column.width" [fxFlex.gt-md]="column.width"  fxFlex.gt-xs="60" fxFlex="60">
+          <div class="form-table-body" >
+            {{config[column.name]}}
+          </div>
+        </div>
+        <div style="text-align: center;"  fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="20" fxFlex="20">
+          <button *ngIf="config['estado']=='pendiente'" mat-button color="warn" class="form-table-body" (click)="updateRow(config)"><mat-icon>close</mat-icon>Eliminar</button>
+        </div>
+        <mat-divider></mat-divider>
+        </div>
+      <!-- FIN DATA DE LA TABLA -->
+
+
+
+      </div>
+
+    <!-- END MINE -->
+
+
+  </div>
+<!--FIN DEL BODY -->
+</div>
+<!--FIN DATOS DE LA PERSONA SELECCIONADA -->
+
+<!-- ACTIONS -->
+<div mat-dialog-actions fxLayout="row wrap"   >
+  <div fxFlex.gt-lg="80" fxFlex.gt-md="80"  fxFlex.gt-xs="100" fxFlex="100">
+  </div>
+  <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
+    <div class="form-element" >
+      <button mat-raised-button color="accent" class="form-element" matTooltip="Registrar" (click)="close('close')"><mat-icon>done</mat-icon>Aceptar</button>
+    </div>
+  </div>
+</div>

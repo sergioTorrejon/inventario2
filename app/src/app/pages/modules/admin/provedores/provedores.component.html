@@ -1,0 +1,279 @@
+<div fxLayout="row wrap">
+  <div fxFlex="100">
+    <mat-card class="card">
+
+      <!-- SECCION TITULO -->
+      <mat-card-header>
+        <img mat-card-avatar src="assets/images/img/documentos1.jpg" class="header-image"/>
+        <mat-card-title>Provedores</mat-card-title>
+        <span fxFlex></span>
+      </mat-card-header>
+      <div><mat-divider></mat-divider></div>
+      <!-- ***FIN*** SECCION TITULO -->
+
+
+      <!-- SECCION BUSQUEDA AVANZADA-->
+      <div>
+        <div  fxLayout="row wrap" style="padding: 10px 5px;">
+          <div fxFlex.gt-lg="100" fxFlex.gt-md="100"  fxFlex.gt-xs="100" fxFlex="100" >
+            <div fxLayout="row wrap" >
+
+              <!-- ETIQUETA -->
+              <div class="form-element">
+                  <mat-card-subtitle>Buscar...</mat-card-subtitle>
+              </div>
+              <span fxFlex></span>
+              <!-- ***FIN*** ETIQUETA -->
+
+                <!-- TIPO DE EMPRESA -->
+                <div *ngIf="this.isAdministrator" fxFlex.gt-lg="30" fxFlex.gt-md="30"  fxFlex.gt-xs="50" fxFlex="50">
+                  <form  [formGroup]="formGroup" >
+                  <mat-form-field class="form-search" appearance="outline" >
+                      <mat-label>Categoria de Empresa</mat-label>
+                      <mat-select formControlName="tipoEmpresa">
+                        <mat-option value="">TODOS</mat-option>
+                        <mat-option *ngFor="let option of this.dataOptions.categoria_empresa" [value]="option.id">{{option.label}}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </form>
+                </div>
+                <!-- ***FIN*** TIPO DE EMPRESA -->
+
+                <!-- NOMBRE DE EMPRESA -->
+                <div *ngIf="this.isAdministrator" fxFlex.gt-lg="40" fxFlex.gt-md="40"  fxFlex.gt-xs="50" fxFlex="50">
+                  <form  [formGroup]="formGroup" >
+                    <mat-form-field class="form-search" appearance="outline" >
+                        <mat-label>Empresa</mat-label>
+                        <mat-select formControlName="codEmpresa">
+                          <mat-option value="">TODOS</mat-option>
+                          <mat-option *ngFor="let option of this.empresas" [value]="option.value">{{option.label}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </form>
+                </div>
+                <!-- ***FIN*** NOMBRE DE EMPRESA -->
+
+                <!-- ESPACIO -->
+                <div *ngIf="this.isAdministrator" fxFlex.gt-lg="30" fxFlex.gt-md="30"  fxFlex.gt-xs="50" fxFlex="50">
+                </div>
+                <!-- ***FIN*** ESPACIO -->
+
+                <!-- ESTADO DEL FUNCIONARIO -->
+                <div fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="50" fxFlex="50">
+                  <form  [formGroup]="formGroup" >
+                  <mat-form-field class="form-search" appearance="outline" >
+                      <mat-label>Estado</mat-label>
+                      <mat-select formControlName="estado">
+                        <mat-option value="">TODOS</mat-option>
+                        <mat-option *ngFor="let option of this.dataOptions.optionEstado" [value]="option.value">{{option.label}}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </form>
+                </div>
+                <!-- ***FIN*** ESTADO DEL FUNCIONARIO -->
+
+                <!-- TIPO DE FUNCIONARIO -->
+                <div fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="50" fxFlex="50">
+                  <form  [formGroup]="formGroup" >
+                  <mat-form-field class="form-search" appearance="outline" >
+                      <mat-label>Niveles</mat-label>
+                      <mat-select formControlName="tipoCargo">
+                        <mat-option value="">TODOS</mat-option>
+                        <mat-option *ngFor="let option of this.dataOptions.nivel_cargo" [value]="option.value">{{option.label}}</mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </form>
+                </div>
+                <!-- ***FIN*** TIPO DE FUNCIONARIO -->
+
+                <!-- CARGO -->
+                <div fxFlex.gt-lg="15" fxFlex.gt-md="15"  fxFlex.gt-xs="50" fxFlex="50" >
+                  <form  [formGroup]="formGroup" >
+                  <mat-form-field class="form-search" appearance="outline">
+                      <mat-label>Cargo</mat-label>
+                      <input type="text" maxlength = "100" matInput formControlName="cargo" >
+                      <button mat-button *ngIf="formGroup.controls['cargo'].value" matSuffix mat-icon-button color="warn" aria-label="Clear" (click)="formGroup.controls['cargo'].setValue('')">
+                        <mat-icon>close</mat-icon>
+                      </button>
+                    </mat-form-field>
+                  </form>
+                </div>
+                <!-- ***FIN*** CARGO -->
+
+                <!-- FECHA DE INICIO DE RELACION LABORAL -->
+                <div fxFlex.gt-lg="15" fxFlex.gt-md="15"  fxFlex.gt-xs="50" fxFlex="50" >
+                  <form  [formGroup]="formGroup" >
+                    <mat-form-field class="form-search" appearance="outline">
+                        <mat-label>Fecha Ingreso</mat-label>
+                        <button style="padding-top: 5px;" mat-button *ngIf="formGroup.controls['fechaIngreso'].value" matSuffix mat-icon-button color="warn" aria-label="Clear" (click)="formGroup.controls['fechaIngreso'].setValue('')">
+                          <mat-icon>close</mat-icon>
+                        </button>
+                        <input [matDatepicker]="desde" (click)="desde.open()" matInput formControlName="fechaIngreso" readonly>
+                        <mat-datepicker #desde></mat-datepicker>
+                    </mat-form-field>
+                  </form>
+                </div>
+                <!-- ***FIN*** FECHA DE INICIO DE RELACION LABORAL -->
+
+                <!-- NUMERO DE IDENTIFICACION -->
+                <div fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="50" fxFlex="50" >
+                  <form  [formGroup]="formGroup" >
+                  <mat-form-field class="form-search" appearance="outline">
+                      <mat-label>Nro Identificación</mat-label>
+                      <input type="text" maxlength = "100" matInput maxlength="10" formControlName="nroIdentificacion" onkeypress="return (event.charCode != 39)">
+                      <button mat-button *ngIf="formGroup.controls['nroIdentificacion'].value" matSuffix mat-icon-button color="warn" aria-label="Clear" (click)="formGroup.controls['nroIdentificacion'].setValue('')">
+                        <mat-icon>close</mat-icon>
+                      </button>
+                    </mat-form-field>
+                  </form>
+                </div>
+                <!-- ***FIN*** NUMERO DE IDENTIFICACION -->
+
+                <!-- NOMBRES -->
+                <div fxFlex.gt-lg="15" fxFlex.gt-md="15"  fxFlex.gt-xs="50" fxFlex="50" >
+                  <form  [formGroup]="formGroup" >
+                  <mat-form-field class="form-search" appearance="outline">
+                      <mat-label>Nombres</mat-label>
+                      <input type="text" maxlength = "100" matInput formControlName="nombres" onkeypress="return (event.charCode != 39)">
+                      <button mat-button *ngIf="formGroup.controls['nombres'].value" matSuffix mat-icon-button color="warn" aria-label="Clear" (click)="formGroup.controls['nombres'].setValue('')">
+                        <mat-icon>close</mat-icon>
+                      </button>
+                    </mat-form-field>
+                  </form>
+                </div>
+                <!-- ***FIN*** NOMBRES -->
+
+                <!-- APELLIDOS -->
+                <div fxFlex.gt-lg="15" fxFlex.gt-md="15"  fxFlex.gt-xs="50" fxFlex="50" >
+                  <form  [formGroup]="formGroup" >
+                  <mat-form-field class="form-search" appearance="outline">
+                      <mat-label>Apellidos</mat-label>
+                      <input type="text" maxlength = "100" matInput formControlName="apellidos" onkeypress="return (event.charCode != 39)">
+                      <button mat-button *ngIf="formGroup.controls['apellidos'].value" matSuffix mat-icon-button color="warn" aria-label="Clear" (click)="formGroup.controls['apellidos'].setValue('')">
+                        <mat-icon>close</mat-icon>
+                      </button>
+                    </mat-form-field>
+                  </form>
+                </div>
+                <!-- ***FIN*** APELLIDOS -->
+
+                <!-- BOTON LIMPIAR -->
+                <div style="text-align: center; padding-top: 5px;" fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="100" fxFlex="100">
+                  <button mat-button class="form-search" color="primary" (click)="setForm()">
+                    <mat-icon>autorenew</mat-icon>
+                    Limpiar
+                  </button>
+                </div>
+                <!-- ***FIN*** BOTON LIMPIAR -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div><mat-divider></mat-divider></div>
+      <!-- ***FIN*** SECCION BUSQUEDA AVANZADA -->
+
+
+      <!-- SECCION REGISTROS -->
+      <div>
+
+        <!-- CABECERA DE REGISTROS -->
+        <div>
+          <div fxLayout="row wrap">
+            <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="0" fxFlex="0">
+            </div>
+            <!-- TITULO CABECERA DE REGISTROS -->
+            <div style="text-align: center; padding-top: 10px;" fxFlex.gt-lg="60" fxFlex.gt-md="60"  fxFlex.gt-xs="100" fxFlex="100">
+              <mat-card-subtitle >LISTADO DE REGISTROS</mat-card-subtitle>
+            </div>
+            <!-- ***FIN*** TITULO CABECERA DE REGISTROS -->
+
+            <!-- BOTONES DE OPCIONES-->
+            <div style="text-align: center;" fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="50" fxFlex="50">
+              <button mat-button class="form-search" color="primary" (click)="insertRow()">
+                <mat-icon>add</mat-icon>
+                Nuevo Registro
+              </button>
+            </div>
+            <div style="text-align: center;;" fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="50" fxFlex="50">
+              <button mat-button color="primary" [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon>Opciones</button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="downloadpdf()">Reporte Pdf</button>
+                <button mat-menu-item (click)="downloadCsv()">Reporte Excel</button>
+              </mat-menu>
+            </div>
+            <!-- ***FIN*** BOTONES DE OPCIONES -->
+          </div>
+        </div>
+        <!-- ***FIN*** CABECERA DE REGISTROS -->
+
+        <!-- TABLA DE REGISTROS -->
+        <div *ngIf="this.data.length>0">
+
+          <!-- CABECERA DE LA TABLA -->
+          <div fxLayout="row wrap" matSort (matSortChange)="sortData($event)" [matSortActive]="this.sort" [matSortDirection]="this.order" matSortDisableClear>
+            <!-- NOMBRES DE COLUMNAS -->
+            <div class="form-table-head" *ngFor="let config of columns" [mat-sort-header]="config.name" [fxFlex.gt-lg]="config.width" [fxFlex.gt-md]="config.width" fxFlex.gt-xs="none" fxFlex=none>
+              {{config.label}}
+            </div>
+            <!-- ***FIN*** NOMBRES DE COLUMNAS -->
+            <!-- COLUMNA ACCIONES -->
+            <div style="text-align: center;"  class="form-table-head" fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
+              Acciones
+            </div>
+            <!-- ***FIN*** COLUMNA ACCIONES -->
+          </div>
+          <!-- ***FIN*** CABECERA DE LA TABLA -->
+
+          <!-- DATA DE LA TABLA -->
+          <div fxLayout="row wrap" *ngFor="let row of this.data">
+            <!-- FILAS DE LA TABLA -->
+            <div class="form-table-body" *ngFor="let column of columns" [fxFlex.gt-lg]="column.width" [fxFlex.gt-md]="column.width"  fxFlex.gt-xs="60" fxFlex="60">
+              <div class="form-table-body">
+                {{row[column.name]}}
+              </div>
+            </div>
+            <!-- ***FIN*** FILAS DE LA TABLA -->
+            <!-- FILA DE ACCIONES -->
+          <div *ngIf="row['estado']!='baja'" style="text-align: center;"  fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="20" fxFlex="20">
+            <button mat-button color="warn" class="form-table-body" (click)="insertBaja(row)"><mat-icon>arrow_downward</mat-icon>Dar Baja</button>
+          </div>
+          <div *ngIf="row['estado']=='baja'" style="text-align: center;"  fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="20" fxFlex="20">
+            <button mat-button color="accent" class="form-table-body" (click)="updateBaja(row)"><mat-icon>expand_circle_down</mat-icon>Ver Baja</button>
+          </div>
+          <div style="text-align: center;"  fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="20" fxFlex="20">
+            <button mat-button color="primary" class="form-table-body" (click)="updateRow(row)"><mat-icon>preview</mat-icon>Ver Registro</button>
+          </div>
+            <!-- ***FIN*** FILA DE ACCIONES -->
+            <mat-divider></mat-divider>
+          </div>
+          <!-- ***FIN*** DATA DE LA TABLA -->
+
+          <!-- PAGINACION DE LA TABLA -->
+          <div><mat-divider></mat-divider></div>
+          <div>
+            <mat-paginator [length]="count" [pageSize]="page.size" [pageIndex]="page.index" [pageSizeOptions]="[5, 10, 25, 100]"
+            (page)="dataTableUpdate($event)"></mat-paginator>
+          </div>
+          <!-- ***FIN*** PAGINACION DE LA TABLA -->
+
+        </div>
+        <!-- ***FIN*** TABLA DE REGISTROS -->
+
+        <!-- TABLA SIN DATOS -->
+        <div *ngIf="this.data.length==0">
+          <div><mat-divider></mat-divider></div>
+          <div fxLayout="row wrap">
+            <div style="text-align: left; padding: 10px 10px;" fxFlex="100">
+              <mat-card-subtitle >**No se encontraron registros**</mat-card-subtitle>
+            </div>
+          </div>
+        </div>
+        <!-- ***FIN*** TABLA SIN DATOS -->
+
+      </div>
+      <!-- ***FIN*** SECCION REGISTROS -->
+
+    </mat-card>
+  </div>
+</div>

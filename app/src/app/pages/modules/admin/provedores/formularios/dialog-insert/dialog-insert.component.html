@@ -1,0 +1,120 @@
+<!-- HEADER -->
+<div fxLayout="row wrap">
+  <div>
+    <img src="assets/images/logo-aps.png" alt="homepage" class="light-logo">
+  </div>
+  <span fxFlex></span>
+  <button mat-icon-button color="warn" matDialogClose="cancel" matTooltip="Salir" (click)="close('close')">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<!--FIN DEL HEADER -->
+
+<!-- FORMULARIO DE ADICIONAR NUEVA PERSONA -->
+<div mat-dialog-content>
+<!--BOTONES PARA BUSCAR O ADICIONAR PERSONA -->
+  <div fxLayout="row wrap">
+    <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
+    </div>
+    <div fxFlex.gt-lg="60" fxFlex.gt-md="60"  fxFlex.gt-xs="100" fxFlex="100">
+      <h2 mat-dialog-title class="head-dialog" style="text-align: center;">REGISTRAR PROVEDOR</h2>
+    </div>
+    <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
+    </div>
+  </div>
+  <!--FIN BOTONES PARA BUSCAR O ADICIONAR PERSONA -->
+
+  <!-- FORMULARIO PERSONA NUEVO -->
+  <div fxLayout="row wrap" >
+    <!-- SUB TITULO -->
+      <div class="form-element">
+        <mat-card-subtitle>Datos del provedor </mat-card-subtitle>
+      </div>
+      <span fxFlex></span>
+    <!----------------------- FILA 1 ----------------------------->
+      <!-- Codigo -->
+      <div fxFlex.gt-lg="30" fxFlex.gt-md="30"  fxFlex.gt-xs="50" fxFlex="50">
+        <form  [formGroup]="formGroupPersona" >
+          <mat-form-field class="form-element" appearance="outline">
+            <mat-label>Codigo</mat-label>
+            <input  matInput formControlName="codigo"  maxlength = "50">
+          </mat-form-field>
+        </form>
+      </div>
+
+      <!-- Nombre -->
+      <div fxFlex.gt-lg="25" fxFlex.gt-md="25"  fxFlex.gt-xs="50" fxFlex="50">
+        <form  [formGroup]="formGroupPersona" >
+          <mat-form-field class="form-element" appearance="outline">
+            <mat-label>Nombre</mat-label>
+            <input  matInput formControlName="nombre"  maxlength = "50">
+          </mat-form-field>
+        </form>
+      </div>
+
+      <!-- Paisde Origen -->
+      <div fxFlex.gt-lg="25" fxFlex.gt-md="25"  fxFlex.gt-xs="50"fxFlex="50">
+        <form  [formGroup]="formGroupPersona" >
+          <mat-form-field class="form-element" appearance="outline">
+            <mat-label>Pais de Origen</mat-label>
+            <input  matInput formControlName="paisOrigen"  maxlength = "50">
+          </mat-form-field>
+        </form>
+      </div>
+
+      <!---------------------- FIN FILA 2 ------------------------->
+
+      <!-- Codigo -->
+      <div fxFlex.gt-lg="30" fxFlex.gt-md="30"  fxFlex.gt-xs="50" fxFlex="50">
+        <form  [formGroup]="formGroupPersona" >
+          <mat-form-field class="form-element" appearance="outline">
+            <mat-label>Mail</mat-label>
+            <input  matInput formControlName="mail"  maxlength = "50">
+          </mat-form-field>
+        </form>
+      </div>
+            
+      <!-- Nombre -->
+      <div fxFlex.gt-lg="25" fxFlex.gt-md="25"  fxFlex.gt-xs="50" fxFlex="50">
+        <form  [formGroup]="formGroupPersona" >
+          <mat-form-field class="form-element" appearance="outline">
+            <mat-label>Telefóno</mat-label>
+            <input  matInput formControlName="telefono"  maxlength = "50">
+          </mat-form-field>
+        </form>
+      </div>
+            
+      <!-- Paisde Origen -->
+      <div fxFlex.gt-lg="25" fxFlex.gt-md="25"  fxFlex.gt-xs="50"fxFlex="50">
+        <form  [formGroup]="formGroupPersona" >
+          <mat-form-field class="form-element" appearance="outline">
+            <mat-label>Dirección</mat-label>
+            <input  matInput formControlName="direccion"  maxlength = "50">
+          </mat-form-field>
+        </form>
+      </div>
+      <!---------------------- FIN FILA 2 ------------------------->
+
+  </div>
+</div>
+<!--FIN FORMULARIO DE ADICIONAR NUEVA PERSONA -->
+
+<!-- ACTIONS -->
+<div mat-dialog-actions fxLayout="row wrap"   >
+
+  <div fxFlex.gt-lg="80" fxFlex.gt-md="80"  fxFlex.gt-xs="100" fxFlex="100">
+  </div>
+
+  <!-- BOTON REGISTRAR NUEVO PERSONA NATURAL-->
+  <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
+    <form [formGroup]="formGroupPersona" (ngSubmit)="onSubmitPersonas(formGroupPersona.value)" >
+      <div class="form-element" >
+        <button mat-raised-button color="primary" type="submit" class="form-element" matTooltip="Registrar" ><mat-icon>save</mat-icon> Guardar Persona</button>
+      </div>
+      <div class="form-element" >
+      </div>
+    </form>
+  </div>
+  <!-- FIN BOTON REGISTRAR NUEVO PERSONA NATURAL-->
+</div>
+<!-- FIN DE ACTIONS-->

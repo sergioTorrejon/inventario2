@@ -1,0 +1,67 @@
+<!-- SECCION BUSQUEDA AVANZADA-->
+<div fxLayout="row wrap" class="container">
+  <!-- AREA BUSQUEDA -->
+  <div class="box">
+    <span >BUSQUEDA...</span>
+    <!-- BODY BUSQUEDA -->
+    <div >
+      <!-- AREA FORMULARIO -->
+      <div fxFlex >
+        <!-- FORMULARIO -->
+        <div class="box"  fxLayout="row wrap" >
+            <div *ngFor="let config of model.elments" [fxFlex.gt-lg]="config.width" [fxFlex.gt-md]="config.width"  fxFlex.gt-xs="100" fxFlex="100">
+              <form  [formGroup]="formGroup" >
+                  <mat-form-field *ngIf="config.type === 'input'" class="form-element" appearance="outline">
+                    <mat-label>{{config.label}}</mat-label>
+                    <input  matInput [formControlName]="config.name" >
+                    <button mat-button *ngIf="formGroup.controls[config.name].value" matSuffix mat-icon-button color="warn" aria-label="Clear" (click)="setFormField(config.name)">
+                    <mat-icon>close</mat-icon>
+                    </button>
+                    </mat-form-field>
+                  <mat-form-field *ngIf="config.type === 'select'" class="form-element" appearance="outline" >
+                    <mat-label>{{config.label}}</mat-label>
+                    <mat-select [formControlName]="config.name">
+                    <mat-option *ngFor="let option of config.option" [value]="option.value">{{option.label}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <mat-form-field *ngIf="config.type === 'date'" class="form-element" appearance="outline" >
+                    <mat-label>{{config.label}}</mat-label>
+                    <input matInput [matDatepicker]="picker" (click)="picker.open()" [formControlName]="config.name" readonly>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field>
+              </form>
+            </div>
+        </div>
+        <!-- **FIN** FORMULARIO -->
+      </div>
+      <!-- **FIN** AREA FORMULARIO -->
+      <!-- BOTONES -->
+      <div fxFlex="none" >
+        <div fxLayout="row wrap" >
+          <!-- BOTON BUSCAR -->
+          <div style="text-align: center;" fxFlex="100">
+              <button mat-button color="primary"  class="form-element" (click)="search()">
+                <mat-icon>search</mat-icon>
+                Buscar..
+              </button>
+          </div>
+          <!-- ***FIN*** BOTON BUSCAR -->
+          <!-- BOTON LIMPIAR -->
+          <div style="text-align: center;"  fxFlex="100" >
+              <button mat-button color="warn"  class="form-element" (click)="setForm()">
+                <mat-icon>autorenew</mat-icon>
+                Limpiar
+              </button>
+          </div>
+          <!-- ***FIN*** BOTON LIMPIAR -->
+        </div>
+      </div>
+      <!-- **FIN** BOTONES -->
+    </div>
+    <!-- **FIN** BODY BUSQUEDA -->
+  </div>
+  <!-- **FIN**  AREA BUSQUEDA-->
+</div>
+<!-- ***FIN*** SECCION BUSQUEDA AVANZADA -->  
+        
+<div><mat-divider></mat-divider></div>

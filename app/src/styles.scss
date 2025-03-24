@@ -1,0 +1,123 @@
+/* You can add global styles to this file, and also import other style files */
+.mat-button-toggle {
+    padding: 0 5px !important;
+    z-index: 1 !important;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+    
+  .mat-button-toggle-checked {
+    border: 1px #2e86c1  solid !important;
+    border-radius: 5px !important;
+    background-color: #2e86c1 !important;
+    color:white !important;;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .mat-button-toggle:hover {
+    background-color: #5dade2; /* Green */
+    border-radius: 5px !important;
+    color: white;
+  }
+
+  /* SERGIO */
+  
+  .button-element{
+    text-align: center;
+  }
+  
+  .button-simple{
+    padding: 2px 2px;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .table-title{
+    padding: 5px 2px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #2e4053;
+    color: white;
+  }
+
+  .cell {
+    padding: 5px 5px !important;
+  }
+  
+  .table-head{
+    font-size: 14px;
+    background-color: #dfe2e2;
+    color: black;
+  }
+
+  .table-body{
+    padding: 5px 0px !important;
+    font-size: 12px;
+  }
+  
+  .mat-divider-field {
+    border-top-color: rgb(3, 3, 3);
+  }
+  
+  .fieldTableImpar{
+    background-color: #f8f9f9;
+  }
+  .fieldTablePar{
+    background-color: #ebf5fb;
+  }
+
+  .container {
+    padding: 5px 5px !important;
+  }
+
+    .box {
+        border: 1px solid rgb(185, 185, 187);
+        height: auto !important;
+        width: 100%;
+    }
+    
+    .form-element {
+        padding: 0.1px 5px !important;
+        width: 100%;
+    }
+
+  ::ng-deep .mat-form-field-flex > .mat-form-field-infix { padding: 0.6em 0px !important;}
+  ::ng-deep .mat-form-field-subscript-wrapper {
+    font-size: 65%;
+    margin-top: 0.2em;
+    top: calc(100% - 2em);
+  }
+  
+  ::ng-deep .mat-form-field-appearance-outline.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+      transform: translateY(-1.7em) scale(.75)!important;
+      width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 12px !important;
+    font-weight: 300;
+    line-height: 1.2;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+    letter-spacing: normal !important;
+  }
+
+  .h-center {
+    text-align: center !important;
+  }
+
+  .h-left {
+    text-align: left !important;
+  }
+
+  .h-right {
+    text-align: right !important;
+  }
+
+  .prueba {
+    background-color: lightgreen !important;
+  }
+
+  .container-box {
+    border: 1px solid rgb(185, 185, 187);
+  }

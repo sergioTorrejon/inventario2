@@ -1,0 +1,16 @@
+<!--TOOLBAR-->
+<mat-button-toggle-group appearance="legacy" [value]="this.service.conf.optionSelected" fxLayout="row wrap" >
+    <mat-button-toggle  *ngFor="let menu of this.service.conf.menu"
+      [value]="menu.name" 
+      (click)="this.service.menuSelect(menu.name)">
+      <mat-icon>{{menu.icon}}</mat-icon>
+      <span fxShow="false" fxShow.gt-sm>{{menu.label}}</span>
+    </mat-button-toggle>
+  <span fxFlex></span>
+    <mat-button-toggle
+    value="settings" 
+    (click)="this.service.menuSelect('settings')">
+    <mat-icon>settings</mat-icon>
+  </mat-button-toggle>
+</mat-button-toggle-group>
+<!-- FIN TOOLBAR-->
