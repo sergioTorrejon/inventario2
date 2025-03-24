@@ -43,7 +43,7 @@ const MENUITEMS: any =
     icon: 'settings',
     role : [Roles.Administrador],
     children: [
-      { state: 'empresas', name: 'Provedores', type: 'link' },
+      { state: 'empresas', name: 'Productos', type: 'link' },
       { state: 'personas', name: 'Almacenes', type: 'link' },
       { state: 'solicitudes', name: 'Productos', type: 'link' },
     ]

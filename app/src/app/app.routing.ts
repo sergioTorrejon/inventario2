@@ -18,8 +18,15 @@ export const AppRoutes: Routes = [
           pathMatch: 'full'
       },
 
+      //PRODUCTOS
+      {
+        path: 'productos',
+        canActivate: [AuthGuard],
+        loadChildren: () => import('./pages/modules/admin/productos/productos.module').then(m => m.ProductosModule),
+        data: { titulo:'registros', roles: [Roles.Administrador, Roles.OperadorFuncionarios, Roles.AprobadorFuncionarios]}
+      },
 
-      //ADMINISTRATOR
+
 
       {
         path: 'empresas',
@@ -41,12 +48,6 @@ export const AppRoutes: Routes = [
         data: { titulo:'solicitudes',roles: [Roles.Administrador, Roles.OperadorFuncionarios, Roles.AprobadorFuncionarios]}
       },
 
-      {
-        path: 'provedores',
-        canActivate: [AuthGuard],
-        loadChildren: () => import('./pages/modules/admin/provedores/provedores.module').then(m => m.ProvedoresModule),
-        data: { titulo:'registros', roles: [Roles.Administrador, Roles.OperadorFuncionarios, Roles.AprobadorFuncionarios]}
-      },
 
       //ADMINISTRATOR
 

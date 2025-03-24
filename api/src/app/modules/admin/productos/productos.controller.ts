@@ -33,15 +33,12 @@ export class ProductosController {
   ) { 
   }
 
-  @Get('listOptions')
-  async getOptions(@User() userDto: UserDto) {
-    return await this.service.getOptions();
-  }
+  //#region CRUD SERVICES
 
-  //FUNCIONA!!!!
+  //GETALL
   @Get()
   async getAll(@User() userDto: UserDto, @Query() paginationDto: PaginationDto,@Query() sortDto: SortDto, @Query() searchDto: searchDto ) {
-    return await this.service.getAllPaginate(userDto,paginationDto,sortDto,searchDto);
+    return await this.service.getAll(userDto,paginationDto,sortDto,searchDto);
   }
 
   //FUNCIONA!!!!

@@ -33,7 +33,7 @@ import {
 } from 'src/app/pages/modules/admin/database/personas/personas.service';
 import { CrudService } from 'src/app/services/crud/crud.service';
 
-import { ProvedoresService } from '../../provedores.service';
+import { ProvedoresService } from '../../productos.service';
 
 @Component({
   selector: 'app-dialog-insert',

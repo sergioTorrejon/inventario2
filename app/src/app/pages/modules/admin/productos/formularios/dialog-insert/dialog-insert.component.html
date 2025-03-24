@@ -17,7 +17,7 @@
     <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
     </div>
     <div fxFlex.gt-lg="60" fxFlex.gt-md="60"  fxFlex.gt-xs="100" fxFlex="100">
-      <h2 mat-dialog-title class="head-dialog" style="text-align: center;">REGISTRAR PROVEDOR</h2>
+      <h2 mat-dialog-title class="head-dialog" style="text-align: center;">NUEVO REGISTRO</h2>
     </div>
     <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
     </div>
@@ -28,7 +28,7 @@
   <div fxLayout="row wrap" >
     <!-- SUB TITULO -->
       <div class="form-element">
-        <mat-card-subtitle>Datos del provedor </mat-card-subtitle>
+        <mat-card-subtitle>Datos</mat-card-subtitle>
       </div>
       <span fxFlex></span>
     <!----------------------- FILA 1 ----------------------------->
@@ -46,8 +46,8 @@
       <div fxFlex.gt-lg="25" fxFlex.gt-md="25"  fxFlex.gt-xs="50" fxFlex="50">
         <form  [formGroup]="formGroupPersona" >
           <mat-form-field class="form-element" appearance="outline">
-            <mat-label>Nombre</mat-label>
-            <input  matInput formControlName="nombre"  maxlength = "50">
+            <mat-label>Categoria</mat-label>
+            <input  matInput formControlName="categoria"  maxlength = "50">
           </mat-form-field>
         </form>
       </div>
@@ -56,8 +56,8 @@
       <div fxFlex.gt-lg="25" fxFlex.gt-md="25"  fxFlex.gt-xs="50"fxFlex="50">
         <form  [formGroup]="formGroupPersona" >
           <mat-form-field class="form-element" appearance="outline">
-            <mat-label>Pais de Origen</mat-label>
-            <input  matInput formControlName="paisOrigen"  maxlength = "50">
+            <mat-label>Marca</mat-label>
+            <input  matInput formControlName="marca"  maxlength = "50">
           </mat-form-field>
         </form>
       </div>
@@ -68,8 +68,8 @@
       <div fxFlex.gt-lg="30" fxFlex.gt-md="30"  fxFlex.gt-xs="50" fxFlex="50">
         <form  [formGroup]="formGroupPersona" >
           <mat-form-field class="form-element" appearance="outline">
-            <mat-label>Mail</mat-label>
-            <input  matInput formControlName="mail"  maxlength = "50">
+            <mat-label>Modelo</mat-label>
+            <input  matInput formControlName="modelo"  maxlength = "50">
           </mat-form-field>
         </form>
       </div>
@@ -78,8 +78,8 @@
       <div fxFlex.gt-lg="25" fxFlex.gt-md="25"  fxFlex.gt-xs="50" fxFlex="50">
         <form  [formGroup]="formGroupPersona" >
           <mat-form-field class="form-element" appearance="outline">
-            <mat-label>Telefóno</mat-label>
-            <input  matInput formControlName="telefono"  maxlength = "50">
+            <mat-label>Medida</mat-label>
+            <input  matInput formControlName="medida"  maxlength = "50">
           </mat-form-field>
         </form>
       </div>
@@ -88,8 +88,8 @@
       <div fxFlex.gt-lg="25" fxFlex.gt-md="25"  fxFlex.gt-xs="50"fxFlex="50">
         <form  [formGroup]="formGroupPersona" >
           <mat-form-field class="form-element" appearance="outline">
-            <mat-label>Dirección</mat-label>
-            <input  matInput formControlName="direccion"  maxlength = "50">
+            <mat-label>Descripción</mat-label>
+            <input  matInput formControlName="descripcion"  maxlength = "50">
           </mat-form-field>
         </form>
       </div>
@@ -109,7 +109,7 @@
   <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
     <form [formGroup]="formGroupPersona" (ngSubmit)="onSubmitPersonas(formGroupPersona.value)" >
       <div class="form-element" >
-        <button mat-raised-button color="primary" type="submit" class="form-element" matTooltip="Registrar" ><mat-icon>save</mat-icon> Guardar Persona</button>
+        <button mat-raised-button color="primary" type="submit" class="form-element" matTooltip="Registrar" ><mat-icon>save</mat-icon> Guardar</button>
       </div>
       <div class="form-element" >
       </div>

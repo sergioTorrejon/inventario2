@@ -21,13 +21,15 @@ export class ProductosService {
   constructor(
     @InjectRepository(Productos) private readonly repository: Repository<Productos>,
     ) { }
-/************************************************************************************************ */
+
+
 //#region CRUD SERVICES
-async getAllPaginate(userDto:UserDto,paginationDto: PaginationDto, sortDto:SortDto,dto:searchDto) {
+async getAll(userDto:UserDto,paginationDto: PaginationDto, sortDto:SortDto,dto:searchDto) {
   const query = this.repository.createQueryBuilder('q')
   .where('q.active=true')
   .orderBy(sortDto.sort, sortDto.order=='asc'?'ASC':'DESC');
   const data = await query.select('*').offset((paginationDto.page-1)*paginationDto.limit).limit(paginationDto.limit).getRawMany()
+  console.log('PRUEBA DE PRODUCTOS', data)
   const count = await query.getCount()
   return responseSuccess(RESP_MESSAGES.GET,{data:data,count:count});
 }
@@ -47,7 +49,7 @@ async getById(userDto:UserDto,id: number)  {
 
 async createOne(userDto: UserDto,dto: createDto) {
   try{
-    const getOne  = await  this.repository.findOne({ where:{ nombre: dto.nombre, active:true}})
+    const getOne  = await  this.repository.findOne({ where:{ codigo: dto.codigo, active:true}})
     if (!getOne)  throw new Error('No existe Datos con este usuario');
     const create =  this.repository.create(dto);
     create.userCreate = userDto.username;

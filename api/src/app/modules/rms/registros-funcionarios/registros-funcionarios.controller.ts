@@ -69,7 +69,7 @@ export class RegistrosFuncionariosController {
   }
 
   //FUNCIONA!!!!
-  @UseGuards(JwtAdminRoleGuard)
+  //@UseGuards(JwtAdminRoleGuard)
   @Get()
   async getMany(@User() userDto: UserDto,@Query() paginationDto: PaginationDto,@Query() sortDto: SortDto, @Query() searchDto: searchDto) {
     return await this.service.getMany(userDto,paginationDto,sortDto,searchDto);

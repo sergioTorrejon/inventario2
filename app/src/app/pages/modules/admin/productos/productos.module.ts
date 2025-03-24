@@ -20,16 +20,16 @@ import {
 import {
   DialogUpdateComponent,
 } from './formularios/dialog-update/dialog-update.component';
-import { ProvedoresComponent } from './provedores.component';
+import { ProductosComponent } from './productos.component';
 
 @NgModule({
     declarations: [
-      ProvedoresComponent,
+      ProductosComponent,
       DialogInsertComponent,
       DialogUpdateComponent
     ],
     exports: [],
-    bootstrap: [ProvedoresComponent],
+    bootstrap: [ProductosComponent],
     imports: [
         ReactiveFormsModule,
         PdfViewerModule,
@@ -44,9 +44,9 @@ import { ProvedoresComponent } from './provedores.component';
         RouterModule.forChild([
             {
                 path: '',
-                component: ProvedoresComponent
+                component: ProductosComponent
             },
         ])
     ]
 })
-export class ProvedoresModule { }
+export class ProductosModule { }

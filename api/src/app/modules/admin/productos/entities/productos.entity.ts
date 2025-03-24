@@ -20,22 +20,23 @@ export class Productos{
   provedor: Provedores
 
   /******************************COLUMNAS************************************** */
-  @Column({ type: 'varchar', name:'codigo' ,length: 50 , nullable: true })
+  @Column({ type: 'varchar', length: 50 , nullable: true })
   codigo: string;
 
-  @Column({ type: 'varchar', name:'nombre' ,length: 250 , nullable: false })
-  nombre: string;
+  @Column({ type: 'varchar', length: 250 , nullable: false })
+  categoria: string;
 
-  @Column({ type: 'varchar', name:'tipo_producto', length: 250 , nullable: true })
-  tipoProducto: string;
+  @Column({ type: 'varchar', length: 250 , nullable: true })
+  marca: string;
 
-  @Column({ type: 'varchar', name:'medida', length: 250 , nullable: true })
-  medida: string;
-
-  @Column({ type: 'varchar', name:'modelo', length: 250 , nullable: true })
+  @Column({ type: 'varchar', length: 250 , nullable: true })
   modelo: string;
 
+  @Column({ type: 'varchar', length: 250 , nullable: true })
+  medida: string;
 
+  @Column({ type: 'varchar', length: 250 , nullable: true })
+  descripcion: string;
 
 
   /******************************ACTIVO************************************** */

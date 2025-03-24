@@ -9,7 +9,7 @@ export const MENUITEMS: any =
     icon: 'settings',
     role : [Roles.Administrador],
     children: [
-      { state: 'provedores', name: 'Provedores', type: 'link' },
+      { state: 'productos', name: 'Productos', type: 'link' },
       { state: 'solicitudes', name: 'Almacenes', type: 'link' },
       { state: 'personas', name: 'productos', type: 'link' },
     ]

@@ -26,25 +26,26 @@ import {
 import {
   DialogUpdateComponent,
 } from './formularios/dialog-update/dialog-update.component';
-import { PROVEDORES } from './model/provedores.model';
-import { ProvedoresService } from './provedores.service';
+import { MODEL } from './model/productos.model';
+import { ProvedoresService } from './productos.service';
 
 @Component({
-  selector: 'app-provedores',
-  templateUrl: './provedores.component.html',
-  styleUrls: ['./provedores.component.css'],
+  selector: 'app-productos',
+  templateUrl: './productos.component.html',
+  styleUrls: ['./productos.component.css'],
 })
-export class ProvedoresComponent implements OnInit {
+export class ProductosComponent implements OnInit {
 
 //GLOBALS
   dateToday= new Date()
 
 
+  // MODEL
+  model=MODEL
 
-  // CONFIGURACION
-  model=PROVEDORES
   // Variables del Formulario
   formGroup: UntypedFormGroup;
+
   isAdministrator=this.authenticationService.GetRoles().includes('administrador')
   empresas: any = [];
   dataOptions: any = [];
@@ -61,7 +62,7 @@ export class ProvedoresComponent implements OnInit {
     index: 0
   };
 
-  columns = this.isAdministrator?this.model.columns:this.model.columnsOperador
+  columnsTable = this.model.columnsTable
 
 
   constructor(
@@ -74,6 +75,7 @@ export class ProvedoresComponent implements OnInit {
     private _snackBar: MatSnackBar
     ) {
       this.formGroup =this.formBuilder.group([]);
+
       this.restCrud.getOptions().subscribe((data:any) => {
         this.model.dataOptions = data.data;
         this.dataOptions = this.model.dataOptions;
@@ -88,7 +90,6 @@ export class ProvedoresComponent implements OnInit {
   }
 
   setForm(){
-    this.isAdministrator = this.authenticationService.GetRoles().includes('administrador')
       this.formGroup =this.formBuilder.group(this.model.formControl);
       this.formOnchange();
       this.dataTableUpdate(this.page);
@@ -107,20 +108,23 @@ export class ProvedoresComponent implements OnInit {
       })
   }
 
+  // ORDENAR LA TABLA
   sortData(event:any){
-      this.sort = event.active;
-      this.order = event.direction;
-      if (this.order == ""){
-        this.sort = 'id';
-      }
-      this.dataTableUpdate(this.page);
+    this.sort = event.active;
+    this.order = event.direction;
+    if (this.order == ""){
+      this.sort = 'id';
+    }
+    this.dataTableUpdate(this.page);
   }
 
+  //ACTUALIZA LA TABLA DEL MÓDULO
   dataTableUpdate(event: any){
 
       this.page.size = event.pageSize !== undefined? event.pageSize: 10;
       this.page.index = event.pageIndex !== undefined? event.pageIndex: 0;
-      this.rest.getFuncionarios('registros_funcionarios',(this.formGroup).getRawValue(),this.page.index+1, this.page.size,this.sort, this.order)
+      var searchDto = (this.formGroup).getRawValue()
+      this.rest.getAll(this.model.name,searchDto,this.page.index+1, this.page.size,this.sort, this.order)
       .subscribe((data:any) => {
         const result = data.data
         this.data = result.data;
@@ -128,6 +132,8 @@ export class ProvedoresComponent implements OnInit {
       });
   }
 
+  //#region CRUD
+  //FUNCIÓN PARA ABRIR LA VENTANA DE INSERTAR
   insertRow()
   {
     var dialogConfig = new MatDialogConfig();
@@ -148,6 +154,7 @@ export class ProvedoresComponent implements OnInit {
     });
   }
 
+  //FUNCIÓN PARA ABRIR LA VENTANA DE ACTUALIZAR
   updateRow(rowSelect: any) {
     var dialogConfig = new MatDialogConfig();
     dialogConfig.width = '1200px';
@@ -168,6 +175,7 @@ export class ProvedoresComponent implements OnInit {
     });
   }
 
+  //FUNCIÓN PARA ELIMINAR
   deleteRow(rowSelect: any) {
     let dialogMessage = this.dialog.open(MessageBoxComponent, {
       disableClose: true,
@@ -190,6 +198,7 @@ export class ProvedoresComponent implements OnInit {
     });
   }
 
+  //ABRIR LA CONFIRMACION 
   openSnackBar(message: string, action: string, type:string) {
     this._snackBar.open(message, action, {
       duration: 2000,
@@ -199,6 +208,7 @@ export class ProvedoresComponent implements OnInit {
     })
   }
 
+  // DESCARGAR EN EXCEL
   downloadCsv() {
     const dto = (this.formGroup).getRawValue();
     this.rest.getCsv('registros_funcionarios',dto)
@@ -217,6 +227,7 @@ export class ProvedoresComponent implements OnInit {
     });
   }
 
+  // DESCARGAR EN PDF
   downloadpdf() {
       const dto = (this.formGroup).getRawValue();
       this.rest.getPdf('registros_funcionarios',dto)
@@ -234,5 +245,6 @@ export class ProvedoresComponent implements OnInit {
         console.log(error);
     });
   }
+
 }
 
