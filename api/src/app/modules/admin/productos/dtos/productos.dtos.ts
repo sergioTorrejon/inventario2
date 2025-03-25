@@ -10,19 +10,33 @@ import { Provedores } from '../../provedores/entities/provedores.entity';
 export class ProductosCreateDto {
   
   @ApiProperty()
-  @IsString()
-  provedor: Provedores;
-
-  @ApiProperty()
   @IsOptional()
   @IsString()
-  @MaxLength(50)
+  @MaxLength(250)
   codigo?: string;
 
   @ApiProperty()
   @IsString()
   @MaxLength(250)
-  nombre: string;
+  categoria: string;
+
+  @ApiProperty()
+  @IsString()
+  @IsOptional()
+  @MaxLength(250)
+  marca?: string;
+
+  @ApiProperty()
+  @IsString()
+  @IsOptional()
+  @MaxLength(250)
+  modelo?: string;
+
+  @ApiProperty()
+  @IsString()
+  @IsOptional()
+  @MaxLength(250)
+  medida?: string;
 
   @ApiProperty()
   @IsString()
@@ -33,7 +47,7 @@ export class ProductosCreateDto {
 }
 
 export class ProductosUpdateDto extends PartialType(
-  OmitType(ProductosCreateDto, ["provedor","nombre"] as const),
+  OmitType(ProductosCreateDto, ["codigo"] as const),
 ) {}
 
 export class ProductosSearchDto {

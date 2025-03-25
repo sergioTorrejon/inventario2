@@ -10,8 +10,6 @@ export const MENUITEMS: any =
     role : [Roles.Administrador],
     children: [
       { state: 'productos', name: 'Productos', type: 'link' },
-      { state: 'solicitudes', name: 'Almacenes', type: 'link' },
-      { state: 'personas', name: 'productos', type: 'link' },
     ]
   },
 
@@ -28,7 +26,7 @@ export const MENUITEMS: any =
 
   {
     state: 'consultas',
-    name: 'Reportes',
+    name: 'Consultas',
     type: 'link',
     icon: 'manage_search',
     role : [Roles.ConsultaFuncionarios, Roles.Administrador],

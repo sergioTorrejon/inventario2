@@ -17,13 +17,15 @@
     <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
     </div>
     <div fxFlex.gt-lg="60" fxFlex.gt-md="60"  fxFlex.gt-xs="100" fxFlex="100">
-      <h2 mat-dialog-title class="head-dialog" style="text-align: center;">FICHA DE REGISTRO FUNCIONARIO/DIRECTIVO</h2>
+      <h2 mat-dialog-title class="head-dialog" style="text-align: center;">FICHA DE REGISTRO</h2>
     </div>
     <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
     </div>
   </div>
   <!--FIN TITULO DE BUSQUEDA Y BOTON PARA AGREGAR NUEVA PERSONA NATURAL -->
 <!-- DATOS DEL SELECCIONADO -->
+
+
 <div  >
   <!-- SUBTITULO FORMULARIO -->
   <mat-card-subtitle>DATOS DE LA PERSONA</mat-card-subtitle>
@@ -47,29 +49,6 @@
 </div>
 <!-- FIN DATOS DEL SELECCIONADO -->
 
-<!-- DATOS DEL SELECCIONADO -->
-<div  *ngIf="!this.editar">
-  <!-- SUBTITULO FORMULARIO -->
-  <mat-card-subtitle>DATOS DEL CARGO</mat-card-subtitle>
-  <!-- FIN SUBTITULO FORMULARIO -->
-
-  <!-- DATOS PERSONA SELECCIONADA -->
-    <!-- CABECERAS DE LA TABLA -->
-      <div fxLayout="row wrap">
-        <div   class="form-table-head" *ngFor="let config of columnsFuncionarioSelect"  [fxFlex.gt-lg]="config.width" [fxFlex.gt-md]="config.width" fxFlex.gt-xs="100" fxFlex="100">
-        {{config.label}}
-        </div>
-      </div>
-    <!-- DATA DE LA TABLA -->
-      <div fxLayout="row wrap">
-        <div class="form-table-body"  *ngFor="let column of columnsFuncionarioSelect" [fxFlex.gt-lg]="column.width" [fxFlex.gt-md]="column.width"  fxFlex.gt-xs="100" fxFlex="100">
-          <div class="form-table-body" >
-            {{this.data.data[column.name]}}
-          </div>
-        </div>
-      </div>
-</div>
-<!-- FIN DATOS DEL SELECCIONADO -->
 </div>
 <!--FIN DATOS DE LA PERSONA SELECCIONADA -->
 
@@ -85,59 +64,59 @@
     <div fxLayout="row wrap" >
       <!---------------------- FILA 3 ----------------------------->
 
-        <!-- TIPO DE CARGO -->
-        <div fxFlex.gt-lg="30" fxFlex.gt-md="30"  fxFlex.gt-xs="100" fxFlex="100">
-          <form  [formGroup]="formGroupFuncionario" >
-            <mat-form-field class="form-element" appearance="outline" >
-              <mat-label>Tipo de Cargo</mat-label>
-              <mat-select formControlName="tipoCargo">
-                <mat-option *ngFor="let option of this.dataOptions.tipo_funcionario" [value]="option.value">{{option.label}}</mat-option>
-              </mat-select>
-            </mat-form-field>
-          </form>
-        </div>
-
-        <!-- NOMBRE DEL CARGO -->
-        <div fxFlex.gt-lg="70" fxFlex.gt-md="70"  fxFlex.gt-xs="100" fxFlex="100">
+        <!-- codigo -->
+        <div fxFlex.gt-lg="50" fxFlex.gt-md="50"  fxFlex.gt-xs="100" fxFlex="100">
           <form  [formGroup]="formGroupFuncionario" >
             <mat-form-field class="form-element" appearance="outline">
-              <mat-label>Cargo</mat-label>
-              <input  matInput formControlName="cargo"  maxlength = "100">
+              <mat-label>Código</mat-label>
+              <input  matInput formControlName="codigo"  maxlength = "100">
             </mat-form-field>
           </form>
         </div>
 
-        <!-- FECHA -->
-        <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
-          <form  [formGroup]="formGroupFuncionario" >
-            <mat-form-field class="form-element" appearance="outline" >
-              <mat-label>Fecha de Ingreso</mat-label>
-              <input matInput [matDatepicker]="picker" (click)="picker.open()" formControlName="fechaIngreso" readonly>
-              <mat-datepicker #picker></mat-datepicker>
-            </mat-form-field>
-          </form>
-        </div>
+      <!-- CATEGORIA -->
+      <div fxFlex.gt-lg="25" fxFlex.gt-md="25"  fxFlex.gt-xs="50" fxFlex="50">
+        <form  [formGroup]="formGroup" >
+          <mat-form-field class="form-search" appearance="outline" >
+            <mat-label>Categoria</mat-label>
+            <mat-select formControlName="categoria">
+              <mat-option *ngFor="let option of this.tipoCategoriaProducto" [value]="option.value">{{option.label}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </form>
+      </div>
+      <!-- ***FIN*** CATEGORIA -->
+
+      <!-- MARCA -->
+      <div fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="50" fxFlex="50">
+        <form  [formGroup]="formGroup" >
+          <mat-form-field class="form-search" appearance="outline" >
+            <mat-label>Marca</mat-label>
+            <mat-select formControlName="marca">
+              <mat-option *ngFor="let option of this.marcasProducto" [value]="option.value">{{option.label}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </form>
+      </div>
+      <!-- ***FIN*** MARCA -->
+
 
         <!-- DEPARTAMENTO -->
-        <div fxFlex.gt-lg="30" fxFlex.gt-md="30"  fxFlex.gt-xs="100" fxFlex="100">
+        <div fxFlex.gt-lg="50" fxFlex.gt-md="50"  fxFlex.gt-xs="100" fxFlex="100">
           <form  [formGroup]="formGroupFuncionario" >
-            <mat-form-field class="form-element" appearance="outline" >
-              <mat-label>Departamento</mat-label>
-              <mat-select formControlName="departamento">
-                <mat-option *ngFor="let option of this.dataOptions.tipoCiudad" [value]="option.value">{{option.label}}</mat-option>
-              </mat-select>
+            <mat-form-field class="form-element" appearance="outline">
+              <mat-label>Modelo</mat-label>
+              <input  matInput formControlName="modelo"  maxlength = "100">
             </mat-form-field>
           </form>
         </div>
 
         <!-- CIUDAD -->
-        <div fxFlex.gt-lg="30" fxFlex.gt-md="30"  fxFlex.gt-xs="100" fxFlex="100">
+        <div fxFlex.gt-lg="50" fxFlex.gt-md="50"  fxFlex.gt-xs="100" fxFlex="100">
           <form  [formGroup]="formGroupFuncionario" >
-            <mat-form-field class="form-element" appearance="outline" >
-              <mat-label>Municipio</mat-label>
-              <mat-select formControlName="municipio">
-                <mat-option *ngFor="let option of this.dataOptions.tipoCiudad" [value]="option.value">{{option.label}}</mat-option>
-              </mat-select>
+            <mat-form-field class="form-element" appearance="outline">
+              <mat-label>Medida</mat-label>
+              <input  matInput formControlName="medida"  maxlength = "100">
             </mat-form-field>
           </form>
         </div>
@@ -146,8 +125,8 @@
         <div fxFlex.gt-lg="50" fxFlex.gt-md="50"  fxFlex.gt-xs="100" fxFlex="100">
           <form  [formGroup]="formGroupFuncionario" >
             <mat-form-field class="form-element" appearance="outline" >
-              <mat-label>Nro. de Contrato </mat-label>
-              <input  matInput formControlName="nroContrato" maxlength = "30">
+              <mat-label>Descripcion</mat-label>
+              <input  matInput formControlName="descripcion" maxlength = "30">
             </mat-form-field>
           </form>
         </div>

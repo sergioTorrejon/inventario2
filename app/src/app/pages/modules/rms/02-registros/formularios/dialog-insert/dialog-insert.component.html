@@ -10,111 +10,8 @@
 </div>
 <!--FIN DEL HEADER -->
 
-<!-- FORMULARIO DE BUSQUEDA DE PERSONAS -->
-<div mat-dialog-content *ngIf="!this.nuevo&&!this.seleccionado">
-  <!--TITULO DE BUSQUEDA Y BOTON PARA AGREGAR NUEVA PERSONA NATURAL -->
-    <div fxLayout="row wrap">
-      <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
-      </div>
-      <div fxFlex.gt-lg="60" fxFlex.gt-md="60"  fxFlex.gt-xs="100" fxFlex="100">
-        <h2 mat-dialog-title class="head-dialog" style="text-align: center;">BUSCAR PERSONA NATURAL</h2>
-      </div>
-      <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
-        <button   mat-raised-button color="primary" type="submit" class="form-element" matTooltip="Registrar"
-        (click)="this.nuevo=!this.nuevo" >
-          <mat-icon>add</mat-icon>
-          Nuevo
-        </button>
-      </div>
-    </div>
-  <!--FIN TITULO DE BUSQUEDA Y BOTON PARA AGREGAR NUEVA PERSONA NATURAL -->
-
-  <!-- FORMULARIO BUSQUEDA -->
-    <div fxLayout="row wrap" >
-      <!-- SUB TITULO -->
-      <div class="form-element">
-        <mat-card-subtitle>Buscar persona...</mat-card-subtitle>
-      </div>
-      <span fxFlex></span>
-      <!-- NRO DE DOCUMENTO -->
-      <div fxFlex.gt-lg="30" fxFlex.gt-md="30"  fxFlex.gt-xs="100" fxFlex="100">
-        <form  [formGroup]="formGroupSearch" >
-          <mat-form-field class="form-element" appearance="outline" >
-            <mat-label>Nro. de Identificación o CI </mat-label>
-            <input  matInput formControlName="nroIdentificacion" maxlength = "10" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)">
-            <mat-icon *ngIf="!formGroupSearch.controls['nroIdentificacion'].value" matSuffix>search</mat-icon>
-            <button mat-button *ngIf="formGroupSearch.controls['nroIdentificacion'].value" matSuffix mat-icon-button color="warn" aria-label="Clear" (click)="formGroupSearch.controls['nroIdentificacion'].setValue('')">
-              <mat-icon>close</mat-icon>
-            </button>
-          </mat-form-field>
-        </form>
-      </div>
-      <!-- NOMBRE -->
-      <div fxFlex.gt-lg="50" fxFlex.gt-md="50"  fxFlex.gt-xs="100" fxFlex="100">
-        <form  [formGroup]="formGroupSearch" >
-          <mat-form-field class="form-element" appearance="outline">
-            <mat-label>Nombre o Apellido</mat-label>
-            <input  matInput formControlName="nombreCompleto"  maxlength = "100">
-            <mat-icon *ngIf="!formGroupSearch.controls['nombreCompleto'].value" matSuffix>search</mat-icon>
-            <button mat-button *ngIf="formGroupSearch.controls['nombreCompleto'].value" matSuffix mat-icon-button color="warn" aria-label="Clear" (click)="formGroupSearch.controls['nombreCompleto'].setValue('')">
-              <mat-icon>close</mat-icon>
-            </button>
-          </mat-form-field>
-        </form>
-      </div>
-      <!-- BOTON PARA LIMPIAR -->
-      <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
-        <button  mat-button color="primary" type="submit" class="form-element" matTooltip="Limpiar"
-        (click)="setFormSearch()" >
-          <mat-icon>autorenew</mat-icon>
-          Limpiar
-        </button>
-      </div>
-      <!-- NRO DE DOCUMENTO -->
-      <span fxFlex></span>
-      <div class="form-element" *ngIf="!this.dataPersonas.length>0">
-        <mat-card-subtitle>Resultado de la Busqueda: {{this.dataPersonas.length}} Registros</mat-card-subtitle>
-      </div>
-    </div>
-  <!-- FIN FORMULARIO BUSQUEDA -->
-
-  <!-- TABLA DE RESULTADOS -->
-    <div fxLayout="row wrap" *ngIf="this.dataPersonas.length>0">
-      <div fxFlex.gt-lg="100" fxFlex.gt-md="100"  fxFlex.gt-xs="100" fxFlex="100">
-        <!-- CABECERAS DE LA TABLA -->
-          <div fxLayout="row wrap" matSort (matSortChange)="sortData($event)" matSortActive="primer_nombre" matSortDirection="desc" matSortDisableClear>
-            <div   class="form-table-head"
-            *ngFor="let config of headersTable" [mat-sort-header]="config.name" [fxFlex.gt-lg]="config.width" [fxFlex.gt-md]="config.width" fxFlex.gt-xs="100" fxFlex="100">
-                {{config.label}}
-            </div>
-            <div class="form-table-head" fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
-            </div>
-          </div>
-        <!-- FIN CABECERAS DE LA TABLA -->
-
-        <!-- DATA DE LA TABLA -->
-          <div fxLayout="row wrap" *ngFor="let config of this.dataPersonas">
-            <div class="form-table-body"  *ngFor="let column of headersTable" [fxFlex.gt-lg]="column.width" [fxFlex.gt-md]="column.width"  fxFlex.gt-xs="100" fxFlex="100">
-              <div class="form-table-body" >
-                {{config[column.name]}}
-              </div>
-            </div>
-            <div style="text-align: center;"  fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="20" fxFlex="20">
-              <button mat-button class="form-search" color="primary" (click)="select(config)">
-                <mat-icon>done</mat-icon>
-                Seleccionar</button>
-            </div>
-            <mat-divider></mat-divider>
-          </div>
-        <!-- FIN DATA DE LA TABLA -->
-      </div>
-    </div>
-  <!-- FIN TABLA DE RESULTADOS -->
-</div>
-<!--FIN FORMULARIO DE BUSQUEDA DE PERSONAS -->
-
 <!-- FORMULARIO DE ADICIONAR NUEVA PERSONA -->
-<div mat-dialog-content *ngIf="this.nuevo&&!this.seleccionado">
+<div mat-dialog-content >
 <!--BOTONES PARA BUSCAR O ADICIONAR PERSONA -->
   <div fxLayout="row wrap">
     <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
@@ -167,10 +64,6 @@
             <input  matInput formControlName="segundoApellido"  maxlength = "50">
           </mat-form-field>
         </form>
-      </div>
-      <!-- HABILITAR_ALPHA -->
-      <div fxFlex.gt-lg="5" fxFlex.gt-md="5"  fxFlex.gt-xs="20" fxFlex="20" >
-          <mat-slide-toggle class="form-element" [(ngModel)]="disabled" (change)="this.showApellidoCasada=!this.showApellidoCasada"></mat-slide-toggle>
       </div>
       <!-- SEGUNDO NOMBRE -->
       <div *ngIf="!this.showApellidoCasada" fxFlex.gt-lg="15" fxFlex.gt-md="15"  fxFlex.gt-xs="80"fxFlex="80">
@@ -266,76 +159,8 @@
 </div>
 <!--FIN FORMULARIO DE ADICIONAR NUEVA PERSONA -->
 
-<!-- DATOS DE LA PERSONA SELECCIONADA -->
-<div mat-dialog-content *ngIf="this.seleccionado">
-    <!--TITULO DE BUSQUEDA Y BOTON PARA AGREGAR NUEVA PERSONA NATURAL -->
-    <div fxLayout="row wrap">
-      <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
-      </div>
-      <div fxFlex.gt-lg="60" fxFlex.gt-md="60"  fxFlex.gt-xs="100" fxFlex="100">
-        <h2 mat-dialog-title class="head-dialog" style="text-align: center;">REGISTRAR NUEVO FUNCIONARIO/SÍNDICO/DIRECTIVO</h2>
-      </div>
-      <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
-        <button style="text-align: right;" mat-button color="primary" type="submit" class="form-element" matTooltip="Registrar" (click)="setFormSearch()" >
-          <mat-icon>search</mat-icon>
-          Buscar Persona...
-        </button>
-      </div>
-    </div>
-    <!--FIN TITULO DE BUSQUEDA Y BOTON PARA AGREGAR NUEVA PERSONA NATURAL -->
-  <!-- DATOS DEL SELECCIONADO -->
-  <div>
-    <!-- SUBTITULO FORMULARIO -->
-    <mat-card-subtitle>DATOS DE LA PERSONA</mat-card-subtitle>
-    <!-- FIN SUBTITULO FORMULARIO -->
-
-    <!-- DATOS PERSONA SELECCIONADA -->
-      <!-- CABECERAS DE LA TABLA -->
-        <div fxLayout="row wrap" matSort (matSortChange)="sortData($event)" [matSortActive]="this.sort" [matSortDirection]="this.order" matSortDisableClear>
-          <div   class="form-table-head" *ngFor="let config of columnsSelect" [mat-sort-header]="config.name" [fxFlex.gt-lg]="config.width" [fxFlex.gt-md]="config.width" fxFlex.gt-xs="100" fxFlex="100">
-          {{config.label}}
-          </div>
-        </div>
-      <!-- DATA DE LA TABLA -->
-        <div fxLayout="row wrap">
-          <div class="form-table-body"  *ngFor="let column of columnsSelect" [fxFlex.gt-lg]="column.width" [fxFlex.gt-md]="column.width"  fxFlex.gt-xs="100" fxFlex="100">
-            <div class="form-table-body" >
-              {{this.rowSelect[column.name]}}
-            </div>
-          </div>
-        </div>
-  </div>
-  <!-- FIN DATOS DEL SELECCIONADO -->
-
-  <!-- CARGOS ACTIVOS -->
-  <div *ngIf="!this.observaciones&&this.dataSelect.length>0">
-    <mat-card-subtitle><b>OBSERVACIONES: </b> CARGOS ACTIVOS</mat-card-subtitle>
-
-    <!-- CABECERAS DE LA TABLA -->
-      <div fxLayout="row wrap" matSort (matSortChange)="($event)" [matSortActive]="this.sort" [matSortDirection]="this.order" matSortDisableClear>
-        <div   class="form-table-head" *ngFor="let config of columns" [mat-sort-header]="config.name" [fxFlex.gt-lg]="config.width" [fxFlex.gt-md]="config.width" fxFlex.gt-xs="100" fxFlex="100">
-        {{config.label}}
-        </div>
-      </div>
-    <!-- FIN CABECERAS DE LA TABLA -->
-
-    <!-- DATA DE LA TABLA -->
-      <div fxLayout="row wrap" *ngFor="let config of this.dataSelect">
-      <div class="form-table-body"  *ngFor="let column of columns" [fxFlex.gt-lg]="column.width" [fxFlex.gt-md]="column.width"  fxFlex.gt-xs="100" fxFlex="100">
-        <div class="form-table-body" >
-          {{config[column.name]}}
-        </div>
-      </div>
-      <mat-divider></mat-divider>
-      </div>
-    <!-- FIN DATA DE LA TABLA -->
-  </div>
-  <!-- FIN CARGOS ACTIVOS -->
-</div>
-<!--FIN DATOS DE LA PERSONA SELECCIONADA -->
-
 <!-- FORMULARIO DE REGISTRO DE NUEVOS FUNCIONARIO -->
-<div mat-dialog-content *ngIf="this.observaciones&&this.seleccionado">
+<div mat-dialog-content>
   <!-- SUBTITULO FORMULARIO -->
   <mat-card-subtitle>DATOS DEL REGISTRO</mat-card-subtitle>
   <!-- FIN SUBTITULO FORMULARIO -->
@@ -503,6 +328,7 @@
     <!---------------------- FIN FILA 2 ------------------------->
   </div>
   <!-- FIN FORMULARIO CREAR NUEVO REGISTRO -->
+   
 </div>
 <!-- FIN FORMULARIO DE REGISTRO DE NUEVOS FUNCIONARIO -->
 

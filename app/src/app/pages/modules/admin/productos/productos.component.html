@@ -17,104 +17,75 @@
       <div>
         <div  fxLayout="row wrap" style="padding: 10px 5px;">
  
-          <!-- ESTADO DEL FUNCIONARIO -->
+          <!-- CATEGORIA -->
           <div fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="50" fxFlex="50">
             <form  [formGroup]="formGroup" >
               <mat-form-field class="form-search" appearance="outline" >
-                <mat-label>Estado</mat-label>
-                <mat-select formControlName="estado">
+                <mat-label>Categoria</mat-label>
+                <mat-select formControlName="categoria">
                   <mat-option value="">TODOS</mat-option>
-                  <mat-option *ngFor="let option of this.dataOptions.optionEstado" [value]="option.value">{{option.label}}</mat-option>
+                  <mat-option *ngFor="let option of this.tipoCategoriaProducto" [value]="option.value">{{option.label}}</mat-option>
                 </mat-select>
               </mat-form-field>
             </form>
           </div>
-          <!-- ***FIN*** ESTADO DEL FUNCIONARIO -->
+          <!-- ***FIN*** CATEGORIA -->
 
-          <!-- TIPO DE FUNCIONARIO -->
+          <!-- MARCA -->
           <div fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="50" fxFlex="50">
             <form  [formGroup]="formGroup" >
               <mat-form-field class="form-search" appearance="outline" >
-                <mat-label>Niveles</mat-label>
-                <mat-select formControlName="tipoCargo">
+                <mat-label>Marca</mat-label>
+                <mat-select formControlName="marca">
                   <mat-option value="">TODOS</mat-option>
-                  <mat-option *ngFor="let option of this.dataOptions.nivel_cargo" [value]="option.value">{{option.label}}</mat-option>
+                  <mat-option *ngFor="let option of this.marcasProducto" [value]="option.value">{{option.label}}</mat-option>
                 </mat-select>
               </mat-form-field>
             </form>
           </div>
-          <!-- ***FIN*** TIPO DE FUNCIONARIO -->
+          <!-- ***FIN*** MARCA -->
 
-          <!-- CARGO -->
+          <!-- MODELO -->
           <div fxFlex.gt-lg="15" fxFlex.gt-md="15"  fxFlex.gt-xs="50" fxFlex="50" >
             <form  [formGroup]="formGroup" >
               <mat-form-field class="form-search" appearance="outline">
-                <mat-label>Cargo</mat-label>
-                <input type="text" maxlength = "100" matInput formControlName="cargo" >
-                <button mat-button *ngIf="formGroup.controls['cargo'].value" matSuffix mat-icon-button color="warn" aria-label="Clear" (click)="formGroup.controls['cargo'].setValue('')">
+                <mat-label>Modelo</mat-label>
+                <input type="text" maxlength = "100" matInput formControlName="modelo" >
+                <button mat-button *ngIf="formGroup.controls['modelo'].value" matSuffix mat-icon-button color="warn" aria-label="Clear" (click)="formGroup.controls['modelo'].setValue('')">
                   <mat-icon>close</mat-icon>
                 </button>
               </mat-form-field>
             </form>
           </div>
-          <!-- ***FIN*** CARGO -->
+          <!-- ***FIN*** MODELO -->
 
-          <!-- FECHA DE INICIO DE RELACION LABORAL -->
+          <!-- MEDIDA -->
+          <div fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="50" fxFlex="50">
+            <form  [formGroup]="formGroup" >
+              <mat-form-field class="form-search" appearance="outline" >
+                <mat-label>Medida</mat-label>
+                <mat-select formControlName="medida">
+                  <mat-option value="">TODOS</mat-option>
+                  <mat-option *ngFor="let option of this.medidasProducto" [value]="option.value">{{option.label}}</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </form>
+          </div>
+          <!-- ***FIN*** MEDIDA -->
+
+          <!-- DESCRIPCION -->
           <div fxFlex.gt-lg="15" fxFlex.gt-md="15"  fxFlex.gt-xs="50" fxFlex="50" >
             <form  [formGroup]="formGroup" >
               <mat-form-field class="form-search" appearance="outline">
-                <mat-label>Fecha Ingreso</mat-label>
-                <button style="padding-top: 5px;" mat-button *ngIf="formGroup.controls['fechaIngreso'].value" matSuffix mat-icon-button color="warn" aria-label="Clear" (click)="formGroup.controls['fechaIngreso'].setValue('')">
-                  <mat-icon>close</mat-icon>
-                </button>
-                <input [matDatepicker]="desde" (click)="desde.open()" matInput formControlName="fechaIngreso" readonly>
-                <mat-datepicker #desde></mat-datepicker>
-              </mat-form-field>
-            </form>
-          </div>
-          <!-- ***FIN*** FECHA DE INICIO DE RELACION LABORAL -->
-
-          <!-- NUMERO DE IDENTIFICACION -->
-          <div fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="50" fxFlex="50" >
-            <form  [formGroup]="formGroup" >
-              <mat-form-field class="form-search" appearance="outline">
-                <mat-label>Nro Identificación</mat-label>
-                <input type="text" maxlength = "100" matInput maxlength="10" formControlName="nroIdentificacion" onkeypress="return (event.charCode != 39)">
-                <button mat-button *ngIf="formGroup.controls['nroIdentificacion'].value" matSuffix mat-icon-button color="warn" aria-label="Clear" (click)="formGroup.controls['nroIdentificacion'].setValue('')">
+                <mat-label>Descripcion</mat-label>
+                <input type="text" maxlength = "100" matInput formControlName="descripcion" onkeypress="return (event.charCode != 39)">
+                <button mat-button *ngIf="formGroup.controls['descripcion'].value" matSuffix mat-icon-button color="warn" aria-label="Clear" (click)="formGroup.controls['descripcion'].setValue('')">
                   <mat-icon>close</mat-icon>
                 </button>
               </mat-form-field>
             </form>
           </div>
-          <!-- ***FIN*** NUMERO DE IDENTIFICACION -->
-
-          <!-- NOMBRES -->
-          <div fxFlex.gt-lg="15" fxFlex.gt-md="15"  fxFlex.gt-xs="50" fxFlex="50" >
-            <form  [formGroup]="formGroup" >
-              <mat-form-field class="form-search" appearance="outline">
-                <mat-label>Nombres</mat-label>
-                <input type="text" maxlength = "100" matInput formControlName="nombres" onkeypress="return (event.charCode != 39)">
-                <button mat-button *ngIf="formGroup.controls['nombres'].value" matSuffix mat-icon-button color="warn" aria-label="Clear" (click)="formGroup.controls['nombres'].setValue('')">
-                  <mat-icon>close</mat-icon>
-                </button>
-              </mat-form-field>
-            </form>
-          </div>
-          <!-- ***FIN*** NOMBRES -->
-
-          <!-- APELLIDOS -->
-          <div fxFlex.gt-lg="15" fxFlex.gt-md="15"  fxFlex.gt-xs="50" fxFlex="50" >
-            <form  [formGroup]="formGroup" >
-              <mat-form-field class="form-search" appearance="outline">
-                <mat-label>Apellidos</mat-label>
-                <input type="text" maxlength = "100" matInput formControlName="apellidos" onkeypress="return (event.charCode != 39)">
-                <button mat-button *ngIf="formGroup.controls['apellidos'].value" matSuffix mat-icon-button color="warn" aria-label="Clear" (click)="formGroup.controls['apellidos'].setValue('')">
-                  <mat-icon>close</mat-icon>
-                </button>
-              </mat-form-field>
-            </form>
-          </div>
-          <!-- ***FIN*** APELLIDOS -->
+          <!-- ***FIN*** DESCRIPCION -->
 
           <!-- BOTON LIMPIAR -->
           <div style="text-align: center; padding-top: 5px;" fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="100" fxFlex="100">
@@ -200,7 +171,7 @@
 
             <!-- FILA DE ACCIONES -->
             <div style="text-align: center;"  fxFlex.gt-lg="5" fxFlex.gt-md="10"  fxFlex.gt-xs="10" fxFlex="10">
-              <button mat-button color="warn" class="form-table-body" (click)="insertBaja(row)"><mat-icon>delete</mat-icon>Eliminar</button>
+              <button mat-button color="warn" class="form-table-body" (click)="deleteRow(row)"><mat-icon>delete</mat-icon>Eliminar</button>
             </div>
             <div style="text-align: center;"  fxFlex.gt-lg="5" fxFlex.gt-md="10"  fxFlex.gt-xs="10" fxFlex="10">
               <button mat-button color="primary" class="form-table-body" (click)="updateRow(row)"><mat-icon>preview</mat-icon>Ver</button>

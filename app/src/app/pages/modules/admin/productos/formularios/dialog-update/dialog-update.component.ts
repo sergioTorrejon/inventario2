@@ -59,44 +59,37 @@ export class DialogUpdateComponent implements OnInit  {
     index: 0
   };
 
-  formFuncionario:any=
-  {
-    'personaNatural':  [''],
-    'tipoCargo':  [this.data.data.id_tipo_cargo, [Validators.required]],
-    'cargo':  [this.data.data.cargo, [Validators.required]],
-    'fechaIngreso': [this.data.data.fecha_ingreso, Validators.required],
-    'departamento':  [this.data.data.departamento, [Validators.required]],
-    'municipio':  [this.data.data.municipio, [Validators.required]],
-    'nroContrato':  [this.data.data.nro_contrato, [Validators.required]],
-
-  };
-
-  columnsSelect: any =
-  [
-    {name:'nro_identificacion', label:'Nro. Identificación',  width:20},
-    {name:'nombres', label:'Primer Nombre',  width:20},
-    {name:'primer_apellido', label:'Primer Apellido',  width:20},
-    {name:'segundo_apellido', label:'Segundo Apellido',  width:20},
-  ];
-
-  columnsFuncionarioSelect: any =
-  [
-    {name:'tipo_cargo', label:'Tipo de Cargo',  width:15},
-    {name:'cargo', label:'Cargo',  width:30},
-    {name:'nro_contrato', label:'Nro de Contrato',  width:20},
-    {name:'fecha_ingreso_format', label:'Fecha Ingreso',  width:20},
-    {name:'estado', label:'Estado',  width:15},
-  ];
-
   columns: any =
   [
     //FORMULARIO
-    {name:'nombre_empresa', label:'Empresa',  width:40},
+    {name:'nombre_empresa', label:'Codigo',  width:40},
     {name:'tipo_cargo', label:'Tipo de Cargo',  width:10},
     {name:'cargo', label:'Cargo',  width:20},
     {name:'fecha_ingreso', label:'Fecha de ingreso',  width:20},
     {name:'estado', label:'Estado', width:10},
   ];
+
+  formFuncionario:any=
+  {
+    'codigo':  [this.data.data.codigo, [Validators.required]],
+    'categoria':  [this.data.data.categoria, [Validators.required]],
+    'marca': [this.data.data.marca, Validators.required],
+    'modelo':  [this.data.data.modelo, [Validators.required]],
+    'medida':  [this.data.data.medida, [Validators.required]],
+    'descripcion':  [this.data.data.descripcion, [Validators.required]],
+
+  };
+
+  columnsSelect: any =
+  [
+    {name:'codigo', label:'Codigo',  width:10},
+    {name:'categoria', label:'Categoria',  width:10},
+    {name:'marca', label:'Marca',  width:20},
+    {name:'modelo', label:'Modelo',  width:20},
+    {name:'medida', label:'Medida',  width:20},
+    {name:'descripcion', label:'Descripción',  width:20},
+  ];
+
 
 
   constructor
@@ -121,7 +114,7 @@ export class DialogUpdateComponent implements OnInit  {
   }
 
   onSubmit(post:any) {
-    this.restCrud.update('registros_funcionarios',this.data.data.id, post).
+    this.restCrud.update('productos',this.data.data.id, post).
     subscribe((data:any) => {
       if (data.success === false) {
         this.openSnackBar(data.message,'','error')

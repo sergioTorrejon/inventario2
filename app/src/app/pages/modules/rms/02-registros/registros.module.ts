@@ -15,12 +15,6 @@ import { AppMaterialModule } from 'src/app/app-material-module';
 import { ComponentsModule } from 'src/app/components/components.module';
 
 import {
-  DialogBajaInsertComponent,
-} from './formularios/dialog-baja-insert/dialog-baja-insert.component';
-import {
-  DialogBajaUpdateComponent,
-} from './formularios/dialog-baja-update/dialog-baja-update.component';
-import {
   DialogInsertComponent,
 } from './formularios/dialog-insert/dialog-insert.component';
 import {
@@ -33,8 +27,6 @@ import { RegistrosComponent } from './registros.component';
       RegistrosComponent,
       DialogInsertComponent,
       DialogUpdateComponent,
-      DialogBajaUpdateComponent,
-      DialogBajaInsertComponent,
     ],
     exports: [],
     bootstrap: [RegistrosComponent],

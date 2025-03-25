@@ -22,12 +22,6 @@ import {
 import { CrudService } from 'src/app/services/crud/crud.service';
 
 import {
-  DialogBajaInsertComponent,
-} from './formularios/dialog-baja-insert/dialog-baja-insert.component';
-import {
-  DialogBajaUpdateComponent,
-} from './formularios/dialog-baja-update/dialog-baja-update.component';
-import {
   DialogInsertComponent,
 } from './formularios/dialog-insert/dialog-insert.component';
 import {
@@ -173,58 +167,6 @@ export class RegistrosComponent implements OnInit {
         this.openSnackBar(result.message,'','error')
       }
     });
-  }
-
-  insertBaja(rowSelect: any) {
-    var dialogConfig = new MatDialogConfig();
-    dialogConfig.width = '1200px';
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
-    dialogConfig.data = {
-      data: rowSelect
-    };
-     let dialogRef = this.dialog.open(DialogBajaInsertComponent, dialogConfig);
-    dialogRef.afterClosed().subscribe((result) => {
-      this.dataTableUpdate(this.page);
-      console.log('RRRREEESULLLT',result)
-      if (result.success === true) {
-        this.openSnackBar(result.message,'','ok')
-        this.dataTableUpdate({ pageSize: 10, pageIndex: 0 });
-      }
-      if (result.success === false) {
-        this.openSnackBar(result.message,'','error')
-      }
-    });
-  }
-
-  updateBaja(rowSelect: any) {
-    this.restCrud.getById('registros_bajas',rowSelect.id_registro_baja).
-    subscribe((resp:any) => {
-      console.log('********** DATA DE LA BAJA ************')
-      console.log(resp.data)
-      var dialogConfig = new MatDialogConfig();
-      dialogConfig.width = '1200px';
-      dialogConfig.disableClose = true;
-      dialogConfig.autoFocus = true;
-      dialogConfig.data = {
-        data: rowSelect,
-        baja:resp.data.data
-      };
-       let dialogRef = this.dialog.open(DialogBajaUpdateComponent, dialogConfig);
-      dialogRef.afterClosed().subscribe((result) => {
-        this.dataTableUpdate(this.page);
-        console.log('RRRREEESULLLT',result)
-        if (result.success === true) {
-          this.openSnackBar(result.message,'','ok')
-          this.dataTableUpdate({ pageSize: 10, pageIndex: 0 });
-        }
-        if (result.success === false) {
-          this.openSnackBar(result.message,'','error')
-        }
-      });
-
-    });
-
   }
 
   deleteRow(rowSelect: any) {

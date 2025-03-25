@@ -38,7 +38,9 @@ export class ProductosController {
   //GETALL
   @Get()
   async getAll(@User() userDto: UserDto, @Query() paginationDto: PaginationDto,@Query() sortDto: SortDto, @Query() searchDto: searchDto ) {
-    return await this.service.getAll(userDto,paginationDto,sortDto,searchDto);
+    const data =  await this.service.getAll(userDto,paginationDto,sortDto,searchDto);
+    console.log('GET PRODUCTOS', data)
+    return data
   }
 
   //FUNCIONA!!!!
@@ -50,18 +52,21 @@ export class ProductosController {
   //FUNCIONA!!!!
   @Post()
   async createOne(@User() userDto: UserDto,@Body() dto: createDto) {
+    console.log('POST PRODUCTOS', userDto)
     return await this.service.createOne(userDto,dto);
   }
 
   //FUNCIONA!!!!
   @Put(':id')
   async editOne(@User() userDto: UserDto, @Param('id') id: number, @Body() dto: updateDto) {
+    console.log('PUT PRODUCTOS', dto)
     return await this.service.editOne(userDto,id,dto);
   }
 
   //FUNCIONA!!!!
   @Delete(':id')
   async logicDelete(@User() userDto: UserDto,@Param('id') id: number) {
+    console.log('DELETE PRODUCTOS', id)
     return await this.service.deleteOne(userDto,id);
   } 
 }

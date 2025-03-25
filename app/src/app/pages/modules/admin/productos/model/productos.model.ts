@@ -15,15 +15,11 @@ export const MODEL = {
 
     formControl:
       {
-        tipoEmpresa:[''],
-        codEmpresa:[''],
-        estado:[''],
-        tipoCargo:[''],
-        fechaIngreso:[''],
-        cargo:[''],
-        nroIdentificacion:[''],
-        nombres:[''],
-        apellidos:['']
+        categoria:[''],
+        marca:[''],
+        modelo:[''],
+        medida:[''],
+        descripcion:['']
       },
 
 
@@ -40,3 +36,30 @@ export const queryGetData = ( dto: any ) =>{
     (dto.nombreEmpresa === ''? ``: `&nombreEmpresa=${dto.nombreEmpresa}`)
     return res;
 }
+
+export const tipoCategoriaProducto = [
+    {value:"motocicleta",label:'Motocicleta'},
+    {value:"Automovil",label:'Automovil'},
+    {value:"Agropecuario",label:'Agropecuario'}
+  ]
+
+export const marcasProducto = [
+    {value:"Michelin",label:'Michelin'},
+    {value:"Goodyear",label:'Goodyear'},
+    {value:"Pirelli",label:'Pirelli'},
+    {value:"Dunlop",label:'Dunlop'},
+    {value:"Continental",label:'Continental'}
+  ]
+ 
+
+  export const medidasProducto = [
+    {value:"113 16/9",label:'113 16/9'},
+    {value:"15 8/8",label:'113 16/9'},
+  ]
+ 
+
+
+
+
+
+

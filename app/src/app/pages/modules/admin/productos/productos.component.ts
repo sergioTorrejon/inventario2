@@ -26,7 +26,7 @@ import {
 import {
   DialogUpdateComponent,
 } from './formularios/dialog-update/dialog-update.component';
-import { MODEL } from './model/productos.model';
+import { marcasProducto, medidasProducto, MODEL, tipoCategoriaProducto } from './model/productos.model';
 import { ProvedoresService } from './productos.service';
 
 @Component({
@@ -43,12 +43,20 @@ export class ProductosComponent implements OnInit {
   // MODEL
   model=MODEL
 
+
+  tipoCategoriaProducto= tipoCategoriaProducto
+  marcasProducto = marcasProducto
+  medidasProducto = medidasProducto
+
+
+
   // Variables del Formulario
   formGroup: UntypedFormGroup;
 
   isAdministrator=this.authenticationService.GetRoles().includes('administrador')
   empresas: any = [];
   dataOptions: any = [];
+
 
   //table
   data: any =[];
@@ -189,7 +197,7 @@ export class ProductosComponent implements OnInit {
     });
     dialogMessage.afterClosed().subscribe((result1) => {
       if (result1 === 'confirm') {
-        this.restCrud.delete(this.formGroup.controls.model.value, rowSelect.id)
+        this.restCrud.delete(this.model.name, rowSelect.id)
         .subscribe((data: any) => {
           this.openSnackBar('Se eliminó el registro correctamente','','warning')
           this.dataTableUpdate({ pageSize: 10, pageIndex: 0, sort: '' });

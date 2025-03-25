@@ -29,7 +29,6 @@ async getAll(userDto:UserDto,paginationDto: PaginationDto, sortDto:SortDto,dto:s
   .where('q.active=true')
   .orderBy(sortDto.sort, sortDto.order=='asc'?'ASC':'DESC');
   const data = await query.select('*').offset((paginationDto.page-1)*paginationDto.limit).limit(paginationDto.limit).getRawMany()
-  console.log('PRUEBA DE PRODUCTOS', data)
   const count = await query.getCount()
   return responseSuccess(RESP_MESSAGES.GET,{data:data,count:count});
 }
@@ -50,7 +49,7 @@ async getById(userDto:UserDto,id: number)  {
 async createOne(userDto: UserDto,dto: createDto) {
   try{
     const getOne  = await  this.repository.findOne({ where:{ codigo: dto.codigo, active:true}})
-    if (!getOne)  throw new Error('No existe Datos con este usuario');
+    if (getOne)  throw new Error('El código ya existe');
     const create =  this.repository.create(dto);
     create.userCreate = userDto.username;
     const data = await this.repository.save(create);
@@ -66,7 +65,7 @@ async createOne(userDto: UserDto,dto: createDto) {
 async editOne(userDto: UserDto,id: number, dto: updateDto) {
   try{
     const getOne = await  this.repository.findOne({ where:{ id: id , active:true}})
-    if (!getOne)  throw new Error('No existe un usuario con este id');
+    if (!getOne)  throw new Error('No existe datos con este id');
     const edited = this.repository.merge(getOne,dto);
     const data = await  this.repository.save(edited);
     return responseSuccess(RESP_MESSAGES.PUT,data);
@@ -82,7 +81,7 @@ async deleteOne(userDto: UserDto,id: number) {
   try{
     const getOne = await  this.repository.findOne({ where:{ id: id , active:true}})
     if (!getOne)  throw new Error('No existe un usuario con este id');
-    const data = await  this.repository.save({...getOne,status:false});
+    const data = await  this.repository.save({...getOne,active:false});
     return responseSuccess(RESP_MESSAGES.DELETE,data);
   }
   catch (error) {
