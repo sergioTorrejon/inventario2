@@ -12,6 +12,7 @@ export const AppRoutes: Routes = [
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
     children: [
+      
       {
           path: '',
           redirectTo: '/consultas',
@@ -23,43 +24,8 @@ export const AppRoutes: Routes = [
         path: 'productos',
         canActivate: [AuthGuard],
         loadChildren: () => import('./pages/modules/admin/productos/productos.module').then(m => m.ProductosModule),
-        data: { titulo:'registros', roles: [Roles.Administrador, Roles.OperadorFuncionarios, Roles.AprobadorFuncionarios]}
+        data: { titulo:'registros', roles: [Roles.Administrador]}
       },
-
-
-
-      {
-        path: 'empresas',
-        canActivate: [AuthGuard],
-        loadChildren: () => import('./pages/modules/admin/database/empresas/empresas.module').then(m => m.EmpresasModule),
-        data: {titulo:'empresa', roles: [Roles.Administrador]}
-      },
-
-      {
-        path: 'personas',
-        canActivate: [AuthGuard],
-        loadChildren: () => import('./pages/modules/admin/database/personas/personas.module').then(m => m.PersonasModule),
-        data: { titulo:'personas',roles: [Roles.Administrador]}
-      },
-      {
-        path: 'solicitudes',
-        canActivate: [AuthGuard],
-        loadChildren: () => import('./pages/modules/admin/tools/solicitudes/solicitudes.module').then(m => m.SolicitudesModule),
-        data: { titulo:'solicitudes',roles: [Roles.Administrador, Roles.OperadorFuncionarios, Roles.AprobadorFuncionarios]}
-      },
-
-
-      //ADMINISTRATOR
-
-      {
-        path: 'categorias',
-        canActivate: [AuthGuard],
-        loadChildren: () => import('./pages/config/categorias/categorias.module').then(m => m.CategoriasModule),
-        data: { roles: [Roles.Administrador]}
-      },
-
-      //CORE
-
       {
         path: 'consultas',
         //canActivate: [AuthGuard],
@@ -69,20 +35,8 @@ export const AppRoutes: Routes = [
         path: 'registros',
         canActivate: [AuthGuard],
         loadChildren: () => import('./pages/modules/rms/02-registros/registros.module').then(m => m.RegistrosModule),
-        data: { titulo:'registros', roles: [Roles.Administrador, Roles.OperadorFuncionarios, Roles.AprobadorFuncionarios]}
-      },
-      {
-        path: 'inhabilitaciones',
-        canActivate: [AuthGuard],
-        loadChildren: () => import('./pages/modules/rms/inhabilitaciones/inhabilitaciones.module').then(m => m.InhabilitacionesModule),
-        data: { roles: [Roles.Administrador, Roles.OperadorFuncionarios, Roles.AprobadorFuncionarios]}
-      },
-      {
-        path: 'suspenciones',
-        canActivate: [AuthGuard],
-        loadChildren: () => import('./pages/modules/rms/suspenciones/suspenciones.module').then(m => m.SuspencionesModule),
-        data: { titulo:'suspenciones',roles: [Roles.Administrador, Roles.OperadorFuncionarios, Roles.AprobadorFuncionarios]}
-      },
+        data: { titulo:'registros', roles: [Roles.Administrador, Roles.Operador, Roles.Supervisor]}
+      }
 
     ]
   },

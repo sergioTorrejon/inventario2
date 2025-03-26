@@ -5,7 +5,6 @@ import {
 } from 'class-validator';
 
 import { ApiProperty, OmitType, PartialType } from '@nestjs/swagger';
-import { Provedores } from '../../provedores/entities/provedores.entity';
 
 export class ProductosCreateDto {
   
@@ -54,17 +53,22 @@ export class ProductosSearchDto {
 
   @ApiProperty()
   @IsOptional()
-  @IsString()
-  provedor?: Provedores;
-
-  @ApiProperty()
-  @IsString()
-  @IsOptional()
-  @MaxLength(50)
-  codigo?: string;
+  categoria?: string;
 
   @ApiProperty()
   @IsOptional()
-  nombre?: string;
+  marca?: string;
+
+  @ApiProperty()
+  @IsOptional()
+  modelo?: string;
+
+  @ApiProperty()
+  @IsOptional()
+  medida?: string;
+
+  @ApiProperty()
+  @IsOptional()
+  descripcion?: string;
   
 }

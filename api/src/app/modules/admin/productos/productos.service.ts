@@ -11,9 +11,20 @@ import { Productos } from './entities/productos.entity';
 import { 
   ProductosSearchDto as searchDto, 
   ProductosCreateDto as createDto, 
-  ProductosUpdateDto as updateDto
+  ProductosUpdateDto as updateDto,
+  ProductosSearchDto
 } from './dtos/productos.dtos';
 import { responseSuccess, responseError } from 'src/core/common/res/res.config';
+
+
+export const titleHeader = [
+  {col:'A1',size:50,name:'codigo',label:'Código'},
+  {col:'B1',size:30,name:'categoria',label:'Categoria'},
+  {col:'C1',size:30,name:'marca',label:'Marca'},
+  {col:'D1',size:50,name:'modelo',label:'Modelo'},
+  {col:'E1',size:30,name:'medida',label:'Medida'},
+  {col:'F1',size:30,name:'descripcion',label:'Descripción'}
+]
 
 
 @Injectable()
@@ -28,6 +39,11 @@ async getAll(userDto:UserDto,paginationDto: PaginationDto, sortDto:SortDto,dto:s
   const query = this.repository.createQueryBuilder('q')
   .where('q.active=true')
   .orderBy(sortDto.sort, sortDto.order=='asc'?'ASC':'DESC');
+  if(dto.categoria) query.andWhere('q.categoria= :categoria', { categoria: dto.categoria });
+  if(dto.marca) query.andWhere('q.marca= :marca', { marca: dto.marca });
+  if(dto.medida) query.andWhere('q.medida= :medida', { medida: dto.medida });
+  if(dto.modelo) query.andWhere("q.modelo ILIKE :modelo ", { modelo: `%${dto.modelo}%` });
+  if(dto.descripcion) query.andWhere("q.descripcion ILIKE :descripcion ", { descripcion: `%${dto.descripcion}%` });
   const data = await query.select('*').offset((paginationDto.page-1)*paginationDto.limit).limit(paginationDto.limit).getRawMany()
   const count = await query.getCount()
   return responseSuccess(RESP_MESSAGES.GET,{data:data,count:count});
@@ -109,4 +125,20 @@ async getOptions() {
   }
 
 //#endregion
+
+  async getManyReport(dto:ProductosSearchDto) {
+    const query = this.repository.createQueryBuilder('q')
+    .where('q.active=true');
+    if(dto.categoria) query.andWhere('q.categoria= :categoria', { categoria: dto.categoria });
+    if(dto.marca) query.andWhere('q.marca= :marca', { marca: dto.marca });
+    if(dto.medida) query.andWhere('q.medida= :medida', { medida: dto.medida });
+    if(dto.modelo) query.andWhere("q.modelo ILIKE :modelo ", { modelo: `%${dto.modelo}%` });
+    if(dto.descripcion) query.andWhere("q.descripcion ILIKE :descripcion ", { descripcion: `%${dto.descripcion}%` });
+    const data = await query.select('*').getRawMany()
+    const header = titleHeader
+    return {data:data,header:header};
+  }
+
+
+
 }

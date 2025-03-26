@@ -20,35 +20,43 @@ import {
   MessageBoxComponent,
 } from 'src/app/components/dialogs/message-box/message-box.component';
 import { CrudService } from 'src/app/services/crud/crud.service';
-
 import {
   DialogInsertComponent,
 } from './formularios/dialog-insert/dialog-insert.component';
 import {
   DialogUpdateComponent,
 } from './formularios/dialog-update/dialog-update.component';
-import { REGISTROS } from './model/registros.model';
-import { RegistrosService } from './registros.service';
+import { marcasProducto, medidasProducto, MODEL, tipoCategoriaProducto } from './model/almacenes.model';
+import { AlmacenesService } from './almacenes.service';
 
 @Component({
-  selector: 'app-registros',
-  templateUrl: './registros.component.html',
-  styleUrls: ['./registros.component.css'],
+  selector: 'app-almacenes',
+  templateUrl: './almacenes.component.html',
+  styleUrls: ['./almacenes.component.css'],
 })
-export class RegistrosComponent implements OnInit {
+export class AlmacenesComponent implements OnInit {
 
 //GLOBALS
   dateToday= new Date()
 
 
+  // MODEL
+  model=MODEL
 
-  // CONFIGURACION
-  model=REGISTROS
+
+  tipoCategoriaProducto= tipoCategoriaProducto
+  marcasProducto = marcasProducto
+  medidasProducto = medidasProducto
+
+
+
   // Variables del Formulario
   formGroup: UntypedFormGroup;
+
   isAdministrator=this.authenticationService.GetRoles().includes('administrador')
   empresas: any = [];
   dataOptions: any = [];
+
 
   //table
   data: any =[];
@@ -62,19 +70,20 @@ export class RegistrosComponent implements OnInit {
     index: 0
   };
 
-  columns = this.isAdministrator?this.model.columns:this.model.columnsOperador
+  columnsTable = this.model.columnsTable
 
 
   constructor(
     private formBuilder: UntypedFormBuilder,
     private dialog: MatDialog,
-    public rest: RegistrosService,
+    public rest: AlmacenesService,
     public restCrud: CrudService,
     public authorizationService: AuthorizationService,
     public authenticationService: AuthenticationService,
     private _snackBar: MatSnackBar
     ) {
       this.formGroup =this.formBuilder.group([]);
+
       this.restCrud.getOptions().subscribe((data:any) => {
         this.model.dataOptions = data.data;
         this.dataOptions = this.model.dataOptions;
@@ -86,7 +95,6 @@ export class RegistrosComponent implements OnInit {
   }
 
   setForm(){
-    this.isAdministrator = this.authenticationService.GetRoles().includes('administrador')
       this.formGroup =this.formBuilder.group(this.model.formControl);
       this.formOnchange();
       this.dataTableUpdate(this.page);
@@ -96,26 +104,25 @@ export class RegistrosComponent implements OnInit {
       this.formGroup.valueChanges.subscribe(async data => {
         this.dataTableUpdate(this.page);
       })
-
-      this.formGroup.controls['tipoEmpresa'].valueChanges.subscribe(async data => {
-        this.formGroup.controls['codEmpresa'].setValue('');
-      })
   }
 
+  // ORDENAR LA TABLA
   sortData(event:any){
-      this.sort = event.active;
-      this.order = event.direction;
-      if (this.order == ""){
-        this.sort = 'id';
-      }
-      this.dataTableUpdate(this.page);
+    this.sort = event.active;
+    this.order = event.direction;
+    if (this.order == ""){
+      this.sort = 'id';
+    }
+    this.dataTableUpdate(this.page);
   }
 
+  //ACTUALIZA LA TABLA DEL MÓDULO
   dataTableUpdate(event: any){
 
       this.page.size = event.pageSize !== undefined? event.pageSize: 10;
       this.page.index = event.pageIndex !== undefined? event.pageIndex: 0;
-      this.rest.getFuncionarios('registros_funcionarios',(this.formGroup).getRawValue(),this.page.index+1, this.page.size,this.sort, this.order)
+      var searchDto = (this.formGroup).getRawValue()
+      this.rest.getAll(this.model.name,searchDto,this.page.index+1, this.page.size,this.sort, this.order)
       .subscribe((data:any) => {
         const result = data.data
         this.data = result.data;
@@ -123,6 +130,8 @@ export class RegistrosComponent implements OnInit {
       });
   }
 
+  //#region CRUD
+  //FUNCIÓN PARA ABRIR LA VENTANA DE INSERTAR
   insertRow()
   {
     var dialogConfig = new MatDialogConfig();
@@ -143,6 +152,7 @@ export class RegistrosComponent implements OnInit {
     });
   }
 
+  //FUNCIÓN PARA ABRIR LA VENTANA DE ACTUALIZAR
   updateRow(rowSelect: any) {
     var dialogConfig = new MatDialogConfig();
     dialogConfig.width = '1200px';
@@ -163,6 +173,7 @@ export class RegistrosComponent implements OnInit {
     });
   }
 
+  //FUNCIÓN PARA ELIMINAR
   deleteRow(rowSelect: any) {
     let dialogMessage = this.dialog.open(MessageBoxComponent, {
       disableClose: true,
@@ -176,7 +187,7 @@ export class RegistrosComponent implements OnInit {
     });
     dialogMessage.afterClosed().subscribe((result1) => {
       if (result1 === 'confirm') {
-        this.restCrud.delete(this.formGroup.controls.model.value, rowSelect.id)
+        this.restCrud.delete(this.model.name, rowSelect.id)
         .subscribe((data: any) => {
           this.openSnackBar('Se eliminó el registro correctamente','','warning')
           this.dataTableUpdate({ pageSize: 10, pageIndex: 0, sort: '' });
@@ -185,6 +196,7 @@ export class RegistrosComponent implements OnInit {
     });
   }
 
+  //ABRIR LA CONFIRMACION 
   openSnackBar(message: string, action: string, type:string) {
     this._snackBar.open(message, action, {
       duration: 2000,
@@ -194,15 +206,17 @@ export class RegistrosComponent implements OnInit {
     })
   }
 
+  // DESCARGAR EN EXCEL
   downloadCsv() {
     const dto = (this.formGroup).getRawValue();
-    this.rest.getCsv('registros_funcionarios',dto)
+    console.log('---------------------------------------------DTO para pdf',dto)
+    this.rest.getCsv('productos',dto)
     .subscribe((result: any) => {
         var newBlob = new Blob([result], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
         const data = window.URL.createObjectURL(newBlob);
         const link = document.createElement('a');
         link.href = data;
-        link.download = "Reporte rms.xlsx";
+        link.download = "Reporte.xlsx";
         link.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
         setTimeout(function () {
             window.URL.revokeObjectURL(data);
@@ -212,15 +226,18 @@ export class RegistrosComponent implements OnInit {
     });
   }
 
+  // DESCARGAR EN PDF
   downloadpdf() {
       const dto = (this.formGroup).getRawValue();
-      this.rest.getPdf('registros_funcionarios',dto)
+      console.log('---------------------------------------------DTO para pdf',dto)
+
+      this.rest.getPdf('productos',dto)
     .subscribe((result: any) =>  {
       var newBlob = new Blob([result], { type: "application/pdf" });
       const data = window.URL.createObjectURL(newBlob);
       var link = document.createElement('a');
       link.href = data;
-      link.download = "Reporte rms.pdf";
+      link.download = "Reporte.pdf";
       link.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
       setTimeout(function () {
           window.URL.revokeObjectURL(data);
@@ -229,5 +246,6 @@ export class RegistrosComponent implements OnInit {
         console.log(error);
     });
   }
+
 }
 

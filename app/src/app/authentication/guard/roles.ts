@@ -1,8 +1,6 @@
 export enum Roles {
     Administrador = 'administrador',
+    Supervisor='supervisor',
     Operador='operador',
-    consulta='consulta',
-    OperadorFuncionarios = 'operador_funcionarios',
-    AprobadorFuncionarios = 'aprobador_funcionarios',
-    ConsultaFuncionarios = 'consulta_funcionarios'
-  }
+    Consulta='consulta'
+}

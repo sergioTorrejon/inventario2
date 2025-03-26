@@ -8,7 +8,7 @@ export class JwtConsultaRoleGuard extends AuthGuard('jwt') {
     console.log('inside JwtConsultaRoleGuard');
     console.log(user);
     //if (user && user.role && (user.role.includes(Roles.ConsultaFuncionarios) || user.role.includes(Roles.Administrador) || user.role.includes(Roles.OperadorFuncionarios) || user.role.includes(Roles.AprobadorFuncionarios))) {
-      if (user && user.role && (user.role.includes(Roles.ConsultaFuncionarios)) || (user.role.includes(Roles.Administrador))) {
+      if (user && user.role && (user.role.includes(Roles.consulta)) || (user.role.includes(Roles.Administrador))) {
       return user;
     }
     throw new ForbiddenException();

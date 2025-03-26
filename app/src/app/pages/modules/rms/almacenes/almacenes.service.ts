@@ -12,7 +12,7 @@ const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/js
 @Injectable({
   providedIn: 'root'
 })
-export class ProvedoresService {
+export class AlmacenesService {
     private url: string = '';
 
     constructor (private http: HttpClient) {

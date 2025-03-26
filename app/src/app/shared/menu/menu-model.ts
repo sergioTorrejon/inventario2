@@ -53,7 +53,7 @@ const MENUITEMS: any =
     name: 'ALMACENES',
     type: 'sub',
     icon: 'settings',
-    role : [Roles.Administrador, Roles.OperadorFuncionarios, Roles.AprobadorFuncionarios],
+    role : [Roles.Administrador, Roles.Operador, Roles.Supervisor],
     children: [
       { state: 'registros', name: 'Registros ', type: 'link' },
     ]
@@ -63,7 +63,7 @@ const MENUITEMS: any =
     name: 'Reportes',
     type: 'link',
     icon: 'manage_search',
-    role : [Roles.ConsultaFuncionarios, Roles.Administrador],
+    role : [Roles.Consulta, Roles.Administrador],
     children: []
   },
 ];

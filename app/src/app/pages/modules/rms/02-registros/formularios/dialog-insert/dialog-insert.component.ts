@@ -186,18 +186,6 @@ export class DialogInsertComponent implements OnInit  {
 
   ngOnInit( )
   {
-    this.restCrud.getOptionsPaises().subscribe((data:any) => {
-      this.listPaises = data.data.paises;
-    });
-
-    this.restCrud.getOptionsestadosDepartamentos().subscribe((data:any) => {
-      this.listEstadosDepartamentos = data.data.estadosDepartamentos;
-    });
-
-    this.restCrud.getOptionsCiudadesMunicipios(this.estadoDepartamento).subscribe((data:any) => {
-      this.listCiudadesMunicipios = data.data.ciudadesMunicipios;
-    });
-
     this.setFormSearch()
     this.formOnchange();
   }
@@ -224,9 +212,6 @@ export class DialogInsertComponent implements OnInit  {
     })
 
     this.formGroupFuncionario.controls['estadoDepartamento'].valueChanges.subscribe(async data => {
-      this.restCrud.getOptionsCiudadesMunicipios(data).subscribe((data:any) => {
-        this.listCiudadesMunicipios = data.data.ciudadesMunicipios;
-      });
     })
   }
 

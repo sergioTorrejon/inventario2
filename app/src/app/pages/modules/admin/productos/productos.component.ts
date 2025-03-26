@@ -88,9 +88,6 @@ export class ProductosComponent implements OnInit {
         this.model.dataOptions = data.data;
         this.dataOptions = this.model.dataOptions;
       });
-      this.restCrud.getEmpresas().subscribe((data:any) => {
-        this.empresas = data.data;
-      });
     }
 
   ngOnInit() {
@@ -106,13 +103,6 @@ export class ProductosComponent implements OnInit {
   formOnchange(){
       this.formGroup.valueChanges.subscribe(async data => {
         this.dataTableUpdate(this.page);
-      })
-
-      this.formGroup.controls['tipoEmpresa'].valueChanges.subscribe(async data => {
-        this.formGroup.controls['codEmpresa'].setValue('');
-        this.restCrud.getEmpresas(data).subscribe((data:any) => {
-          this.empresas = data.data;
-        });
       })
   }
 
@@ -219,13 +209,14 @@ export class ProductosComponent implements OnInit {
   // DESCARGAR EN EXCEL
   downloadCsv() {
     const dto = (this.formGroup).getRawValue();
-    this.rest.getCsv('registros_funcionarios',dto)
+    console.log('---------------------------------------------DTO para pdf',dto)
+    this.rest.getCsv('productos',dto)
     .subscribe((result: any) => {
         var newBlob = new Blob([result], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
         const data = window.URL.createObjectURL(newBlob);
         const link = document.createElement('a');
         link.href = data;
-        link.download = "Reporte rms.xlsx";
+        link.download = "Reporte.xlsx";
         link.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
         setTimeout(function () {
             window.URL.revokeObjectURL(data);
@@ -238,13 +229,15 @@ export class ProductosComponent implements OnInit {
   // DESCARGAR EN PDF
   downloadpdf() {
       const dto = (this.formGroup).getRawValue();
-      this.rest.getPdf('registros_funcionarios',dto)
+      console.log('---------------------------------------------DTO para pdf',dto)
+
+      this.rest.getPdf('productos',dto)
     .subscribe((result: any) =>  {
       var newBlob = new Blob([result], { type: "application/pdf" });
       const data = window.URL.createObjectURL(newBlob);
       var link = document.createElement('a');
       link.href = data;
-      link.download = "Reporte rms.pdf";
+      link.download = "Reporte.pdf";
       link.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
       setTimeout(function () {
           window.URL.revokeObjectURL(data);

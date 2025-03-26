@@ -67,28 +67,6 @@ export class CrudService {
       return this.http.get(`${this.url}/catalogo/options`).pipe();
     }
 
-    getEmpresas(tipoEmpresa:number=0):  Observable<any>
-    {
-      return this.http.get<any[]>(`${this.url}/empresa/listOptions?` +
-      (tipoEmpresa === 0? ``: `&tipoEmpresa=${tipoEmpresa}`) 
-      ).pipe();
-    }
-
-    getOptionsPaises(): Observable<any> {
-      return this.http.get(`${this.url}/data/paises/listOptions`).pipe();
-    }
-
-    getOptionsestadosDepartamentos(): Observable<any> {
-      return this.http.get(`${this.url}/data/estados_departamentos/listOptions`).pipe();
-    }
-
-    getOptionsCiudadesMunicipios(estadoDepartamento: number): Observable<any> {
-      return this.http.get(`${this.url}/data/ciudades_municipios/listOptions?`+
-      (estadoDepartamento === 0? ``: `&estadoDepartamento=${estadoDepartamento}`)
-      ).pipe();
-    }
-
-
     getData(model,query: string,page: number = 0,limit: number = 0,sort: string = '',order: string = ''):  Observable<any>
     {
       return this.http.get<any[]>(`${this.url}/${model}?` +

@@ -23,7 +23,7 @@ export async function pdfBuild(data:any) {
     }
     let doc = new jsPDF('landscape', 'cm', 'a4')
     doc.setFontSize(10);
-    doc.text("REGISTRO DEL MERCADO DE SEGUROS - RMS", doc.internal.pageSize.width / 3, 1)
+    doc.text("REPORTE DE REGISTROS", doc.internal.pageSize.width / 3, 1)
     doc.setFontSize(7);
     doc.setTextColor('red')
     autoTable(doc,{

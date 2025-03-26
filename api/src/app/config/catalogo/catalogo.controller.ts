@@ -20,9 +20,10 @@ import {
   CatalogoCreateDto,
   CatalogoUpdateDto,
 } from './dtos';
+import { Auth } from 'src/core/common/decorators/auth/auth.decorator';
 
 @ApiTags('Catalogo')
-//@Auth()
+@Auth()
 @Controller('catalogo')
 @UseFilters(new HttpExceptionFilter())
 export class CatalogoController {

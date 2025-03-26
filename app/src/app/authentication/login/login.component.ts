@@ -26,9 +26,9 @@ export class LoginComponent implements OnInit {
   listaUsuarios: any =
   [
     {value:'administrador' , label:'administrador'},
-    {value:'operador_funcionarios_101' , label:'operador_funcionarios_101'},
-    {value:'operador_funcionarios_109' , label:'operador_funcionarios_109'},
-    {value:'consulta_funcionarios_101' , label:'consulta_funcionarios_101'},
+    {value:'operador' , label:'operador'},
+    {value:'supervisor' , label:'supervisor'},
+    {value:'consulta' , label:'consulta'},
   ];
 
   constructor(
@@ -53,12 +53,7 @@ export class LoginComponent implements OnInit {
         .pipe(first())
         .subscribe(
           data => {
-            if(this.authorizationService.isAuthorized('consulta_funcionarios')){
-              this.router.navigate(['/consultas']);
-            }else{
-              this.router.navigate(['/registros']);
-            }
-
+            this.router.navigate(['/consultas']);
           },
         )
   }

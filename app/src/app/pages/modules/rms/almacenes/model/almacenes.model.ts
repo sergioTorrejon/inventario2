@@ -1,6 +1,6 @@
 export const MODEL = {
     name:'productos',
-    title:'PRODUCTOS',
+    title:'ALMACENES',
     avatar:'assets/images/img/documentos1.jpg',
 
     columnsTable:
@@ -32,8 +32,8 @@ export const MODEL = {
 
 export const tipoCategoriaProducto = [
     {value:"motocicleta",label:'Motocicleta'},
-    {value:"Automovil",label:'Automovil'},
-    {value:"Agropecuario",label:'Agropecuario'}
+    {value:"automovil",label:'Automovil'},
+    {value:"agropecuario",label:'Agropecuario'}
   ]
 
 export const marcasProducto = [
