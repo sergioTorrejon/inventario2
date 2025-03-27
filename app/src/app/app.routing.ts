@@ -19,6 +19,11 @@ export const AppRoutes: Routes = [
           pathMatch: 'full'
       },
 
+      {
+        path: 'consultas',
+        //canActivate: [AuthGuard],
+        loadChildren: () => import('./pages/modules/rms/consultas/consultas.module').then(m => m.ConsultasModule)
+      },
       //PRODUCTOS
       {
         path: 'productos',
@@ -27,14 +32,9 @@ export const AppRoutes: Routes = [
         data: { titulo:'registros', roles: [Roles.Administrador]}
       },
       {
-        path: 'consultas',
-        //canActivate: [AuthGuard],
-        loadChildren: () => import('./pages/modules/rms/01-consultas/consultas.module').then(m => m.ConsultasModule)
-      },
-      {
         path: 'registros',
         canActivate: [AuthGuard],
-        loadChildren: () => import('./pages/modules/rms/02-registros/registros.module').then(m => m.RegistrosModule),
+        loadChildren: () => import('./pages/modules/rms/registros/registros.module').then(m => m.RegistrosModule),
         data: { titulo:'registros', roles: [Roles.Administrador, Roles.Operador, Roles.Supervisor]}
       }
 

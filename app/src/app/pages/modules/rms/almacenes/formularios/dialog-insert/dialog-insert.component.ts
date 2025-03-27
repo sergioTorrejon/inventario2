@@ -30,7 +30,7 @@ import {
 } from 'src/app/components/dialogs/message-box/message-box.component';
 import {
   PersonasService,
-} from 'src/app/pages/modules/admin/database/personas/personas.service';
+} from 'src/app/pages/modules/admin/personas/personas.service';
 import { CrudService } from 'src/app/services/crud/crud.service';
 
 import { ProvedoresService } from '../../almacenes.service';

@@ -9,9 +9,7 @@
       </mat-card-header>
       <!-- ***FIN*** TITULO -->
       
-      
       <mat-divider></mat-divider>
-
 
       <!-- BUSQUEDA AVANZADA-->
       <div>
@@ -45,20 +43,6 @@
           </div>
           <!-- ***FIN*** MARCA -->
 
-          <!-- MODELO -->
-          <div fxFlex.gt-lg="15" fxFlex.gt-md="15"  fxFlex.gt-xs="50" fxFlex="50" >
-            <form  [formGroup]="formGroup" >
-              <mat-form-field class="form-search" appearance="outline">
-                <mat-label>Modelo</mat-label>
-                <input type="text" maxlength = "100" matInput formControlName="modelo" >
-                <button mat-button *ngIf="formGroup.controls['modelo'].value" matSuffix mat-icon-button color="warn" aria-label="Clear" (click)="formGroup.controls['modelo'].setValue('')">
-                  <mat-icon>close</mat-icon>
-                </button>
-              </mat-form-field>
-            </form>
-          </div>
-          <!-- ***FIN*** MODELO -->
-
           <!-- MEDIDA -->
           <div fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="50" fxFlex="50">
             <form  [formGroup]="formGroup" >
@@ -72,6 +56,20 @@
             </form>
           </div>
           <!-- ***FIN*** MEDIDA -->
+
+          <!-- MODELO -->
+          <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="50" fxFlex="50" >
+            <form  [formGroup]="formGroup" >
+              <mat-form-field class="form-search" appearance="outline">
+                <mat-label>Modelo</mat-label>
+                <input type="text" maxlength = "100" matInput formControlName="modelo" >
+                <button mat-button *ngIf="formGroup.controls['modelo'].value" matSuffix mat-icon-button color="warn" aria-label="Clear" (click)="formGroup.controls['modelo'].setValue('')">
+                  <mat-icon>close</mat-icon>
+                </button>
+              </mat-form-field>
+            </form>
+          </div>
+          <!-- ***FIN*** MODELO -->
 
           <!-- DESCRIPCION -->
           <div fxFlex.gt-lg="15" fxFlex.gt-md="15"  fxFlex.gt-xs="50" fxFlex="50" >
@@ -101,7 +99,6 @@
       <!-- ***FIN*** BUSQUEDA AVANZADA -->
 
       <mat-divider></mat-divider>
-
 
       <!-- TABLA -->
       <div >
@@ -170,10 +167,10 @@
             <!-- ***FIN*** FILAS DE LA TABLA -->
 
             <!-- FILA DE ACCIONES -->
-            <div style="text-align: center;"  fxFlex.gt-lg="5" fxFlex.gt-md="10"  fxFlex.gt-xs="10" fxFlex="10">
-              <button mat-button color="warn" class="form-table-body" (click)="deleteRow(row)"><mat-icon>delete</mat-icon>Eliminar</button>
+            <div style="text-align: center;"  fxFlex.gt-lg="5" fxFlex.gt-md="5"  fxFlex.gt-xs="10" fxFlex="10">
+              <button mat-button color="warn" class="form-table-body" (click)="deleteRow(row)"><mat-icon>delete</mat-icon>Borrar</button>
             </div>
-            <div style="text-align: center;"  fxFlex.gt-lg="5" fxFlex.gt-md="10"  fxFlex.gt-xs="10" fxFlex="10">
+            <div style="text-align: center;"  fxFlex.gt-lg="5" fxFlex.gt-md="5"  fxFlex.gt-xs="10" fxFlex="10">
               <button mat-button color="primary" class="form-table-body" (click)="updateRow(row)"><mat-icon>preview</mat-icon>Ver</button>
             </div>
             <!-- ***FIN*** FILA DE ACCIONES -->

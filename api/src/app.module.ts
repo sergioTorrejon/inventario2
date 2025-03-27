@@ -32,8 +32,8 @@ import { SuspencionesModule } from './app/modules/rms/suspenciones/suspenciones.
 
 import { DATABASE_CONFIG } from './config/config';
 import { AuthModule } from './core/auth/auth.module';
-import { EmpresasModule } from './app/modules/admin/database/empresas/empresas.module';
-import { PersonasModule } from './app/modules/admin/database/personas/personas.module';
+import { EmpresasModule } from './app/modules/admin/empresas/empresas.module';
+import { PersonasModule } from './app/modules/admin/personas/personas.module';
 import { ProvedoresModule } from './app/modules/admin/provedores/provedores.module';
 import { AlmacenesModule } from './app/modules/admin/almacenes/almacenes.module';
 import { ProductosModule } from './app/modules/admin/productos/productos.module';

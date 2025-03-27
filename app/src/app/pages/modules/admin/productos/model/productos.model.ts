@@ -7,10 +7,10 @@ export const MODEL = {
     [
       {name:'codigo', label:'Codigo', width:10},
       {name:'categoria', label:'Categoria',  width:10},
-      {name:'marca', label:'Marca',  width:20},
-      {name:'modelo', label:'Modelo',  width:15},
+      {name:'marca', label:'Marca',  width:10},
       {name:'medida', label:'Medida',  width:20},
-      {name:'descripcion', label:'Descripción',  width:15},
+      {name:'modelo', label:'Modelo',  width:20},
+      {name:'descripcion', label:'Descripción',  width:20},
     ],
 
     formControl:
