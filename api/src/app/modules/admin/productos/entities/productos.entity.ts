@@ -6,7 +6,6 @@ import {
   ManyToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
-import { Provedores } from '../../provedores/entities/provedores.entity';
 
 @Entity({name:'productos'})
 export class Productos{
@@ -14,10 +13,6 @@ export class Productos{
   /******************************IDENTIFICADOR************************************** */
   @PrimaryGeneratedColumn()
   id: number;
-
-  @ManyToOne((type) => Provedores)
-  @JoinColumn({name:'id_provedor'})
-  provedor: Provedores
 
   /******************************COLUMNAS************************************** */
   @Column({ type: 'varchar', length: 50 , nullable: true })

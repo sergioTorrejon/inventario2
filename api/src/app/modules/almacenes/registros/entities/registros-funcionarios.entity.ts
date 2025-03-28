@@ -14,8 +14,6 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-import { RegistrosBajas } from '../../registros_detalle/entities';
-
 @Entity({name:'registros_funcionarios'})
 export class RegistrosFuncionarios{
   //PRIMARY KEY GUID AUTOCLAVE STRING
@@ -68,9 +66,6 @@ export class RegistrosFuncionarios{
   @Column({ type: 'timestamp', name: 'fecha_fin_representacion_legal' , nullable:true})
   fechaFinRepresentacionLegal: string;
   
-  @OneToMany(() => RegistrosBajas, registrosBajas => registrosBajas.funcionario)
-  bajas: RegistrosBajas[];
-
   @Column({ type: 'varchar', name: 'estado',length: 50, default: 'activo' })
   estado: string;
   
