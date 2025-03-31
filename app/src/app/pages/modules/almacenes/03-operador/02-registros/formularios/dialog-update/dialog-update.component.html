@@ -1,0 +1,160 @@
+<!-- HEADER -->
+<div fxLayout="row wrap">
+  <div>
+    <img src="assets/images/logo-aps.png" alt="homepage" class="light-logo">
+  </div>
+  <span fxFlex></span>
+  <button mat-icon-button color="warn" matDialogClose="cancel" matTooltip="Salir" (click)="close('close')">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+<!--FIN DEL HEADER -->
+
+<!-- DATOS DE LA PERSONA SELECCIONADA -->
+<div mat-dialog-content>
+  <!--TITULO DE BUSQUEDA Y BOTON PARA AGREGAR NUEVA PERSONA NATURAL -->
+  <div fxLayout="row wrap">
+    <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
+    </div>
+    <div fxFlex.gt-lg="60" fxFlex.gt-md="60"  fxFlex.gt-xs="100" fxFlex="100">
+      <h2 mat-dialog-title class="head-dialog" style="text-align: center;">FICHA DE REGISTRO</h2>
+    </div>
+    <div fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
+    </div>
+  </div>
+  <!--FIN TITULO DE BUSQUEDA Y BOTON PARA AGREGAR NUEVA PERSONA NATURAL -->
+<!-- DATOS DEL SELECCIONADO -->
+
+
+<div  >
+  <!-- SUBTITULO FORMULARIO -->
+  <mat-card-subtitle>DATOS DE LA PERSONA</mat-card-subtitle>
+  <!-- FIN SUBTITULO FORMULARIO -->
+
+  <!-- DATOS PERSONA SELECCIONADA -->
+    <!-- CABECERAS DE LA TABLA -->
+      <div fxLayout="row wrap">
+        <div   class="form-table-head" *ngFor="let config of columnsSelect"  [fxFlex.gt-lg]="config.width" [fxFlex.gt-md]="config.width" fxFlex.gt-xs="100" fxFlex="100">
+        {{config.label}}
+        </div>
+      </div>
+    <!-- DATA DE LA TABLA -->
+      <div fxLayout="row wrap">
+        <div class="form-table-body"  *ngFor="let column of columnsSelect" [fxFlex.gt-lg]="column.width" [fxFlex.gt-md]="column.width"  fxFlex.gt-xs="100" fxFlex="100">
+          <div class="form-table-body" >
+            {{this.data.data[column.name]}}
+          </div>
+        </div>
+      </div>
+</div>
+<!-- FIN DATOS DEL SELECCIONADO -->
+
+</div>
+<!--FIN DATOS DE LA PERSONA SELECCIONADA -->
+
+<!-- FORMULARIO DE ADICIONAR NUEVA PERSONA -->
+<div mat-dialog-content *ngIf="this.editar"> <!-- instead of your <div>  or use <div mat-dialog-content> -->
+<!-- FORMULARIO -->
+
+
+  <div  >
+
+    <mat-card-subtitle>DATOS DEL REGISTRO</mat-card-subtitle>
+    <!-- FORMULARIO INSECION -->
+    <div fxLayout="row wrap" >
+      <!---------------------- FILA 3 ----------------------------->
+
+        <!-- codigo -->
+        <div fxFlex.gt-lg="50" fxFlex.gt-md="50"  fxFlex.gt-xs="100" fxFlex="100">
+          <form  [formGroup]="formGroupFuncionario" >
+            <mat-form-field class="form-element" appearance="outline">
+              <mat-label>Código</mat-label>
+              <input  matInput formControlName="codigo"  maxlength = "100">
+            </mat-form-field>
+          </form>
+        </div>
+
+      <!-- CATEGORIA -->
+      <div fxFlex.gt-lg="25" fxFlex.gt-md="25"  fxFlex.gt-xs="50" fxFlex="50">
+        <form  [formGroup]="formGroup" >
+          <mat-form-field class="form-search" appearance="outline" >
+            <mat-label>Categoria</mat-label>
+            <mat-select formControlName="categoria">
+              <mat-option *ngFor="let option of this.tipoCategoriaProducto" [value]="option.value">{{option.label}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </form>
+      </div>
+      <!-- ***FIN*** CATEGORIA -->
+
+      <!-- MARCA -->
+      <div fxFlex.gt-lg="10" fxFlex.gt-md="10"  fxFlex.gt-xs="50" fxFlex="50">
+        <form  [formGroup]="formGroup" >
+          <mat-form-field class="form-search" appearance="outline" >
+            <mat-label>Marca</mat-label>
+            <mat-select formControlName="marca">
+              <mat-option *ngFor="let option of this.marcasProducto" [value]="option.value">{{option.label}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </form>
+      </div>
+      <!-- ***FIN*** MARCA -->
+
+
+        <!-- DEPARTAMENTO -->
+        <div fxFlex.gt-lg="50" fxFlex.gt-md="50"  fxFlex.gt-xs="100" fxFlex="100">
+          <form  [formGroup]="formGroupFuncionario" >
+            <mat-form-field class="form-element" appearance="outline">
+              <mat-label>Modelo</mat-label>
+              <input  matInput formControlName="modelo"  maxlength = "100">
+            </mat-form-field>
+          </form>
+        </div>
+
+        <!-- CIUDAD -->
+        <div fxFlex.gt-lg="50" fxFlex.gt-md="50"  fxFlex.gt-xs="100" fxFlex="100">
+          <form  [formGroup]="formGroupFuncionario" >
+            <mat-form-field class="form-element" appearance="outline">
+              <mat-label>Medida</mat-label>
+              <input  matInput formControlName="medida"  maxlength = "100">
+            </mat-form-field>
+          </form>
+        </div>
+
+        <!-- NRO DE CONTRATO -->
+        <div fxFlex.gt-lg="50" fxFlex.gt-md="50"  fxFlex.gt-xs="100" fxFlex="100">
+          <form  [formGroup]="formGroupFuncionario" >
+            <mat-form-field class="form-element" appearance="outline" >
+              <mat-label>Descripcion</mat-label>
+              <input  matInput formControlName="descripcion" maxlength = "30">
+            </mat-form-field>
+          </form>
+        </div>
+
+      <!---------------------- FIN FILA 3 ------------------------->
+    </div>
+    <!-- FIN DEL  FORMULARIO INSECION -->
+  </div>
+</div>
+<!--FIN DEL BODY -->
+
+<!-- ACTIONS -->
+<div mat-dialog-actions fxLayout="row wrap"   >
+  <div fxFlex.gt-lg="80" fxFlex.gt-md="80"  fxFlex.gt-xs="100" fxFlex="100">
+  </div>
+  <div *ngIf="this.editar" fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
+      <form [formGroup]="formGroupFuncionario" (ngSubmit)="onSubmit(formGroupFuncionario.value)" >
+        <div class="form-element" >
+          <button mat-raised-button color="primary" type="submit" class="form-element" matTooltip="Registrar" [disabled]="formGroupFuncionario.invalid"><mat-icon>save</mat-icon> Guardar</button>
+        </div>
+        <div class="form-element" >
+        </div>
+      </form>
+  </div>
+  <div *ngIf="!this.editar" fxFlex.gt-lg="20" fxFlex.gt-md="20"  fxFlex.gt-xs="100" fxFlex="100">
+    <div class="form-element" >
+      <button mat-raised-button color="primary" class="form-element" matTooltip="Registrar" (click)="this.editar=!this.editar" ><mat-icon>edit</mat-icon> Editar</button>
+    </div>
+  </div>
+</div>
+<!-- FIN DE ACTIONS *ngIf="dataRow.length==0"-->
