@@ -19,9 +19,9 @@ import { EstadosDepartamentosModule } from './app/data/estados_departamentos/est
 import { PaisesModule } from './app/data/paises/paises.module';
 import { DATABASE_CONFIG } from './config/config';
 import { AuthModule } from './core/auth/auth.module';
-import { EmpresasModule } from './app/modules/admin/empresas/empresas.module';
-import { PersonasModule } from './app/modules/admin/personas/personas.module';
-import { ProductosModule } from './app/modules/admin/productos/productos.module';
+import { EmpresasModule } from './app/modules/02-data/empresas/empresas.module';
+import { PersonasModule } from './app/modules/02-data/personas/personas.module';
+import { ProductosModule } from './app/modules/02-data/productos/productos.module';
 
 @Module({
   imports: [TypeOrmModule.forRoot(DATABASE_CONFIG as TypeOrmModuleOptions),
