@@ -8,12 +8,12 @@ import { Repository } from 'typeorm';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 
-import { Personas } from './personas.entity';
+import { Personas } from './entities/personas.entity';
 import { 
   PersonasSearchDto as searchDto, 
   PersonasCreateDto as createDto, 
   PersonasUpdateDto as updateDto
-} from './personas.dtos';
+} from './dtos/personas.dtos';
 import { RESP_MESSAGES } from 'src/core/common/constants/resp-messages';
 import { selectQuery,whereQuery } from './repository/persona_natural.query';
 import { PERSONAS_MODEL } from './personas.config';

@@ -6,8 +6,8 @@ import {
 import { ApiProperty } from '@nestjs/swagger';
 import { Catalogo } from 'src/app/config/catalogo/entities';
 import { EstadosDepartamentos } from 'src/app/data/estados_departamentos/estados_departamentos.entity';
-import { Personas } from 'src/app/modules/02-data/personas/personas.entity';
-import { Empresas } from 'src/app/modules/02-data/empresas/empresas.entity';
+import { Personas } from 'src/app/modules/02-data/personas/entities/personas.entity';
+import { Empresas } from 'src/app/modules/02-data/empresas/entities/empresas.entity';
 
 
 export class RegistrosFuncionariosCreateDto{

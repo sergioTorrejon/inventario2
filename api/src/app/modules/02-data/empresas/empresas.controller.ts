@@ -18,7 +18,7 @@ import {
   EmpresasSearchDto as searchDto, 
   EmpresasCreateDto as createDto, 
   EmpresasUpdateDto as updateDto
-} from './empresas.dtos';
+} from './dtos/empresas.dtos';
 import { EmpresasService } from './empresas.service';
 
 @ApiTags('Empresa')

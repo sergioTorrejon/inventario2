@@ -1,8 +1,8 @@
 import { Catalogo } from 'src/app/config/catalogo/entities';
 import { CiudadesMunicipios } from 'src/app/data/ciudades_municipios/ciudades_municipios.entity';
 import { EstadosDepartamentos } from 'src/app/data/estados_departamentos/estados_departamentos.entity';
-import { Empresas } from 'src/app/modules/02-data/empresas/empresas.entity';
-import { Personas } from 'src/app/modules/02-data/personas/personas.entity';
+import { Empresas } from 'src/app/modules/02-data/empresas/entities/empresas.entity';
+import { Personas } from 'src/app/modules/02-data/personas/entities/personas.entity';
 import {
   Column,
   CreateDateColumn,

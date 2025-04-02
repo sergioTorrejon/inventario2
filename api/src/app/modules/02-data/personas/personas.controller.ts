@@ -21,7 +21,7 @@ import {
   PersonasSearchDto as searchDto, 
   PersonasCreateDto as createDto, 
   PersonasUpdateDto as updateDto
-} from './personas.dtos';
+} from './dtos/personas.dtos';
 import { PersonasService } from './personas.service';
 
 @ApiTags('Persona Natural')

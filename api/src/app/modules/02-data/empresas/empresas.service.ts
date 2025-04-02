@@ -9,12 +9,12 @@ import { Repository } from 'typeorm';
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 
-import { Empresas } from './empresas.entity';
+import { Empresas } from './entities/empresas.entity';
 import { 
   EmpresasSearchDto as searchDto, 
   EmpresasCreateDto as createDto, 
   EmpresasUpdateDto as updateDto
-} from './empresas.dtos';
+} from './dtos/empresas.dtos';
 import { EMPRESA_MODEL } from './empresa.config';
 
 

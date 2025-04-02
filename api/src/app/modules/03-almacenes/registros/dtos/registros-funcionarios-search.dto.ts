@@ -7,7 +7,7 @@ import {
 import { ApiProperty } from '@nestjs/swagger';
 
 import { Catalogo } from 'src/app/config/catalogo/entities';
-import { Personas } from 'src/app/modules/02-data/personas/personas.entity';
+import { Personas } from 'src/app/modules/02-data/personas/entities/personas.entity';
 
 export class RegistrosFuncionariosSearchDto {
   

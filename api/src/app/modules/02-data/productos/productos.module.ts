@@ -6,7 +6,6 @@ import { ProductosController } from './productos.controller';
 import { ProductosService } from './productos.service';
 
 
-
 const entities =    [Productos]
 const controllers = [ProductosController]
 const services =    [ProductosService]

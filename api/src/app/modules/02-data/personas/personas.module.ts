@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { PersonasController } from './personas.controller';
-import { Personas } from './personas.entity';
+import { Personas } from './entities/personas.entity';
 import { PersonasService } from './personas.service';
 
 const entities =    [Personas]

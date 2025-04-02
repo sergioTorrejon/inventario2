@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Empresas } from '../../02-data/empresas/empresas.entity';
+import { Empresas } from '../../02-data/empresas/entities/empresas.entity';
 import { EmpresasService } from '../../02-data/empresas/empresas.service';
 import { RegistrosFuncionarios } from './entities';
 import {

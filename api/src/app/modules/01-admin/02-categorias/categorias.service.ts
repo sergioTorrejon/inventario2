@@ -22,15 +22,17 @@ export class CategoriasService {
     private readonly repository: Repository<Categorias>) {
   }
 
-//#region CRUD SERVICES
-  async getMany(pag: PaginationDto) {
+  //#region CRUD 
+  //GET ALL
+  async getAll(pag: PaginationDto) {
     const data = await  this.repository.find({ where:{active:true}})
     console.log(data)
     const count = await  this.repository.count({where:{active:true}})
     return responseSuccess(RESP_MESSAGES.GET,{data:data,count:count});
   }
 
-   async getOne(id: string)  {
+  //GET ONE
+  async getOne(id: string)  {
     try{
       const data  = await  this.repository.findOne({ where:{ id: +id , active:true}})
       if (!data)  throw new Error('No existe Datos con este usuario');
@@ -43,6 +45,7 @@ export class CategoriasService {
     }
   }
 
+  //CREATE ONE
   async createOne(dto: CreateDto) {
     try{
       const getOne = await  this.repository.findOne({ where:{codigo: dto.codigo, active: true }});
@@ -53,13 +56,13 @@ export class CategoriasService {
       return responseSuccess(RESP_MESSAGES.POST,{codigo});
     }
     catch (error) {
-    if (error instanceof Error) {
-      return (responseError(error.message, error.name ));
+      if (error instanceof Error) {
+        return (responseError(error.message, error.name ));
+      }
     }
   }
 
-  }
-
+  //UPDATE ONE
   async editOne(id: string, dto: UpdateDto) {
     try{
       const getOne = await  this.repository.findOne({ where:{ id: +id , active:true}})
@@ -69,14 +72,13 @@ export class CategoriasService {
       return responseSuccess(RESP_MESSAGES.PUT,{username});
     }
     catch (error) {
-    if (error instanceof Error) {
-      return (responseError(error.message, error.name ));
+      if (error instanceof Error) {
+        return (responseError(error.message, error.name ));
+      }
     }
   }
 
-
-  }
-
+  //DELETE ONE
   async deleteOne(id: string) {
     try{
       const getOne = await  this.repository.findOne({ where:{ id: +id , active:true}})
@@ -90,9 +92,7 @@ export class CategoriasService {
       }
     }
   } 
-
-
-//#endregion
+  //#region END CRUD
 
 
 }

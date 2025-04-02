@@ -13,7 +13,7 @@ import {
   ProductosCreateDto as createDto, 
   ProductosUpdateDto as updateDto,
   ProductosSearchDto
-} from './dtos/productos.dtos';
+} from './dtos/productos.dto';
 import { responseSuccess, responseError } from 'src/core/common/res/res.config';
 
 
@@ -31,114 +31,97 @@ export const titleHeader = [
 export class ProductosService {
   constructor(
     @InjectRepository(Productos) private readonly repository: Repository<Productos>,
-    ) { }
+  ) { }
 
-
-//#region CRUD SERVICES
-async getAll(userDto:UserDto,paginationDto: PaginationDto, sortDto:SortDto,dto:searchDto) {
-  const query = this.repository.createQueryBuilder('q')
-  .where('q.active=true')
-  .orderBy(sortDto.sort, sortDto.order=='asc'?'ASC':'DESC');
-  if(dto.categoria) query.andWhere('q.categoria= :categoria', { categoria: dto.categoria });
-  if(dto.marca) query.andWhere('q.marca= :marca', { marca: dto.marca });
-  if(dto.medida) query.andWhere('q.medida= :medida', { medida: dto.medida });
-  if(dto.modelo) query.andWhere("q.modelo ILIKE :modelo ", { modelo: `%${dto.modelo}%` });
-  if(dto.descripcion) query.andWhere("q.descripcion ILIKE :descripcion ", { descripcion: `%${dto.descripcion}%` });
-  const data = await query.select('*').offset((paginationDto.page-1)*paginationDto.limit).limit(paginationDto.limit).getRawMany()
-  const count = await query.getCount()
-  return responseSuccess(RESP_MESSAGES.GET,{data:data,count:count});
-}
-
-async getById(userDto:UserDto,id: number)  {
-  try{
-    const getOne  = await  this.repository.findOne({ where:{ id: id , active:true}})
-    if (!getOne)  throw new Error('No existe Datos con este usuario');
-    return responseSuccess(RESP_MESSAGES.GET,getOne,userDto);
-  }
-  catch (error) {
-    if (error instanceof Error) {
-      return (responseError(error.message, error.name ,userDto));
-    }
-  }
-}
-
-async createOne(userDto: UserDto,dto: createDto) {
-  try{
-    const getOne  = await  this.repository.findOne({ where:{ codigo: dto.codigo, active:true}})
-    if (getOne)  throw new Error('El código ya existe');
-    const create =  this.repository.create(dto);
-    create.userCreate = userDto.username;
-    const data = await this.repository.save(create);
-    return responseSuccess(RESP_MESSAGES.POST,data);
-  }
-  catch (error) {
-  if (error instanceof Error) {
-    return (responseError(error.message, error.name ));
-    }
-  }
-}
-
-async editOne(userDto: UserDto,id: number, dto: updateDto) {
-  try{
-    const getOne = await  this.repository.findOne({ where:{ id: id , active:true}})
-    if (!getOne)  throw new Error('No existe datos con este id');
-    const edited = this.repository.merge(getOne,dto);
-    const data = await  this.repository.save(edited);
-    return responseSuccess(RESP_MESSAGES.PUT,data);
-  }
-  catch (error) {
-    if (error instanceof Error) {
-      return (responseError(error.message, error.name ));
-    }
-  }
-}
-
-async deleteOne(userDto: UserDto,id: number) {
-  try{
-    const getOne = await  this.repository.findOne({ where:{ id: id , active:true}})
-    if (!getOne)  throw new Error('No existe un usuario con este id');
-    const data = await  this.repository.save({...getOne,active:false});
-    return responseSuccess(RESP_MESSAGES.DELETE,data);
-  }
-  catch (error) {
-  if (error instanceof Error) {
-    return (responseError(error.message, error.name ));
-  }
-}
-} 
-
-async getOptions() {
-  const data = {
-    estadosDepartamentos: await this.queryOptions(),
-  }
-  return responseSuccess(RESP_MESSAGES.GET,data);
-  }
-
-  
-  async queryOptions() {
-    const data = await this.repository
-    .createQueryBuilder('q')
-    .innerJoin('q.pais', 'p')
-    .select("q.id as value, q.nombre as label, p.nombre as pais")
-    .getRawMany();
-    return data;
-  }
-
-//#endregion
-
-  async getManyReport(dto:ProductosSearchDto) {
+  //#region CRUD SERVICES
+  //GET ALL
+  async getAll(userDto:UserDto,paginationDto: PaginationDto, sortDto:SortDto,dto:searchDto) {
     const query = this.repository.createQueryBuilder('q')
-    .where('q.active=true');
+    .where('q.active=true')
+    .orderBy(sortDto.sort, sortDto.order=='asc'?'ASC':'DESC');
     if(dto.categoria) query.andWhere('q.categoria= :categoria', { categoria: dto.categoria });
     if(dto.marca) query.andWhere('q.marca= :marca', { marca: dto.marca });
     if(dto.medida) query.andWhere('q.medida= :medida', { medida: dto.medida });
     if(dto.modelo) query.andWhere("q.modelo ILIKE :modelo ", { modelo: `%${dto.modelo}%` });
     if(dto.descripcion) query.andWhere("q.descripcion ILIKE :descripcion ", { descripcion: `%${dto.descripcion}%` });
-    const data = await query.select('*').getRawMany()
-    const header = titleHeader
-    return {data:data,header:header};
+    const data = await query.select('*').offset((paginationDto.page-1)*paginationDto.limit).limit(paginationDto.limit).getRawMany()
+    const count = await query.getCount()
+    return responseSuccess(RESP_MESSAGES.GET,{data:data,count:count});
   }
 
+  //GET ONE
+  async getById(userDto:UserDto,id: number)  {
+    try{
+      const getOne  = await  this.repository.findOne({ where:{ id: id , active:true}})
+      if (!getOne)  throw new Error('No existe Datos con este usuario');
+      return responseSuccess(RESP_MESSAGES.GET,getOne,userDto);
+    }
+    catch (error) {
+      if (error instanceof Error) {
+        return (responseError(error.message, error.name ,userDto));
+      }
+    }
+  }
 
+  //CREATE ONE
+  async createOne(userDto: UserDto,dto: createDto) {
+    try{
+      const getOne  = await  this.repository.findOne({ where:{ codigo: dto.codigo, active:true}})
+      if (getOne)  throw new Error('El código ya existe');
+      const create =  this.repository.create(dto);
+      create.userCreate = userDto.username;
+      const data = await this.repository.save(create);
+      return responseSuccess(RESP_MESSAGES.POST,data);
+    }
+    catch (error) {
+      if (error instanceof Error) {
+        return (responseError(error.message, error.name ));
+      }
+    }
+  }
 
-}
+  //UPDATE ONE
+  async editOne(userDto: UserDto,id: number, dto: updateDto) {
+    try{
+      const getOne = await  this.repository.findOne({ where:{ id: id , active:true}})
+      if (!getOne)  throw new Error('No existe datos con este id');
+      const edited = this.repository.merge(getOne,dto);
+      const data = await  this.repository.save(edited);
+      return responseSuccess(RESP_MESSAGES.PUT,data);
+    }
+    catch (error) {
+      if (error instanceof Error) {
+        return (responseError(error.message, error.name ));
+      }
+    }
+  }
+
+  //DELETE ONE
+  async deleteOne(userDto: UserDto,id: number) {
+    try{
+      const getOne = await  this.repository.findOne({ where:{ id: id , active:true}})
+      if (!getOne)  throw new Error('No existe un usuario con este id');
+      const data = await  this.repository.save({...getOne,active:false});
+      return responseSuccess(RESP_MESSAGES.DELETE,data);
+    }
+    catch (error) {
+      if (error instanceof Error) {
+        return (responseError(error.message, error.name ));
+      }
+    }
+  } 
+  //#region END CRUD
+
+    async getManyReport(dto:ProductosSearchDto) {
+      const query = this.repository.createQueryBuilder('q')
+      .where('q.active=true');
+      if(dto.categoria) query.andWhere('q.categoria= :categoria', { categoria: dto.categoria });
+      if(dto.marca) query.andWhere('q.marca= :marca', { marca: dto.marca });
+      if(dto.medida) query.andWhere('q.medida= :medida', { medida: dto.medida });
+      if(dto.modelo) query.andWhere("q.modelo ILIKE :modelo ", { modelo: `%${dto.modelo}%` });
+      if(dto.descripcion) query.andWhere("q.descripcion ILIKE :descripcion ", { descripcion: `%${dto.descripcion}%` });
+      const data = await query.select('*').getRawMany()
+      const header = titleHeader
+      return {data:data,header:header};
+    }
+  }

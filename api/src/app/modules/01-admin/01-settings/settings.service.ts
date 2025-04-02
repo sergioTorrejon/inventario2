@@ -24,13 +24,15 @@ export class SettingsService {
     {
   }
 
-  //#region CRUD SERVICES
+  //#region CRUD
+  //GET ALL
   async getAll(pag: PaginationDto) {
     const data = await  this.repository.find({ where:{active:true}})
     const count = await  this.repository.count({where:{active:true}})
     return responseSuccess(RESP_MESSAGES.GET,{data:data,count:count});
   }
 
+  //GET ONE
   async getOne(id: string)  {
     try{
       const data  = await  this.repository.findOne({ where:{ id: +id , active:true}})
@@ -44,6 +46,7 @@ export class SettingsService {
     }
   }
 
+  //CREATE ONE
   async createOne(dto: CreateDto) {
     try{
       const getOne = await  this.repository.findOne({ where:{codigo: dto.codigo, active: true }});
@@ -60,6 +63,7 @@ export class SettingsService {
 
   }
 
+  //UPDATE ONE
   async editOne(id: string, dto: UpdateDto) {
     try{
       const getOne = await  this.repository.findOne({ where:{ id: +id , active:true}})
@@ -75,6 +79,7 @@ export class SettingsService {
     }
   }
 
+  //DELETE ONE
   async deleteOne(id: string) {
     try{
       const getOne = await  this.repository.findOne({ where:{ id: +id , active:true}})
@@ -89,7 +94,7 @@ export class SettingsService {
   }
 
   } 
-  //#endregion
+  //#region END CRUD
 
 }
 
