@@ -112,16 +112,17 @@ export class ProductosService {
   } 
   //#region END CRUD
 
-    async getManyReport(dto:ProductosSearchDto) {
-      const query = this.repository.createQueryBuilder('q')
-      .where('q.active=true');
-      if(dto.categoria) query.andWhere('q.categoria= :categoria', { categoria: dto.categoria });
-      if(dto.marca) query.andWhere('q.marca= :marca', { marca: dto.marca });
-      if(dto.medida) query.andWhere('q.medida= :medida', { medida: dto.medida });
-      if(dto.modelo) query.andWhere("q.modelo ILIKE :modelo ", { modelo: `%${dto.modelo}%` });
-      if(dto.descripcion) query.andWhere("q.descripcion ILIKE :descripcion ", { descripcion: `%${dto.descripcion}%` });
-      const data = await query.select('*').getRawMany()
-      const header = titleHeader
-      return {data:data,header:header};
-    }
+  async getManyReport(dto:ProductosSearchDto) {
+    const query = this.repository.createQueryBuilder('q')
+    .where('q.active=true');
+    if(dto.categoria) query.andWhere('q.categoria= :categoria', { categoria: dto.categoria });
+    if(dto.marca) query.andWhere('q.marca= :marca', { marca: dto.marca });
+    if(dto.medida) query.andWhere('q.medida= :medida', { medida: dto.medida });
+    if(dto.modelo) query.andWhere("q.modelo ILIKE :modelo ", { modelo: `%${dto.modelo}%` });
+    if(dto.descripcion) query.andWhere("q.descripcion ILIKE :descripcion ", { descripcion: `%${dto.descripcion}%` });
+    const data = await query.select('*').getRawMany()
+    const header = titleHeader
+    return {data:data,header:header};
   }
+
+}

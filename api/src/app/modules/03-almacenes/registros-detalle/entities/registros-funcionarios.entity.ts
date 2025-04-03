@@ -1,4 +1,3 @@
-import { Catalogos } from 'src/app/modules/01-admin/03-catalogos/entities';
 import { Empresas } from 'src/app/modules/02-data/empresas/entities/empresas.entity';
 import { Personas } from 'src/app/modules/02-data/personas/entities/personas.entity';
 import {
@@ -7,18 +6,20 @@ import {
   Entity,
   JoinColumn,
   ManyToOne,
+  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
 
-@Entity({name:'registros'})
-export class Registros{
+@Entity({name:'registros_funcionarios'})
+export class RegistrosFuncionarios{
   
   /******************************IDENTIFICADOR************************************** */
   @PrimaryGeneratedColumn()
   id: number;
 
-  /******************************CLAVES FORANEAS************************************** */
+
+  /******************************COLUMNAS************************************** */
   @ManyToOne(() => Personas)
   @JoinColumn({name:'id_persona'})
   personaNatural: Personas
@@ -27,12 +28,10 @@ export class Registros{
   @JoinColumn({name:'id_empresa'})
   empresa: Empresas
 
-  @ManyToOne(() => Catalogos)
+  @ManyToOne(() => Catalogo)
   @JoinColumn({name:'id_tipo_cargo'})
-  tipoCargo: Catalogos;
+  tipoCargo: Catalogo;
 
-
-  /******************************COLUMNAS************************************** */
   @Column({ type: 'varchar', name: 'pais',length: 50 , nullable:true})
   pais: string;
 
@@ -69,15 +68,19 @@ export class Registros{
   @Column({ type: 'varchar', name: 'estado',length: 50, default: 'activo' })
   estado: string;
   
-  /******************************ACTIVO************************************** */
+  // COLUMNS AUDIT
   @Column({ type: 'boolean', default: true })
-  active: boolean;
+  status: boolean;
   
-  /******************************AUDITABLE************************************** */
   @Column({ type: 'varchar', name: 'usuario_creacion',length: 50, default: 'default', select: false })
   userCreate: string;
-  
+
   @CreateDateColumn({ type: 'timestamp', name: 'fecha_creacion', nullable: false, select: false })
   dateCreate: Date;
- 
+
+  @Column({ type: 'varchar', name: 'usuario_modificacion',length: 50, default: 'default', select: false })
+  userUpdate: string;
+
+  @UpdateDateColumn({ type: 'timestamp', name: 'fecha_modificacion', nullable: true, select: false })
+  dateUpdate: Date;
 }
