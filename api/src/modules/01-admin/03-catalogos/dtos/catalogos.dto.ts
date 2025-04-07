@@ -1,0 +1,30 @@
+import {
+  IsString,
+  MaxLength,
+  MinLength,
+} from 'class-validator';
+
+import { ApiProperty, OmitType, PartialType } from '@nestjs/swagger';
+import { Categorias } from '../../02-categorias/entities';
+
+export class createDto {
+  
+  @ApiProperty()
+  @IsString()
+  categoria: Categorias;
+
+  @ApiProperty()
+  @IsString()
+  @MaxLength(50)
+  codigo: string;
+
+  @ApiProperty()
+  @IsString()
+  @MaxLength(250)
+  descripcion: string;
+
+}
+
+export class updateDto extends PartialType(
+  OmitType(createDto, ['categoria',"codigo"] as const),
+) {}
