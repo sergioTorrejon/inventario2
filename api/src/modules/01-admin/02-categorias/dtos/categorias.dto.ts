@@ -4,7 +4,7 @@ import {
 
 import { ApiProperty, OmitType, PartialType } from '@nestjs/swagger';
 
-export class SettingsSearchDto {
+export class CategoriasSearchDto {
 
   @ApiProperty()
   @IsOptional()
@@ -20,7 +20,7 @@ export class SettingsSearchDto {
   
 }
 
-export class SettingsCreateDto {
+export class CategoriasCreateDto {
   
   @ApiProperty()
   @IsOptional()
@@ -36,8 +36,8 @@ export class SettingsCreateDto {
 
 }
 
-export class SettingsUpdateDto extends PartialType(
-  OmitType(SettingsCreateDto, ["codigo"] as const),
+export class CategoriasUpdateDto extends PartialType(
+  OmitType(CategoriasCreateDto, ["codigo"] as const),
 ) {}
 
 

@@ -5,8 +5,8 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-@Entity({name:'settings'})
-export class Settings{
+@Entity({name:'categorias'})
+export class Categorias{
 
   /******************************IDENTIFICADOR************************************** */
   @PrimaryGeneratedColumn()

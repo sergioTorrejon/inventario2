@@ -7,20 +7,20 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { RESP_MESSAGES } from 'src/core/common/constants/resp-messages';
 
 import { UserDto } from 'src/core/common/dtos/user/user.dto';
-import { Settings } from './entities';
+import { Categorias } from './entities';
 import { 
-  SettingsSearchDto as searchDto, 
-  SettingsCreateDto as createDto, 
-  SettingsUpdateDto as updateDto,
-} from './dtos/settings.dto';
+  CategoriasSearchDto as searchDto, 
+  CategoriasCreateDto as createDto, 
+  CategoriasUpdateDto as updateDto,
+} from './dtos/usuarios.dto';
 import { responseSuccess, responseError } from 'src/core/common/res/res.config';
-import { titleHeaderReport } from './settings.config';
+import { titleHeaderReport } from './usuarios.config';
 
 
 @Injectable()
-export class SettingsService {
+export class CategoriasService {
   constructor(
-    @InjectRepository(Settings) private readonly repository: Repository<Settings>,
+    @InjectRepository(Categorias) private readonly repository: Repository<Categorias>,
   ) { }
 
   //#region ---------------------------------------------------------------------------CRUD SERVICES

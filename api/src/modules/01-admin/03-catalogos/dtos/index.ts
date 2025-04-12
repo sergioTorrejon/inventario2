@@ -1,2 +1,1 @@
 export * from './catalogos.dto';
-

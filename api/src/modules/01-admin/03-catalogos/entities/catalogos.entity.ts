@@ -15,21 +15,20 @@ export class Catalogos{
   @PrimaryGeneratedColumn()
   id: number;
 
-  
   /******************************CLAVES FORANEAS************************************** */
   @ManyToOne((type) => Categorias)
   @JoinColumn({name:'id_categoria'})
   categoria: Categorias
-  
+
   /******************************COLUMNAS************************************** */
-  @Column({ type: 'varchar', name:'codigo', length: 50 , nullable: true })
+  @Column({ type: 'varchar', length: 50 , nullable: true })
   codigo: string;
 
-  @Column({ type: 'varchar', name:'descripcion', length: 250 , nullable: true })
+  @Column({ type: 'varchar', length: 250 , nullable: true })
   descripcion: string;
 
 
-  /******************************ACTIVE************************************** */
+  /******************************ACTIVO************************************** */
   @Column({ type: 'boolean', default: true })
   active: boolean;
 
@@ -41,4 +40,4 @@ export class Catalogos{
   @CreateDateColumn({ type: 'timestamp', name: 'fecha_creacion', nullable: false, select: false })
   dateCreate: Date;
 
-}                                                                                                                                                                                                                                                                                                                
+}

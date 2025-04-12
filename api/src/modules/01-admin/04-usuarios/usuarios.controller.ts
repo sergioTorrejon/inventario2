@@ -15,23 +15,23 @@ import {
 } from '@nestjs/common';
 import { Auth } from 'src/core/common/decorators/auth/auth.decorator';
 import { UserDto } from 'src/core/common/dtos/user/user.dto';
-import { SettingsService } from './settings.service';
+import { CategoriasService } from './usuarios.service';
 import { 
-  SettingsCreateDto as CreateDto, 
-  SettingsUpdateDto as UpdateDto,
-  SettingsSearchDto as SearchDto, 
-} from './dtos/settings.dto';
+  CategoriasCreateDto as CreateDto, 
+  CategoriasUpdateDto as UpdateDto,
+  CategoriasSearchDto as SearchDto, 
+} from './dtos/usuarios.dto';
 import { csvBuild } from 'src/utils/libs/csv/csv-create';
 import { pdfBuild } from 'src/utils/libs/pdf/pdf-create';
 import { HttpExceptionFilter } from 'src/core/common/filters';
-import { CONFIG } from './settings.config';
+import { CONFIG } from './usuarios.config';
 
-@Controller('settings')
+@Controller('categorias')
 @Auth()
 @UseFilters(new HttpExceptionFilter())
-export class SettingsController {
+export class CategoriasController {
   constructor(
-    private readonly service:  SettingsService,
+    private readonly service:  CategoriasService,
   ) { 
   }
 

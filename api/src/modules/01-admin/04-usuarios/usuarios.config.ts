@@ -1,5 +1,5 @@
 export const CONFIG = {
-    name: 'Configuraciones'
+    name: 'Categorias'
 }
 
 //---------------PARA REPORTES----------------------------
