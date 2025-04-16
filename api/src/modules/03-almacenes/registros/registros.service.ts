@@ -7,20 +7,20 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { RESP_MESSAGES } from 'src/core/common/constants/resp-messages';
 
 import { UserDto } from 'src/core/common/dtos/user/user.dto';
-import { Usuarios } from './entities';
+import { Registros } from './entities';
 import { 
-  UsuariosSearchDto as searchDto, 
-  UsuariosCreateDto as createDto, 
-  UsuariosUpdateDto as updateDto,
-} from './dtos/usuarios.dto';
+  RegistrosSearchDto as searchDto, 
+  RegistrosCreateDto as createDto, 
+  RegistrosUpdateDto as updateDto,
+} from './dtos/registros.dto';
 import { responseSuccess, responseError } from 'src/core/common/res/res.config';
-import { titleHeaderReport } from './usuarios.config';
+import { titleHeaderReport } from './registros.config';
 
 
 @Injectable()
-export class UsuariosService {
+export class RegistrosService {
   constructor(
-    @InjectRepository(Usuarios) private readonly repository: Repository<Usuarios>,
+    @InjectRepository(Registros) private readonly repository: Repository<Registros>,
   ) { }
 
   //#region ---------------------------------------------------------------------------CRUD SERVICES
@@ -30,7 +30,11 @@ export class UsuariosService {
     .where('q.active=true')
     .orderBy(sortDto.sort, sortDto.order=='asc'?'ASC':'DESC');
     //-----------------------------DESDE AQUI SE REALIZA LAS CONDICIONES-----------------------------
-    if(dto.user) query.andWhere("q.descripcion ILIKE :descripcion ", { descripcion: `%${dto.user}%` });
+    if(dto.categoria) query.andWhere('q.categoria= :categoria', { categoria: dto.categoria });
+    if(dto.marca) query.andWhere('q.marca= :marca', { marca: dto.marca });
+    if(dto.medida) query.andWhere('q.medida= :medida', { medida: dto.medida });
+    if(dto.modelo) query.andWhere("q.modelo ILIKE :modelo ", { modelo: `%${dto.modelo}%` });
+    if(dto.descripcion) query.andWhere("q.descripcion ILIKE :descripcion ", { descripcion: `%${dto.descripcion}%` });
     //-------------------------------------------------------------------------------------------------
     const data = await query.select('*').offset((paginationDto.page-1)*paginationDto.limit).limit(paginationDto.limit).getRawMany()
     const count = await query.getCount()
@@ -56,7 +60,7 @@ export class UsuariosService {
     try{
       const getOne  = await  this.repository.findOne(
         //-----------------CONDICIÓN PARA VERIFICAR EL REGISTRO
-        { where:{ user: dto.user, active:true}}
+        { where:{ codigo: dto.codigo, active:true}}
       )
       if (getOne)  throw new Error('El identificador ya existe');
       const create =  this.repository.create(dto);
@@ -106,7 +110,11 @@ export class UsuariosService {
     const query = this.repository.createQueryBuilder('q')
     .where('q.active=true');
     //-----------------------------DESDE AQUI SE REALIZA LAS CONDICIONES-----------------------------
-    if(dto.user) query.andWhere("q.descripcion ILIKE :descripcion ", { descripcion: `%${dto.user}%` });
+    if(dto.categoria) query.andWhere('q.categoria= :categoria', { categoria: dto.categoria });
+    if(dto.marca) query.andWhere('q.marca= :marca', { marca: dto.marca });
+    if(dto.medida) query.andWhere('q.medida= :medida', { medida: dto.medida });
+    if(dto.modelo) query.andWhere("q.modelo ILIKE :modelo ", { modelo: `%${dto.modelo}%` });
+    if(dto.descripcion) query.andWhere("q.descripcion ILIKE :descripcion ", { descripcion: `%${dto.descripcion}%` });
     //-------------------------------------------------------------------------------------------------
     const data = await query.select('*').getRawMany()
     const header = titleHeaderReport

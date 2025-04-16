@@ -1,20 +1,31 @@
+import { Catalogos } from 'src/modules/01-admin/03-catalogos/entities';
 import {
   Column,
   CreateDateColumn,
   Entity,
+  JoinColumn,
+  ManyToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-@Entity({name:'categorias'})
-export class Categorias{
+@Entity({name:'registros'})
+export class Registros{
 
   /******************************IDENTIFICADOR************************************** */
   @PrimaryGeneratedColumn()
   id: number;
 
+  /******************************CLAVES FORANEAS************************************** */
+  @ManyToOne((type) => Catalogos)
+  @JoinColumn({name:'tipo_registro'})
+  tipoRegistro: Catalogos
+
   /******************************COLUMNAS************************************** */
   @Column({ type: 'varchar', length: 50 , nullable: true })
   codigo: string;
+
+  @Column({ type: 'varchar', name:'fecha_registro', length: 250 , nullable: true })
+  fechaRegistro: string;
 
   @Column({ type: 'varchar', length: 250 , nullable: true })
   descripcion: string;

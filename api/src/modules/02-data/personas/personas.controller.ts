@@ -15,23 +15,23 @@ import {
 } from '@nestjs/common';
 import { Auth } from 'src/core/common/decorators/auth/auth.decorator';
 import { UserDto } from 'src/core/common/dtos/user/user.dto';
-import { UsuariosService } from './usuarios.service';
+import { PersonasService } from './personas.service';
 import { 
-  UsuariosCreateDto as CreateDto, 
-  UsuariosUpdateDto as UpdateDto,
-  UsuariosSearchDto as SearchDto, 
-} from './dtos/usuarios.dto';
+  PersonasCreateDto as CreateDto, 
+  PersonasUpdateDto as UpdateDto,
+  PersonasSearchDto as SearchDto, 
+} from './dtos/personas.dto';
 import { csvBuild } from 'src/utils/libs/csv/csv-create';
 import { pdfBuild } from 'src/utils/libs/pdf/pdf-create';
 import { HttpExceptionFilter } from 'src/core/common/filters';
-import { CONFIG } from './usuarios.config';
+import { CONFIG } from './personas.config';
 
-@Controller('usuarios')
+@Controller('personas')
 @Auth()
 @UseFilters(new HttpExceptionFilter())
-export class UsuariosController {
+export class PersonasController {
   constructor(
-    private readonly service:  UsuariosService,
+    private readonly service:  PersonasService,
   ) { 
   }
 

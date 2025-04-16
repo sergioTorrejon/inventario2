@@ -4,40 +4,32 @@ import {
 
 import { ApiProperty, OmitType, PartialType } from '@nestjs/swagger';
 
-export class CategoriasSearchDto {
+export class UsuariosSearchDto {
 
   @ApiProperty()
   @IsOptional()
-  codigo?: string;
+  user?: string;
 
   @ApiProperty()
   @IsOptional()
-  descripcion?: string;
-
-  @ApiProperty()
-  @IsOptional()
-  valor?: string;
-  
-}
-
-export class CategoriasCreateDto {
-  
-  @ApiProperty()
-  @IsOptional()
-  codigo?: string;
-
-  @ApiProperty()
-  @IsOptional()
-  descripcion?: string;
-
-  @ApiProperty()
-  @IsOptional()
-  valor?: string;
+  password?: string;
 
 }
 
-export class CategoriasUpdateDto extends PartialType(
-  OmitType(CategoriasCreateDto, ["codigo"] as const),
+export class UsuariosCreateDto {
+  
+  @ApiProperty()
+  @IsOptional()
+  user?: string;
+
+  @ApiProperty()
+  @IsOptional()
+  password?: string;
+
+}
+
+export class UsuariosUpdateDto extends PartialType(
+  OmitType(UsuariosCreateDto, ["user"] as const),
 ) {}
 
 

@@ -14,10 +14,6 @@ export class CategoriasSearchDto {
   @IsOptional()
   descripcion?: string;
 
-  @ApiProperty()
-  @IsOptional()
-  valor?: string;
-  
 }
 
 export class CategoriasCreateDto {
@@ -30,9 +26,6 @@ export class CategoriasCreateDto {
   @IsOptional()
   descripcion?: string;
 
-  @ApiProperty()
-  @IsOptional()
-  valor?: string;
 
 }
 

@@ -7,20 +7,20 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { RESP_MESSAGES } from 'src/core/common/constants/resp-messages';
 
 import { UserDto } from 'src/core/common/dtos/user/user.dto';
-import { Usuarios } from './entities';
+import { Personas } from './entities';
 import { 
-  UsuariosSearchDto as searchDto, 
-  UsuariosCreateDto as createDto, 
-  UsuariosUpdateDto as updateDto,
-} from './dtos/usuarios.dto';
+  PersonasSearchDto as searchDto, 
+  PersonasCreateDto as createDto, 
+  PersonasUpdateDto as updateDto,
+} from './dtos/personas.dto';
 import { responseSuccess, responseError } from 'src/core/common/res/res.config';
-import { titleHeaderReport } from './usuarios.config';
+import { titleHeaderReport } from './personas.config';
 
 
 @Injectable()
-export class UsuariosService {
+export class PersonasService {
   constructor(
-    @InjectRepository(Usuarios) private readonly repository: Repository<Usuarios>,
+    @InjectRepository(Personas) private readonly repository: Repository<Personas>,
   ) { }
 
   //#region ---------------------------------------------------------------------------CRUD SERVICES
@@ -30,7 +30,8 @@ export class UsuariosService {
     .where('q.active=true')
     .orderBy(sortDto.sort, sortDto.order=='asc'?'ASC':'DESC');
     //-----------------------------DESDE AQUI SE REALIZA LAS CONDICIONES-----------------------------
-    if(dto.user) query.andWhere("q.descripcion ILIKE :descripcion ", { descripcion: `%${dto.user}%` });
+    if(dto.tipoDocumento) query.andWhere('q.tipo_documento= :tipo_documento', { categoria: dto.tipoDocumento });
+    if(dto.nombres) query.andWhere("q.nombres ILIKE :nombres ", { modelo: `%${dto.nombres}%` });
     //-------------------------------------------------------------------------------------------------
     const data = await query.select('*').offset((paginationDto.page-1)*paginationDto.limit).limit(paginationDto.limit).getRawMany()
     const count = await query.getCount()
@@ -56,7 +57,7 @@ export class UsuariosService {
     try{
       const getOne  = await  this.repository.findOne(
         //-----------------CONDICIÓN PARA VERIFICAR EL REGISTRO
-        { where:{ user: dto.user, active:true}}
+        { where:{ numeroIdentificacion: dto.numeroIdentificacion, active:true}}
       )
       if (getOne)  throw new Error('El identificador ya existe');
       const create =  this.repository.create(dto);
@@ -106,7 +107,8 @@ export class UsuariosService {
     const query = this.repository.createQueryBuilder('q')
     .where('q.active=true');
     //-----------------------------DESDE AQUI SE REALIZA LAS CONDICIONES-----------------------------
-    if(dto.user) query.andWhere("q.descripcion ILIKE :descripcion ", { descripcion: `%${dto.user}%` });
+    if(dto.tipoDocumento) query.andWhere('q.tipo_documento= :tipo_documento', { categoria: dto.tipoDocumento });
+    if(dto.nombres) query.andWhere("q.nombres ILIKE :nombres ", { modelo: `%${dto.nombres}%` });
     //-------------------------------------------------------------------------------------------------
     const data = await query.select('*').getRawMany()
     const header = titleHeaderReport

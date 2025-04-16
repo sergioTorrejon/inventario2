@@ -5,8 +5,8 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-@Entity({name:'categorias'})
-export class Categorias{
+@Entity({name:'usuarios'})
+export class Usuarios{
 
   /******************************IDENTIFICADOR************************************** */
   @PrimaryGeneratedColumn()
@@ -14,13 +14,10 @@ export class Categorias{
 
   /******************************COLUMNAS************************************** */
   @Column({ type: 'varchar', length: 50 , nullable: true })
-  codigo: string;
+  user: string;
 
   @Column({ type: 'varchar', length: 250 , nullable: true })
-  descripcion: string;
-
-  @Column({ type: 'varchar', length: 250 , nullable: true })
-  valor: string;
+  password: string;
 
 
   /******************************ACTIVO************************************** */
