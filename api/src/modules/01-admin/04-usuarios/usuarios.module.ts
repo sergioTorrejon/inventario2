@@ -1,14 +1,14 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
-import { Categorias } from './entities/usuarios.entity';
-import { CategoriasController } from './usuarios.controller';
-import { CategoriasService } from './usuarios.service';
+import { Usuarios } from './entities/usuarios.entity';
+import { UsuariosController } from './usuarios.controller';
+import { UsuariosService } from './usuarios.service';
 
 
-const entities =    [Categorias]
-const controllers = [CategoriasController]
-const services =    [CategoriasService]
+const entities =    [Usuarios]
+const controllers = [UsuariosController]
+const services =    [UsuariosService]
 
 @Module({
   imports: [TypeOrmModule.forFeature([...entities])],
@@ -16,4 +16,4 @@ const services =    [CategoriasService]
   providers: [...services],
   exports: [...services],
 })
-export class CategoriasModule {}
+export class UsuariosModule {}

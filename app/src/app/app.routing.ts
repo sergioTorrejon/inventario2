@@ -27,7 +27,7 @@ export const AppRoutes: Routes = [
       {
         path: 'consultas',
         //canActivate: [AuthGuard],
-        loadChildren: () => import('./pages/modules/rms/consultas/consultas.module').then(m => m.ConsultasModule)
+        loadChildren: () => import('./modules/00-dashboard/dashboard.module').then(m => m.DashboardModule)
       },
       
       
@@ -35,14 +35,8 @@ export const AppRoutes: Routes = [
       {
         path: 'productos',
         canActivate: [AuthGuard],
-        loadChildren: () => import('./pages/modules/admin/productos/productos.module').then(m => m.ProductosModule),
+        loadChildren: () => import('./modules/00-dashboard/01--admin/productos/productos.module').then(m => m.ProductosModule),
         data: { titulo:'registros', roles: [Roles.Administrador]}
-      },
-      {
-        path: 'registros',
-        canActivate: [AuthGuard],
-        loadChildren: () => import('./pages/modules/rms/registros/registros.module').then(m => m.RegistrosModule),
-        data: { titulo:'registros', roles: [Roles.Operador, Roles.Supervisor]}
       }
 
     ]

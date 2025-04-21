@@ -28,8 +28,13 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import {
   MessageBoxComponent,
 } from 'src/app/components/dialogs/message-box/message-box.component';
+import {
+  PersonasService,
+} from 'src/app/modules/00-dashboard/01--admin/personas/personas.service';
+import { CrudService } from 'src/app/services/crud/crud.service';
 
-import { CategoriasService } from '../categorias.service';
+import { ProvedoresService } from '../../productos.service';
+import { tipoCategoriaProducto, marcasProducto, medidasProducto } from '../../model/productos.model';
 
 @Component({
   selector: 'app-dialog-insert',
@@ -48,45 +53,57 @@ import { CategoriasService } from '../categorias.service';
 export class DialogInsertComponent implements OnInit  {
   //Formularios
   formGroup: UntypedFormGroup;
+  
+  dataOptions: any = [] ;
 
-  dataRow: any = [];
+  tipoCategoriaProducto= tipoCategoriaProducto
+  marcasProducto = marcasProducto
+  medidasProducto = medidasProducto
 
-  dataOptions=this.data.dataOptions ;
-  file:any;
+  dataPersonas: any =[];
+  count = 0;
 
-  formControl:any=
-  {
-    'codigo':  ['', [Validators.required , Validators.minLength(1), Validators.maxLength(50)]],
-    'categoria':  ['', [Validators.required , Validators.minLength(1), Validators.maxLength(50)]],
-    'descripcion':  ['', [Validators.required , Validators.minLength(1), Validators.maxLength(250)]],
+  dataSelect: any=[];
+
+  //sort
+  sort: string = '';
+  order: string = '';
+  page = {
+    length: 10,
+    size: 10,
+    index: 0
   };
+
+  form:any=
+  {
+    'codigo':  ['', [Validators.required]],
+    'categoria': ['', [Validators.required]],
+    'marca':  ['', [Validators.required]],
+    'modelo':  ['', [Validators.required]],
+    'medida': [''],
+    'descripcion': ['ci', [Validators.required]],
+  };
+
 
   constructor
   (
+    private dialog: MatDialog,
     private formBuilder: UntypedFormBuilder,
     private dialogRef: MatDialogRef<DialogInsertComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    public rest: CategoriasService,
-    private dialog: MatDialog,
+    public rest: ProvedoresService,
+    public restPersonas: PersonasService,
+    public restCrud: CrudService,
     private _snackBar: MatSnackBar
   )
   {
-    this.formGroup =this.formBuilder.group(this.formControl);
+    this.formGroup =this.formBuilder.group(this.form);
+    this.dataOptions = this.data.model.dataOptions;
   }
-
 
   ngOnInit( )
   {
 
-  }
-
-  openSnackBar(message: string, action: string, type:string) {
-    this._snackBar.open(message, action, {
-      duration: 5000,
-      horizontalPosition: 'center',
-      verticalPosition: 'top',
-      panelClass: [type]
-    })
   }
 
   onSubmit(post:any) {
@@ -99,23 +116,33 @@ export class DialogInsertComponent implements OnInit  {
         cancelarBtn: true,
         aceptarBtn: true,
         titulo: 'Mensaje',
-        descripcion: 'Se realizara el registro',
+        descripcion: 'Se realizará el registro',
       },
     });
     dialogMessage.afterClosed().subscribe((result1) => {
       if (result1 === 'confirm') {
-        this.rest.create('empresa', post).
-        subscribe((data:any) => {
-          if (data.success === false) {
-            this.openSnackBar(data.message,'','error')
+        this.restCrud.create('productos', post).
+        subscribe((result:any) => {
+          if (result.success === true) {
+            this.openSnackBar(result.message,'','ok')
+            this.dialogRef.close(result);
           }
-          else{
-            this.close(data);
+          if (result.success === false) {
+            this.openSnackBar(result.message,'','error')
           }
         });
       }
     });
 
+  }
+
+  openSnackBar(message: string, action: string, type:string) {
+    this._snackBar.open(message, action, {
+      duration: 5000,
+      horizontalPosition: 'center',
+      verticalPosition: 'top',
+      panelClass: [type]
+    })
   }
 
   close(data:any) {

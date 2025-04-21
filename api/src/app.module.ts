@@ -12,6 +12,10 @@ import { ProductosModule } from './modules/02-data/productos/productos.module';
 import { SettingsModule } from './modules/01-admin/01-settings/settings.module';
 import { CategoriasModule } from './modules/01-admin/02-categorias/categorias.module';
 import { CatalogosModule } from './modules/01-admin/03-catalogos/catalogos.module';
+import { UsuariosModule } from './modules/01-admin/04-usuarios/usuarios.module';
+import { EmpresasModule } from './modules/02-data/empresas/empresas.module';
+import { PersonasModule } from './modules/02-data/personas/personas.module';
+import { RegistrosModule } from './modules/03-almacenes/registros/registros.module';
 
 @Module({
   imports: [TypeOrmModule.forRoot(DATABASE_CONFIG as TypeOrmModuleOptions),
@@ -21,11 +25,16 @@ import { CatalogosModule } from './modules/01-admin/03-catalogos/catalogos.modul
     SettingsModule,
     CategoriasModule,
     CatalogosModule,
+    UsuariosModule,
+    
     
     //DATA    
+    EmpresasModule,
+    PersonasModule,
     ProductosModule,
-
+        
     //INVENTARIOS
+    RegistrosModule,    
 
 
   ],
