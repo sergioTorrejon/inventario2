@@ -34,20 +34,40 @@ export interface Menu {
     children?: ChildrenItems[];
 }
 
-const MENUITEMS: any =
-[
+export const MENUITEMS: any =
+[  
+  {
+    state: 'dashboard',
+    name: 'Inicio',
+    type: 'link',
+    icon: 'home',
+    role : [],
+    children: []
+  },
   {
     state: '',
-    name: 'Administrador',
+    name: 'Admin',
     type: 'sub',
     icon: 'settings',
+    role : [Roles.Administrador],
+    children: [
+      { state: 'settings', name: 'Configuraciòn', type: 'link' },
+      { state: 'personas', name: 'Categorias', type: 'link' },
+      { state: 'solicitudes', name: 'Catalogos', type: 'link' },
+    ]
+  },
+/*   {
+    state: '',
+    name: '',
+    type: 'sub',
+    icon: '',
     role : [Roles.Administrador],
     children: [
       { state: 'empresas', name: 'Productos', type: 'link' },
       { state: 'personas', name: 'Almacenes', type: 'link' },
       { state: 'solicitudes', name: 'Productos', type: 'link' },
     ]
-  },
+  },  
   {
     state: '',
     name: 'ALMACENES',
@@ -57,15 +77,8 @@ const MENUITEMS: any =
     children: [
       { state: 'registros', name: 'Registros ', type: 'link' },
     ]
-  },
-  {
-    state: 'consultas',
-    name: 'Reportes',
-    type: 'link',
-    icon: 'manage_search',
-    role : [Roles.Consulta, Roles.Administrador],
-    children: []
-  },
+  }, */
+
 ];
 
 @Injectable()

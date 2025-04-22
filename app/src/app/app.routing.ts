@@ -15,17 +15,22 @@ export const AppRoutes: Routes = [
       
       {
           path: '',
-          redirectTo: '/consultas',
+          redirectTo: '/dashboard',
           pathMatch: 'full'
       },
 
 
-      //ALMACENES
+      //ADMIN
+      {
+        path: 'settings',
+        //canActivate: [AuthGuard],
+        loadChildren: () => import('./modules/01-admin/01-settings/settings.module').then(m => m.SettingsModule)
+      },      
 
       
       //CONSULTAS
       {
-        path: 'consultas',
+        path: 'dashboard',
         //canActivate: [AuthGuard],
         loadChildren: () => import('./modules/00-dashboard/dashboard.module').then(m => m.DashboardModule)
       },
@@ -35,7 +40,7 @@ export const AppRoutes: Routes = [
       {
         path: 'productos',
         canActivate: [AuthGuard],
-        loadChildren: () => import('./modules/00-dashboard/01--admin/productos/productos.module').then(m => m.ProductosModule),
+        loadChildren: () => import('./modules/02-data/productos/productos.module').then(m => m.ProductosModule),
         data: { titulo:'registros', roles: [Roles.Administrador]}
       }
 

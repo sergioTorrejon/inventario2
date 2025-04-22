@@ -12,7 +12,7 @@
 </div>
 
 <mat-nav-list appAccordion>
-    <mat-list-item appAccordionLink *ngFor="let menuitem of this.consfigService.menu" routerLinkActive="selected" group="{{menuitem.state}}">
+    <mat-list-item appAccordionLink *ngFor="let menuitem of this.menuItems" routerLinkActive="selected" group="{{menuitem.state}}">
       <a class="" appAccordionToggle [routerLink]="['/', menuitem.state]" *ngIf="menuitem.type === 'link' && this.authorizationService.isAuthorized(menuitem.role)">
             <mat-icon>{{ menuitem.icon }}</mat-icon>
             <span>{{ menuitem.name  }}</span>

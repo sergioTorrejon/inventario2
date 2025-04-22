@@ -20,7 +20,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { ChartistModule } from 'ng-chartist';
 
 import { AppMaterialModule } from '../app-material-module';
-import { MatHeaderSimpleComponent } from './01-headers/1_simple/header-simple.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import {
   MessageBoxComponent,
@@ -29,7 +28,6 @@ import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
     declarations: [
-      MatHeaderSimpleComponent,
         //Messages
         MessageBoxComponent,
         //Spinner
@@ -44,7 +42,6 @@ import { SpinnerComponent } from './spinner/spinner.component';
         BreadcrumbsComponent,
     ],
     exports: [
-      MatHeaderSimpleComponent,
         //Messages
         MessageBoxComponent,
         //Spinner

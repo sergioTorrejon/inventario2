@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/authentication/services/authentication.service';
 import { AuthorizationService } from 'src/app/authentication/services/authorization.service';
-import { DataService } from 'src/app/services/data/data.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',

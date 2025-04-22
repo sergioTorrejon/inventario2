@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ConfigService } from './services/config/config.service';
 
 
 @Component({
@@ -9,13 +8,8 @@ import { ConfigService } from './services/config/config.service';
 })
 export class AppComponent {
   constructor(
-    public configService:ConfigService,
   ){
 
-    this.configService.getMenu()
-    console.log('AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII')
-/*     this.dataService.config()
-    this.dataService.options() */
 
   }
 }

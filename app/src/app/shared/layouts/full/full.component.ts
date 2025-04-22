@@ -13,7 +13,6 @@ import {
 
 import { PerfectScrollbarConfigInterface, PerfectScrollbarDirective } from 'ngx-perfect-scrollbar';
 import { MenuItems } from '../../menu/menu-model';
-import { DataService } from 'src/app/services/data/data.service';
 
 /** @title Responsive sidenav */
 @Component({

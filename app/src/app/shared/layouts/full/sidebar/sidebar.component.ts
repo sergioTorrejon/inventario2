@@ -13,8 +13,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
 import {animate, state, style, transition, trigger} from '@angular/animations';
 import { AuthorizationService } from '../../../../authentication/services/authorization.service';
-import { MenuItems } from 'src/app/shared/menu/menu-model';
-import { ConfigService } from 'src/app/services/config/config.service';
+import { MENUITEMS, MenuItems } from 'src/app/shared/menu/menu-model';
 
 @Component({
   selector: 'app-sidebar',
@@ -41,7 +40,6 @@ export class AppSidebarComponent implements OnDestroy {
   constructor(
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher,
-    public consfigService:ConfigService,
     public menuItems: MenuItems,
     public router: Router,
     public authorizationService: AuthorizationService
@@ -49,6 +47,7 @@ export class AppSidebarComponent implements OnDestroy {
     this.mobileQuery = media.matchMedia('(min-width: 768px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
+    this.menuItems=MENUITEMS
     console.log(menuItems,'*********************************MENUUUUUUU')
   }
 
