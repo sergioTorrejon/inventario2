@@ -12,6 +12,7 @@ const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/js
 @Injectable({
   providedIn: 'root'
 })
+
 export class SettingsService {
     private url: string = '';
 
@@ -19,6 +20,7 @@ export class SettingsService {
         this.url = environment.api;
     }
 
+    //#region CRUD
     /** DATA DOCUMENTOS PAGINADOS */
     getAll(model:string,dto:any,page: number = 0,limit: number = 0,sort: string = '',order: string = ''):  Observable<any>
     {
@@ -46,6 +48,19 @@ export class SettingsService {
       ).pipe();
     }
 
+    deleteRow(model:string,rowSelect: any) {
+      let dialogMessage = this.dialog.open(MessageBoxComponent, this.deleteoptions);
+      dialogMessage.afterClosed().subscribe((result1) => {
+        if (result1 === 'confirm') {
+          this.delete(model, rowSelect.id)
+            .subscribe((data: any) => {
+              this.openSnackBar('Se eliminó el registro correctamente','','warning')
+            });
+        }
+      });
+    }
+
+
     /**REPORTE EN CSV */
     getCsv(model:string,dto:any): Observable<any>
     {
@@ -69,6 +84,6 @@ export class SettingsService {
       (dto.descripcion === ''? ``: `&descripcion=${dto.descripcion}`) 
       return this.http.get(returl, { responseType: "blob" } )
     }
+    //#region ENDCRUD
 
-//#region CRUD
 }

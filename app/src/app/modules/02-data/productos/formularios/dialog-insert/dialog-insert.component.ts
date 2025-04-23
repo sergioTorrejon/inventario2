@@ -27,12 +27,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 import {
   MessageBoxComponent,
-} from 'src/app/components/dialogs/message-box/message-box.component';
+} from 'src/app/components/message-box/message-box.component';
 import { CrudService } from 'src/app/services/crud/crud.service';
 
-import { ProvedoresService } from '../../productos.service';
 import { tipoCategoriaProducto, marcasProducto, medidasProducto } from '../../model/productos.model';
-import { PersonasService } from '../../../personas/personas.service';
+import { ProductosService } from '../../productos.service';
 
 @Component({
   selector: 'app-dialog-insert',
@@ -89,9 +88,7 @@ export class DialogInsertComponent implements OnInit  {
     private formBuilder: UntypedFormBuilder,
     private dialogRef: MatDialogRef<DialogInsertComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    public rest: ProvedoresService,
-    public restPersonas: PersonasService,
-    public restCrud: CrudService,
+    public service: ProductosService,
     private _snackBar: MatSnackBar
   )
   {
@@ -100,9 +97,7 @@ export class DialogInsertComponent implements OnInit  {
   }
 
   ngOnInit( )
-  {
-
-  }
+  {}
 
   onSubmit(post:any) {
     let dialogMessage = this.dialog.open(MessageBoxComponent, {
@@ -119,7 +114,7 @@ export class DialogInsertComponent implements OnInit  {
     });
     dialogMessage.afterClosed().subscribe((result1) => {
       if (result1 === 'confirm') {
-        this.restCrud.create('productos', post).
+        this.service.create('productos', post).
         subscribe((result:any) => {
           if (result.success === true) {
             this.openSnackBar(result.message,'','ok')

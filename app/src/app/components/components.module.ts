@@ -20,10 +20,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { ChartistModule } from 'ng-chartist';
 
 import { AppMaterialModule } from '../app-material-module';
-import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import {
   MessageBoxComponent,
-} from './dialogs/message-box/message-box.component';
+} from './message-box/message-box.component';
 import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
@@ -39,7 +38,6 @@ import { SpinnerComponent } from './spinner/spinner.component';
         //forms
         //Crud
         //Brudcrumbs
-        BreadcrumbsComponent,
     ],
     exports: [
         //Messages
@@ -53,7 +51,6 @@ import { SpinnerComponent } from './spinner/spinner.component';
         //forms
         //Crud
        //Brudcrumbs
-       BreadcrumbsComponent,
     ],
     imports: [
         FlexLayoutModule,

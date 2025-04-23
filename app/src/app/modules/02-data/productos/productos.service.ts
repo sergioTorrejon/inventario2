@@ -3,7 +3,6 @@ import {
   HttpHeaders,
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 
@@ -12,7 +11,7 @@ const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/js
 @Injectable({
   providedIn: 'root'
 })
-export class ProvedoresService {
+export class ProductosService {
     private url: string = '';
 
     constructor (private http: HttpClient) {
@@ -45,6 +44,11 @@ export class ProvedoresService {
       (nroIdentificacion === ''? ``: `&nroIdentificacion=${nroIdentificacion}`)
       ).pipe();
     }
+
+    /** INSERT CON FORMDATA */
+    create(model: string, dto: any): Observable<any> {
+      return this.http.post(`${this.url}/${model}`, dto).pipe();
+    }    
 
     /**REPORTE EN CSV */
     getCsv(model:string,dto:any): Observable<any>

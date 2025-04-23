@@ -18,7 +18,7 @@ import {
 import { AuthorizationService } from 'src/app/authentication/services/authorization.service';
 import {
   MessageBoxComponent,
-} from 'src/app/components/dialogs/message-box/message-box.component';
+} from 'src/app/components/message-box/message-box.component';
 import { CrudService } from 'src/app/services/crud/crud.service';
 import {
   DialogInsertComponent,
@@ -27,7 +27,7 @@ import {
   DialogUpdateComponent,
 } from './formularios/dialog-update/dialog-update.component';
 import { marcasProducto, medidasProducto, MODEL, tipoCategoriaProducto } from './model/productos.model';
-import { ProvedoresService } from './productos.service';
+import { ProductosService } from './productos.service';
 
 @Component({
   selector: 'app-productos',
@@ -76,7 +76,7 @@ export class ProductosComponent implements OnInit {
   constructor(
     private formBuilder: UntypedFormBuilder,
     private dialog: MatDialog,
-    public rest: ProvedoresService,
+    public rest: ProductosService,
     public restCrud: CrudService,
     public authorizationService: AuthorizationService,
     public authenticationService: AuthenticationService,

@@ -5,7 +5,7 @@ import { environment } from '../../../environments/environment.prod';
 import { DataService } from '../data/data.service';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { MessageBoxComponent } from 'src/app/components/dialogs/message-box/message-box.component';
+import { MessageBoxComponent } from 'src/app/components/message-box/message-box.component';
 
 const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' })};
 
@@ -53,14 +53,6 @@ export class CrudService {
         tap(console.log),
         catchError(this.handleError)
       );
-    }
-
-/*     getConfigPromise(model:string): Observable<any> {
-      return this.http.get(`${this.url}/${model}/config`).
-    } */
-
-    getMenu(): Observable<any> {
-      return this.http.get(`${this.url}/menu`).pipe();
     }
 
     getOptions(): Observable<any> {

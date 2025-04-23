@@ -2,61 +2,37 @@ import {
   Component,
   OnInit,
 } from '@angular/core';
-import {
-  UntypedFormBuilder,
-  UntypedFormGroup,
-} from '@angular/forms';
-import {
-  MatDialog,
-  MatDialogConfig,
-} from '@angular/material/dialog';
-import { MatSnackBar } from '@angular/material/snack-bar';
 
 import {
   AuthenticationService,
 } from 'src/app/authentication/services/authentication.service';
 import { AuthorizationService } from 'src/app/authentication/services/authorization.service';
-import {
-  MessageBoxComponent,
-} from 'src/app/components/dialogs/message-box/message-box.component';
-import { CrudService } from 'src/app/services/crud/crud.service';
-import {
-  DialogInsertComponent,
-} from './formularios/dialog-insert/dialog-insert.component';
-import {
-  DialogUpdateComponent,
-} from './formularios/dialog-update/dialog-update.component';
-import { marcasProducto, medidasProducto, MODEL, tipoCategoriaProducto } from './model/settings.model';
 import { SettingsService } from './settings.service';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { DialogInsertComponent } from './formularios/dialog-insert/dialog-insert.component';
+import { DialogUpdateComponent } from './formularios/dialog-update/dialog-update.component';
+import { MessageBoxComponent } from 'src/app/components/message-box/message-box.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
-  styleUrls: ['./settings.component.css'],
 })
 export class SettingsComponent implements OnInit {
 
-//GLOBALS
-  dateToday= new Date()
-
-
   // MODEL
-  model=MODEL
-
-
-  tipoCategoriaProducto= tipoCategoriaProducto
-  marcasProducto = marcasProducto
-  medidasProducto = medidasProducto
-
-
-
-  // Variables del Formulario
-  formGroup: UntypedFormGroup;
-
-  isAdministrator=this.authenticationService.GetRoles().includes('administrador')
-  empresas: any = [];
-  dataOptions: any = [];
-
+  name:'settings'
+  title:'Settings'
+  
+  //CAMPOS DEL FOMRULARIO DE BUSQUEDA
+  formControl:{
+    categoria:[''],
+    marca:[''],
+    modelo:[''],
+    medida:[''],
+    descripcion:['']
+  }
 
   //table
   data: any =[];
@@ -70,35 +46,41 @@ export class SettingsComponent implements OnInit {
     index: 0
   };
 
-  columnsTable = this.model.columnsTable
+  //CAMPOS DE LAS COLUMNAS DE LAS TABLAS
+  columnsTable:
+  [
+    {name:'codigo', label:'Codigo', width:10},
+    {name:'categoria', label:'Categoria',  width:10},
+    {name:'marca', label:'Marca',  width:10},
+    {name:'medida', label:'Medida',  width:20},
+    {name:'modelo', label:'Modelo',  width:20},
+    {name:'descripcion', label:'Descripción',  width:20},
+  ]  
 
-
+  // Variables del Formulario
+  formGroup: UntypedFormGroup;  
+  
   constructor(
-    private formBuilder: UntypedFormBuilder,
-    private dialog: MatDialog,
-    public rest: SettingsService,
-    public restCrud: CrudService,
     public authorizationService: AuthorizationService,
     public authenticationService: AuthenticationService,
+    private formBuilder: UntypedFormBuilder,
+    private dialog: MatDialog,
+    public service: SettingsService,
     private _snackBar: MatSnackBar
-    ) {
-      this.formGroup =this.formBuilder.group([]);
-    }
+    ) {}
 
-  ngOnInit() {
-      //this.setForm();
-  }
+  ngOnInit() {this.setForm()}
 
   setForm(){
-      this.formGroup =this.formBuilder.group(this.model.formControl);
-      this.formOnchange();
-      this.dataTableUpdate(this.page);
+    this.formGroup =this.formBuilder.group(this.formControl);
+    this.formOnchange();
+    this.dataTableUpdate(this.page);
   }
 
   formOnchange(){
-      this.formGroup.valueChanges.subscribe(async data => {
-        this.dataTableUpdate(this.page);
-      })
+    this.formGroup.valueChanges.subscribe(async data => {
+      this.dataTableUpdate(this.page);
+    })
   }
 
   // ORDENAR LA TABLA
@@ -113,16 +95,15 @@ export class SettingsComponent implements OnInit {
 
   //ACTUALIZA LA TABLA DEL MÓDULO
   dataTableUpdate(event: any){
-
-      this.page.size = event.pageSize !== undefined? event.pageSize: 10;
-      this.page.index = event.pageIndex !== undefined? event.pageIndex: 0;
-      var searchDto = (this.formGroup).getRawValue()
-      this.rest.getAll(this.model.name,searchDto,this.page.index+1, this.page.size,this.sort, this.order)
-      .subscribe((data:any) => {
-        const result = data.data
-        this.data = result.data;
-        this.count = result.count;
-      });
+    this.page.size = event.pageSize !== undefined? event.pageSize: 10;
+    this.page.index = event.pageIndex !== undefined? event.pageIndex: 0;
+    var searchDto = (this.formGroup).getRawValue()
+    this.service.getAll(this.name,searchDto,this.page.index+1, this.page.size,this.sort, this.order)
+    .subscribe((data:any) => {
+      const result = data.data
+      this.data = result.data;
+      this.count = result.count;
+    });
   }
 
   //#region CRUD
@@ -133,8 +114,7 @@ export class SettingsComponent implements OnInit {
     dialogConfig.width = '1200px';
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-    dialogConfig.data = { model:this.model
-    };
+    dialogConfig.data = { model:this.name};
     let dialogRef = this.dialog.open(DialogInsertComponent, dialogConfig);
     dialogRef.afterClosed().subscribe((result:any) => {
       if (result.success === true) {
@@ -156,7 +136,7 @@ export class SettingsComponent implements OnInit {
     dialogConfig.data = {
       data: rowSelect
     };
-     let dialogRef = this.dialog.open(DialogUpdateComponent, dialogConfig);
+    let dialogRef = this.dialog.open(DialogUpdateComponent, dialogConfig);
     dialogRef.afterClosed().subscribe((result) => {
       if (result.success === true) {
         this.openSnackBar(result.message,'','ok')
@@ -205,28 +185,27 @@ export class SettingsComponent implements OnInit {
   downloadCsv() {
     const dto = (this.formGroup).getRawValue();
     console.log('---------------------------------------------DTO para pdf',dto)
-    this.rest.getCsv('productos',dto)
+    this.service.getCsv('productos',dto)
     .subscribe((result: any) => {
-        var newBlob = new Blob([result], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
-        const data = window.URL.createObjectURL(newBlob);
-        const link = document.createElement('a');
-        link.href = data;
-        link.download = "Reporte.xlsx";
-        link.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
-        setTimeout(function () {
-            window.URL.revokeObjectURL(data);
-        }, 100);
+      var newBlob = new Blob([result], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+      const data = window.URL.createObjectURL(newBlob);
+      const link = document.createElement('a');
+      link.href = data;
+      link.download = "Reporte.xlsx";
+      link.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
+      setTimeout(function () {
+          window.URL.revokeObjectURL(data);
+      }, 100);
     }, (error: any) => {
-        console.log(error);
+      console.log(error);
     });
   }
 
   // DESCARGAR EN PDF
   downloadpdf() {
-      const dto = (this.formGroup).getRawValue();
-      console.log('---------------------------------------------DTO para pdf',dto)
-
-      this.rest.getPdf('productos',dto)
+    const dto = (this.formGroup).getRawValue();
+    console.log('---------------------------------------------DTO para pdf',dto)
+    this.service.getPdf('productos',dto)
     .subscribe((result: any) =>  {
       var newBlob = new Blob([result], { type: "application/pdf" });
       const data = window.URL.createObjectURL(newBlob);
@@ -235,12 +214,12 @@ export class SettingsComponent implements OnInit {
       link.download = "Reporte.pdf";
       link.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true, view: window }));
       setTimeout(function () {
-          window.URL.revokeObjectURL(data);
+        window.URL.revokeObjectURL(data);
       }, 100);
     }, (error: any) => {
-        console.log(error);
+      console.log(error);
     });
   }
-
+  //#region END CRUD
 }
 

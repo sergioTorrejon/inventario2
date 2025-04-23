@@ -27,11 +27,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 import {
   MessageBoxComponent,
-} from 'src/app/components/dialogs/message-box/message-box.component';
+} from 'src/app/components/message-box/message-box.component';
 import { CrudService } from 'src/app/services/crud/crud.service';
 
 import { SettingsService } from '../../settings.service';
-import { tipoCategoriaProducto, marcasProducto, medidasProducto } from '../../model/settings.model';
+import { tipoCategoriaProducto, marcasProducto, medidasProducto } from 'src/app/modules/02-data/productos/model/productos.model';
 
 @Component({
   selector: 'app-dialog-insert',

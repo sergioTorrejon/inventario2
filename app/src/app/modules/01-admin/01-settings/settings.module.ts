@@ -21,16 +21,13 @@ import {
   DialogUpdateComponent,
 } from './formularios/dialog-update/dialog-update.component';
 import { SettingsComponent } from './settings.component';
-import { SearchComponent } from './modal/search/search.component';
-import { TableComponent } from './modal/table/table.component';
+
 
 @NgModule({
     declarations: [
       SettingsComponent,
       DialogInsertComponent,
-      DialogUpdateComponent,
-      SearchComponent,
-      TableComponent
+      DialogUpdateComponent
     ],
     exports: [],
     bootstrap: [SettingsComponent],
